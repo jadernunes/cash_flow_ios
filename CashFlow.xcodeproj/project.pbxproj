@@ -18,6 +18,10 @@
 		6B2726C228236194000903CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B27269128235E74000903CB /* Assets.xcassets */; };
 		6B2726CC28236426000903CB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6B2726CB28236426000903CB /* README.md */; };
 		6B2726CD28236426000903CB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6B2726CB28236426000903CB /* README.md */; };
+		6B2726D528236B0B000903CB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B2726D828236B0B000903CB /* Localizable.strings */; };
+		6B2726D628236B0B000903CB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B2726D828236B0B000903CB /* Localizable.strings */; };
+		6B2726DC28236BED000903CB /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2726DB28236BED000903CB /* R.generated.swift */; };
+		6B2726DD28236BED000903CB /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2726DB28236BED000903CB /* R.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +31,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 6B27268428235E72000903CB;
 			remoteInfo = CashFlow;
+		};
+		6B2726D02823693B000903CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B27267D28235E72000903CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B2726BB28236194000903CB;
+			remoteInfo = "CashFlow-qa";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -42,6 +53,8 @@
 		6B2726C628236194000903CB /* CashFlow-qa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CashFlow-qa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B2726CA282363AB000903CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B2726CB28236426000903CB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		6B2726D728236B0B000903CB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6B2726DB28236BED000903CB /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,12 +82,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5AC073CE236FEB74E6843159 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		6B27267C28235E72000903CB = {
 			isa = PBXGroup;
 			children = (
 				6B27268728235E72000903CB /* CashFlow */,
 				6B27269E28235E75000903CB /* CashFlowTests */,
 				6B27268628235E72000903CB /* Products */,
+				5AC073CE236FEB74E6843159 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +133,8 @@
 				6B2726CB28236426000903CB /* README.md */,
 				6B27269328235E74000903CB /* LaunchScreen.storyboard */,
 				6B27269128235E74000903CB /* Assets.xcassets */,
+				6B2726D828236B0B000903CB /* Localizable.strings */,
+				6B2726DB28236BED000903CB /* R.generated.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -165,6 +188,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6B2726AF28235E75000903CB /* Build configuration list for PBXNativeTarget "CashFlow" */;
 			buildPhases = (
+				6B2726D928236B3F000903CB /* R.swift */,
 				6B2726CE2823657E000903CB /* Search_TODO_FIXE_ERROR */,
 				6B27268128235E72000903CB /* Sources */,
 				6B27268228235E72000903CB /* Frameworks */,
@@ -191,6 +215,7 @@
 			);
 			dependencies = (
 				6B27269D28235E75000903CB /* PBXTargetDependency */,
+				6B2726D12823693B000903CB /* PBXTargetDependency */,
 			);
 			name = CashFlowTests;
 			productName = CashFlowTests;
@@ -201,6 +226,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6B2726C328236194000903CB /* Build configuration list for PBXNativeTarget "CashFlow-qa" */;
 			buildPhases = (
+				6B2726DA28236B80000903CB /* R.swift */,
 				6B2726CF282365A4000903CB /* Search_TODO_FIXE_ERROR */,
 				6B2726BC28236194000903CB /* Sources */,
 				6B2726BF28236194000903CB /* Frameworks */,
@@ -230,7 +256,7 @@
 					};
 					6B27269A28235E75000903CB = {
 						CreatedOnToolsVersion = 13.1;
-						TestTargetID = 6B27268428235E72000903CB;
+						TestTargetID = 6B2726BB28236194000903CB;
 					};
 				};
 			};
@@ -260,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B2726CC28236426000903CB /* README.md in Resources */,
+				6B2726D528236B0B000903CB /* Localizable.strings in Resources */,
 				6B27269528235E74000903CB /* LaunchScreen.storyboard in Resources */,
 				6B27269228235E74000903CB /* Assets.xcassets in Resources */,
 			);
@@ -277,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B2726CD28236426000903CB /* README.md in Resources */,
+				6B2726D628236B0B000903CB /* Localizable.strings in Resources */,
 				6B2726C128236194000903CB /* LaunchScreen.storyboard in Resources */,
 				6B2726C228236194000903CB /* Assets.xcassets in Resources */,
 			);
@@ -321,6 +349,46 @@
 			shellPath = /bin/sh;
 			shellScript = "TAGS=\"TODO: -|FIXME: -\"\nERRORTAG=\"ERROR:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$|($ERRORTAG).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\" | perl -p -e \"s/($ERRORTAG)/ error: \\$1/\"\n\n";
 		};
+		6B2726D928236B3F000903CB /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$SRCROOT/R.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ $ACTION != \"indexbuild\" ]; then\n  \"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\nfi\n";
+		};
+		6B2726DA28236B80000903CB /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$SRCROOT/R.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ $ACTION != \"indexbuild\" ]; then\n  \"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -330,6 +398,7 @@
 			files = (
 				6B27268928235E72000903CB /* AppDelegate.swift in Sources */,
 				6B27268B28235E72000903CB /* SceneDelegate.swift in Sources */,
+				6B2726DC28236BED000903CB /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +416,7 @@
 			files = (
 				6B2726BD28236194000903CB /* AppDelegate.swift in Sources */,
 				6B2726BE28236194000903CB /* SceneDelegate.swift in Sources */,
+				6B2726DD28236BED000903CB /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +428,11 @@
 			target = 6B27268428235E72000903CB /* CashFlow */;
 			targetProxy = 6B27269C28235E75000903CB /* PBXContainerItemProxy */;
 		};
+		6B2726D12823693B000903CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B2726BB28236194000903CB /* CashFlow-qa */;
+			targetProxy = 6B2726D02823693B000903CB /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -368,6 +443,14 @@
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
+		};
+		6B2726D828236B0B000903CB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B2726D728236B0B000903CB /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXVariantGroup section */
 
@@ -430,6 +513,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -484,6 +568,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -564,7 +649,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CashFlow.app/CashFlow";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CashFlow-qa.app/CashFlow-qa";
 			};
 			name = Debug;
 		};
@@ -588,7 +673,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CashFlow.app/CashFlow";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CashFlow-qa.app/CashFlow-qa";
 			};
 			name = Release;
 		};

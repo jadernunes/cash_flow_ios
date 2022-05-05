@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6B2726BB28236194000903CB"
-               BuildableName = "CashFlow copy.app"
+               BuildableName = "CashFlow-qa.app"
                BlueprintName = "CashFlow-qa"
                ReferencedContainer = "container:CashFlow.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6B2726BB28236194000903CB"
-            BuildableName = "CashFlow copy.app"
+            BuildableName = "CashFlow-qa.app"
             BlueprintName = "CashFlow-qa"
             ReferencedContainer = "container:CashFlow.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6B2726BB28236194000903CB"
-            BuildableName = "CashFlow copy.app"
+            BuildableName = "CashFlow-qa.app"
             BlueprintName = "CashFlow-qa"
             ReferencedContainer = "container:CashFlow.xcodeproj">
          </BuildableReference>
