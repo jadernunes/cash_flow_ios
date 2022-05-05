@@ -1,0 +1,778 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6B27268928235E72000903CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27268828235E72000903CB /* AppDelegate.swift */; };
+		6B27268B28235E72000903CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27268A28235E72000903CB /* SceneDelegate.swift */; };
+		6B27269228235E74000903CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B27269128235E74000903CB /* Assets.xcassets */; };
+		6B27269528235E74000903CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B27269328235E74000903CB /* LaunchScreen.storyboard */; };
+		6B2726A028235E75000903CB /* CashFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27269F28235E75000903CB /* CashFlowTests.swift */; };
+		6B2726BD28236194000903CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27268828235E72000903CB /* AppDelegate.swift */; };
+		6B2726BE28236194000903CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27268A28235E72000903CB /* SceneDelegate.swift */; };
+		6B2726C128236194000903CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B27269328235E74000903CB /* LaunchScreen.storyboard */; };
+		6B2726C228236194000903CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B27269128235E74000903CB /* Assets.xcassets */; };
+		6B2726CC28236426000903CB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6B2726CB28236426000903CB /* README.md */; };
+		6B2726CD28236426000903CB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6B2726CB28236426000903CB /* README.md */; };
+		6B2726D528236B0B000903CB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B2726D828236B0B000903CB /* Localizable.strings */; };
+		6B2726D628236B0B000903CB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B2726D828236B0B000903CB /* Localizable.strings */; };
+		6B2726DC28236BED000903CB /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2726DB28236BED000903CB /* R.generated.swift */; };
+		6B2726DD28236BED000903CB /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2726DB28236BED000903CB /* R.generated.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6B27269C28235E75000903CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B27267D28235E72000903CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B27268428235E72000903CB;
+			remoteInfo = CashFlow;
+		};
+		6B2726D02823693B000903CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B27267D28235E72000903CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B2726BB28236194000903CB;
+			remoteInfo = "CashFlow-qa";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6B27268528235E72000903CB /* CashFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CashFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B27268828235E72000903CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6B27268A28235E72000903CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6B27269128235E74000903CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6B27269428235E74000903CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6B27269628235E74000903CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B27269B28235E75000903CB /* CashFlowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CashFlowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B27269F28235E75000903CB /* CashFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashFlowTests.swift; sourceTree = "<group>"; };
+		6B2726C628236194000903CB /* CashFlow-qa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CashFlow-qa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B2726CA282363AB000903CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B2726CB28236426000903CB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		6B2726D728236B0B000903CB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6B2726DB28236BED000903CB /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6B27268228235E72000903CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B27269828235E75000903CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B2726BF28236194000903CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5AC073CE236FEB74E6843159 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6B27267C28235E72000903CB = {
+			isa = PBXGroup;
+			children = (
+				6B27268728235E72000903CB /* CashFlow */,
+				6B27269E28235E75000903CB /* CashFlowTests */,
+				6B27268628235E72000903CB /* Products */,
+				5AC073CE236FEB74E6843159 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		6B27268628235E72000903CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B27268528235E72000903CB /* CashFlow.app */,
+				6B27269B28235E75000903CB /* CashFlowTests.xctest */,
+				6B2726C628236194000903CB /* CashFlow-qa.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6B27268728235E72000903CB /* CashFlow */ = {
+			isa = PBXGroup;
+			children = (
+				6B2726C7282361BD000903CB /* Targets */,
+				6B2726B828235FEA000903CB /* Resources */,
+				6B2726B92823600E000903CB /* Modules */,
+			);
+			path = CashFlow;
+			sourceTree = "<group>";
+		};
+		6B27269E28235E75000903CB /* CashFlowTests */ = {
+			isa = PBXGroup;
+			children = (
+				6B27269F28235E75000903CB /* CashFlowTests.swift */,
+			);
+			path = CashFlowTests;
+			sourceTree = "<group>";
+		};
+		6B2726B828235FEA000903CB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6B2726CB28236426000903CB /* README.md */,
+				6B27269328235E74000903CB /* LaunchScreen.storyboard */,
+				6B27269128235E74000903CB /* Assets.xcassets */,
+				6B2726D828236B0B000903CB /* Localizable.strings */,
+				6B2726DB28236BED000903CB /* R.generated.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6B2726B92823600E000903CB /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				6B2726BA28236026000903CB /* App */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		6B2726BA28236026000903CB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6B27268828235E72000903CB /* AppDelegate.swift */,
+				6B27268A28235E72000903CB /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		6B2726C7282361BD000903CB /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				6B2726C8282361C7000903CB /* CashFlow */,
+				6B2726C9282361D3000903CB /* CashFlow-qa */,
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
+		6B2726C8282361C7000903CB /* CashFlow */ = {
+			isa = PBXGroup;
+			children = (
+				6B27269628235E74000903CB /* Info.plist */,
+			);
+			path = CashFlow;
+			sourceTree = "<group>";
+		};
+		6B2726C9282361D3000903CB /* CashFlow-qa */ = {
+			isa = PBXGroup;
+			children = (
+				6B2726CA282363AB000903CB /* Info.plist */,
+			);
+			path = "CashFlow-qa";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6B27268428235E72000903CB /* CashFlow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B2726AF28235E75000903CB /* Build configuration list for PBXNativeTarget "CashFlow" */;
+			buildPhases = (
+				6B2726D928236B3F000903CB /* R.swift */,
+				6B2726CE2823657E000903CB /* Search_TODO_FIXE_ERROR */,
+				6B27268128235E72000903CB /* Sources */,
+				6B27268228235E72000903CB /* Frameworks */,
+				6B27268328235E72000903CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CashFlow;
+			productName = CashFlow;
+			productReference = 6B27268528235E72000903CB /* CashFlow.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6B27269A28235E75000903CB /* CashFlowTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B2726B228235E75000903CB /* Build configuration list for PBXNativeTarget "CashFlowTests" */;
+			buildPhases = (
+				6B27269728235E75000903CB /* Sources */,
+				6B27269828235E75000903CB /* Frameworks */,
+				6B27269928235E75000903CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B27269D28235E75000903CB /* PBXTargetDependency */,
+				6B2726D12823693B000903CB /* PBXTargetDependency */,
+			);
+			name = CashFlowTests;
+			productName = CashFlowTests;
+			productReference = 6B27269B28235E75000903CB /* CashFlowTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6B2726BB28236194000903CB /* CashFlow-qa */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B2726C328236194000903CB /* Build configuration list for PBXNativeTarget "CashFlow-qa" */;
+			buildPhases = (
+				6B2726DA28236B80000903CB /* R.swift */,
+				6B2726CF282365A4000903CB /* Search_TODO_FIXE_ERROR */,
+				6B2726BC28236194000903CB /* Sources */,
+				6B2726BF28236194000903CB /* Frameworks */,
+				6B2726C028236194000903CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CashFlow-qa";
+			productName = CashFlow;
+			productReference = 6B2726C628236194000903CB /* CashFlow-qa.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6B27267D28235E72000903CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					6B27268428235E72000903CB = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					6B27269A28235E75000903CB = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 6B2726BB28236194000903CB;
+					};
+				};
+			};
+			buildConfigurationList = 6B27268028235E72000903CB /* Build configuration list for PBXProject "CashFlow" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6B27267C28235E72000903CB;
+			productRefGroup = 6B27268628235E72000903CB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6B27268428235E72000903CB /* CashFlow */,
+				6B2726BB28236194000903CB /* CashFlow-qa */,
+				6B27269A28235E75000903CB /* CashFlowTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6B27268328235E72000903CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B2726CC28236426000903CB /* README.md in Resources */,
+				6B2726D528236B0B000903CB /* Localizable.strings in Resources */,
+				6B27269528235E74000903CB /* LaunchScreen.storyboard in Resources */,
+				6B27269228235E74000903CB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B27269928235E75000903CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B2726C028236194000903CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B2726CD28236426000903CB /* README.md in Resources */,
+				6B2726D628236B0B000903CB /* Localizable.strings in Resources */,
+				6B2726C128236194000903CB /* LaunchScreen.storyboard in Resources */,
+				6B2726C228236194000903CB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6B2726CE2823657E000903CB /* Search_TODO_FIXE_ERROR */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Search_TODO_FIXE_ERROR;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "TAGS=\"TODO: -|FIXME: -\"\nERRORTAG=\"ERROR:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$|($ERRORTAG).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\" | perl -p -e \"s/($ERRORTAG)/ error: \\$1/\"\n\n";
+		};
+		6B2726CF282365A4000903CB /* Search_TODO_FIXE_ERROR */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Search_TODO_FIXE_ERROR;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "TAGS=\"TODO: -|FIXME: -\"\nERRORTAG=\"ERROR:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$|($ERRORTAG).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\" | perl -p -e \"s/($ERRORTAG)/ error: \\$1/\"\n\n";
+		};
+		6B2726D928236B3F000903CB /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$SRCROOT/R.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ $ACTION != \"indexbuild\" ]; then\n  \"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\nfi\n";
+		};
+		6B2726DA28236B80000903CB /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$SRCROOT/R.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ $ACTION != \"indexbuild\" ]; then\n  \"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6B27268128235E72000903CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B27268928235E72000903CB /* AppDelegate.swift in Sources */,
+				6B27268B28235E72000903CB /* SceneDelegate.swift in Sources */,
+				6B2726DC28236BED000903CB /* R.generated.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B27269728235E75000903CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B2726A028235E75000903CB /* CashFlowTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B2726BC28236194000903CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B2726BD28236194000903CB /* AppDelegate.swift in Sources */,
+				6B2726BE28236194000903CB /* SceneDelegate.swift in Sources */,
+				6B2726DD28236BED000903CB /* R.generated.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6B27269D28235E75000903CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B27268428235E72000903CB /* CashFlow */;
+			targetProxy = 6B27269C28235E75000903CB /* PBXContainerItemProxy */;
+		};
+		6B2726D12823693B000903CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B2726BB28236194000903CB /* CashFlow-qa */;
+			targetProxy = 6B2726D02823693B000903CB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6B27269328235E74000903CB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B27269428235E74000903CB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6B2726D828236B0B000903CB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B2726D728236B0B000903CB /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6B2726AD28235E75000903CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		6B2726AE28235E75000903CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6B2726B028235E75000903CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(PROJECT_NAME)/Targets/$(TARGET_NAME)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Cash Flow";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jader.cashflow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		6B2726B128235E75000903CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(PROJECT_NAME)/Targets/$(TARGET_NAME)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Cash Flow";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jader.cashflow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		6B2726B328235E75000903CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jader.CashFlowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CashFlow-qa.app/CashFlow-qa";
+			};
+			name = Debug;
+		};
+		6B2726B428235E75000903CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jader.CashFlowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CashFlow-qa.app/CashFlow-qa";
+			};
+			name = Release;
+		};
+		6B2726C428236194000903CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(PROJECT_NAME)/Targets/$(TARGET_NAME)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Cash Flow";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jader.cashflow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		6B2726C528236194000903CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(PROJECT_NAME)/Targets/$(TARGET_NAME)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Cash Flow";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jader.cashflow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6B27268028235E72000903CB /* Build configuration list for PBXProject "CashFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B2726AD28235E75000903CB /* Debug */,
+				6B2726AE28235E75000903CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B2726AF28235E75000903CB /* Build configuration list for PBXNativeTarget "CashFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B2726B028235E75000903CB /* Debug */,
+				6B2726B128235E75000903CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B2726B228235E75000903CB /* Build configuration list for PBXNativeTarget "CashFlowTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B2726B328235E75000903CB /* Debug */,
+				6B2726B428235E75000903CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B2726C328236194000903CB /* Build configuration list for PBXNativeTarget "CashFlow-qa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B2726C428236194000903CB /* Debug */,
+				6B2726C528236194000903CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6B27267D28235E72000903CB /* Project object */;
+}
