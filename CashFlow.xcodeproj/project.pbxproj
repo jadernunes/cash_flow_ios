@@ -22,6 +22,18 @@
 		6B2726D628236B0B000903CB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B2726D828236B0B000903CB /* Localizable.strings */; };
 		6B2726DC28236BED000903CB /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2726DB28236BED000903CB /* R.generated.swift */; };
 		6B2726DD28236BED000903CB /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2726DB28236BED000903CB /* R.generated.swift */; };
+		6B2727002823F9A5000903CB /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2726FF2823F9A5000903CB /* AppCoordinator.swift */; };
+		6B2727012823F9A5000903CB /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2726FF2823F9A5000903CB /* AppCoordinator.swift */; };
+		6B2727052823FBF7000903CB /* InitialFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2727042823FBF7000903CB /* InitialFlow.swift */; };
+		6B2727062823FBF7000903CB /* InitialFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2727042823FBF7000903CB /* InitialFlow.swift */; };
+		6B27270A2823FDC8000903CB /* ListRegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2727092823FDC8000903CB /* ListRegisterCoordinator.swift */; };
+		6B27270B2823FDC8000903CB /* ListRegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2727092823FDC8000903CB /* ListRegisterCoordinator.swift */; };
+		6B27270D2823FEA7000903CB /* ListRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27270C2823FEA7000903CB /* ListRegisterViewController.swift */; };
+		6B27270E2823FEA7000903CB /* ListRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27270C2823FEA7000903CB /* ListRegisterViewController.swift */; };
+		6B2727102823FEC9000903CB /* ListRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27270F2823FEC9000903CB /* ListRegisterViewModel.swift */; };
+		6B2727112823FEC9000903CB /* ListRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27270F2823FEC9000903CB /* ListRegisterViewModel.swift */; };
+		6B2727132823FF90000903CB /* ListRegisterContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2727122823FF90000903CB /* ListRegisterContent.swift */; };
+		6B2727142823FF90000903CB /* ListRegisterContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2727122823FF90000903CB /* ListRegisterContent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +67,12 @@
 		6B2726CB28236426000903CB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		6B2726D728236B0B000903CB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6B2726DB28236BED000903CB /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		6B2726FF2823F9A5000903CB /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		6B2727042823FBF7000903CB /* InitialFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialFlow.swift; sourceTree = "<group>"; };
+		6B2727092823FDC8000903CB /* ListRegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRegisterCoordinator.swift; sourceTree = "<group>"; };
+		6B27270C2823FEA7000903CB /* ListRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRegisterViewController.swift; sourceTree = "<group>"; };
+		6B27270F2823FEC9000903CB /* ListRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRegisterViewModel.swift; sourceTree = "<group>"; };
+		6B2727122823FF90000903CB /* ListRegisterContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRegisterContent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +130,7 @@
 		6B27268728235E72000903CB /* CashFlow */ = {
 			isa = PBXGroup;
 			children = (
+				6B2727022823FBE8000903CB /* General */,
 				6B2726C7282361BD000903CB /* Targets */,
 				6B2726B828235FEA000903CB /* Resources */,
 				6B2726B92823600E000903CB /* Modules */,
@@ -143,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				6B2726BA28236026000903CB /* App */,
+				6B2727082823FDB1000903CB /* ListRegister */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -152,6 +172,7 @@
 			children = (
 				6B27268828235E72000903CB /* AppDelegate.swift */,
 				6B27268A28235E72000903CB /* SceneDelegate.swift */,
+				6B2726FF2823F9A5000903CB /* AppCoordinator.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -179,6 +200,33 @@
 				6B2726CA282363AB000903CB /* Info.plist */,
 			);
 			path = "CashFlow-qa";
+			sourceTree = "<group>";
+		};
+		6B2727022823FBE8000903CB /* General */ = {
+			isa = PBXGroup;
+			children = (
+				6B2727032823FBEE000903CB /* Enums */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		6B2727032823FBEE000903CB /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				6B2727042823FBF7000903CB /* InitialFlow.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		6B2727082823FDB1000903CB /* ListRegister */ = {
+			isa = PBXGroup;
+			children = (
+				6B2727122823FF90000903CB /* ListRegisterContent.swift */,
+				6B27270C2823FEA7000903CB /* ListRegisterViewController.swift */,
+				6B27270F2823FEC9000903CB /* ListRegisterViewModel.swift */,
+				6B2727092823FDC8000903CB /* ListRegisterCoordinator.swift */,
+			);
+			path = ListRegister;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,13 +399,13 @@
 		};
 		6B2726D928236B3F000903CB /* R.swift */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$TEMP_DIR/rswift-lastrun",
 			);
 			name = R.swift;
 			outputFileListPaths = (
@@ -367,17 +415,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ $ACTION != \"indexbuild\" ]; then\n  \"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\nfi\n";
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
 		};
 		6B2726DA28236B80000903CB /* R.swift */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$TEMP_DIR/rswift-lastrun",
 			);
 			name = R.swift;
 			outputFileListPaths = (
@@ -387,7 +435,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ $ACTION != \"indexbuild\" ]; then\n  \"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\nfi\n";
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -396,9 +444,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B2727052823FBF7000903CB /* InitialFlow.swift in Sources */,
+				6B27270D2823FEA7000903CB /* ListRegisterViewController.swift in Sources */,
+				6B2727002823F9A5000903CB /* AppCoordinator.swift in Sources */,
+				6B2727102823FEC9000903CB /* ListRegisterViewModel.swift in Sources */,
 				6B27268928235E72000903CB /* AppDelegate.swift in Sources */,
+				6B27270A2823FDC8000903CB /* ListRegisterCoordinator.swift in Sources */,
 				6B27268B28235E72000903CB /* SceneDelegate.swift in Sources */,
 				6B2726DC28236BED000903CB /* R.generated.swift in Sources */,
+				6B2727132823FF90000903CB /* ListRegisterContent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,9 +468,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B2727062823FBF7000903CB /* InitialFlow.swift in Sources */,
+				6B27270E2823FEA7000903CB /* ListRegisterViewController.swift in Sources */,
+				6B2727012823F9A5000903CB /* AppCoordinator.swift in Sources */,
+				6B2727112823FEC9000903CB /* ListRegisterViewModel.swift in Sources */,
 				6B2726BD28236194000903CB /* AppDelegate.swift in Sources */,
+				6B27270B2823FDC8000903CB /* ListRegisterCoordinator.swift in Sources */,
 				6B2726BE28236194000903CB /* SceneDelegate.swift in Sources */,
 				6B2726DD28236BED000903CB /* R.generated.swift in Sources */,
+				6B2727142823FF90000903CB /* ListRegisterContent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +648,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -616,6 +677,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -692,6 +754,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -720,6 +783,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
