@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  CashFlow
+
+  Created by Jader Nunes on 05/05/22.
+  
+*/
+
+// MARK: - General
+
+"error.internal" = "Internal error";
+"error.title" = "Something wrong";
+"noData.title" = "No data";
