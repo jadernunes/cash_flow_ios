@@ -3,6 +3,7 @@ use_frameworks!
 
 def install_pods
   pod 'R.swift', '6.1.0'
+  pod 'RealmSwift', '10.25.2'
 end
 
 target 'CashFlow' do
