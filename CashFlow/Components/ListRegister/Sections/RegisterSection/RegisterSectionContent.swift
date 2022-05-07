@@ -17,6 +17,7 @@ final class RegisterSectionContent: UIView {
 
     private let titleLabel: UILabel = initElement {
         $0.textColor = .black
+        $0.font = .subTitle
     }
 
     // MARK: - Life cycle
@@ -40,8 +41,8 @@ final class RegisterSectionContent: UIView {
 
     private func setupUI() {
         backgroundColor = .clBeigeDark
-        layer.cornerRadius = 8
         addShadow()
+        cornerRadius(radius: 8, cornerMask: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
     }
 }
 

@@ -90,6 +90,16 @@
 		6B4A93002826AB3E00880080 /* RegisterSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92FE2826AB3E00880080 /* RegisterSectionViewModel.swift */; };
 		6B4A93022826ECD500880080 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A93012826ECD500880080 /* UIColor+Extension.swift */; };
 		6B4A93032826ECD500880080 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A93012826ECD500880080 /* UIColor+Extension.swift */; };
+		6B4A9305282700FD00880080 /* CellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A9304282700FD00880080 /* CellData.swift */; };
+		6B4A9306282700FD00880080 /* CellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A9304282700FD00880080 /* CellData.swift */; };
+		6B4A930828271D0500880080 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A930728271D0500880080 /* UIFont+Extension.swift */; };
+		6B4A930928271D0500880080 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A930728271D0500880080 /* UIFont+Extension.swift */; };
+		6B4A930B2827203A00880080 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A930A2827203A00880080 /* Int+Extension.swift */; };
+		6B4A930C2827203A00880080 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A930A2827203A00880080 /* Int+Extension.swift */; };
+		6B4A930E282720EC00880080 /* NumberFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A930D282720EC00880080 /* NumberFormatter+Extension.swift */; };
+		6B4A930F282720EC00880080 /* NumberFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A930D282720EC00880080 /* NumberFormatter+Extension.swift */; };
+		6B4A93112827299C00880080 /* TypeRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A93102827299C00880080 /* TypeRegister.swift */; };
+		6B4A93122827299C00880080 /* TypeRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A93102827299C00880080 /* TypeRegister.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +167,11 @@
 		6B4A92FB2826AB2F00880080 /* RegisterSectionContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSectionContent.swift; sourceTree = "<group>"; };
 		6B4A92FE2826AB3E00880080 /* RegisterSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSectionViewModel.swift; sourceTree = "<group>"; };
 		6B4A93012826ECD500880080 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		6B4A9304282700FD00880080 /* CellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellData.swift; sourceTree = "<group>"; };
+		6B4A930728271D0500880080 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		6B4A930A2827203A00880080 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		6B4A930D282720EC00880080 /* NumberFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Extension.swift"; sourceTree = "<group>"; };
+		6B4A93102827299C00880080 /* TypeRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeRegister.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,6 +321,7 @@
 				6B27272028240927000903CB /* ErrorRequest.swift */,
 				6B4A92A92824A23D00880080 /* Response.swift */,
 				6B4A92EB2825B0D600880080 /* DateFormatType.swift */,
+				6B4A93102827299C00880080 /* TypeRegister.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -350,8 +366,11 @@
 				6B4A92DB28257E9600880080 /* JSONDecoder+Extension.swift */,
 				6B4A92E128257FF900880080 /* JSONEncoder+Extension.swift */,
 				6B4A92DE28257FBA00880080 /* DateFormatter+Extension.swift */,
+				6B4A930D282720EC00880080 /* NumberFormatter+Extension.swift */,
 				6B4A92E82825B0B000880080 /* Date+Extension.swift */,
 				6B4A93012826ECD500880080 /* UIColor+Extension.swift */,
+				6B4A930728271D0500880080 /* UIFont+Extension.swift */,
+				6B4A930A2827203A00880080 /* Int+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -399,6 +418,7 @@
 			isa = PBXGroup;
 			children = (
 				6B4A92F22826A81700880080 /* SectionData.swift */,
+				6B4A9304282700FD00880080 /* CellData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -650,6 +670,7 @@
 				6B4A92FF2826AB3E00880080 /* RegisterSectionViewModel.swift in Sources */,
 				6B2727052823FBF7000903CB /* InitialFlow.swift in Sources */,
 				6B27270D2823FEA7000903CB /* ListRegisterViewController.swift in Sources */,
+				6B4A930E282720EC00880080 /* NumberFormatter+Extension.swift in Sources */,
 				6B2727002823F9A5000903CB /* AppCoordinator.swift in Sources */,
 				6B4A92AA2824A23D00880080 /* Response.swift in Sources */,
 				6B2727102823FEC9000903CB /* ListRegisterViewModel.swift in Sources */,
@@ -657,6 +678,7 @@
 				6B4A92A128247AE100880080 /* NSObject+Extension.swift in Sources */,
 				6B27268928235E72000903CB /* AppDelegate.swift in Sources */,
 				6B4A92E228257FF900880080 /* JSONEncoder+Extension.swift in Sources */,
+				6B4A93112827299C00880080 /* TypeRegister.swift in Sources */,
 				6B4A92BC2824C03800880080 /* RegisterCell.swift in Sources */,
 				6B27270A2823FDC8000903CB /* ListRegisterCoordinator.swift in Sources */,
 				6B4A92F92826AB1F00880080 /* RegisterSection.swift in Sources */,
@@ -669,6 +691,7 @@
 				6B4A92A42824827900880080 /* Encodable+Extension.swift in Sources */,
 				6B27271E28240775000903CB /* DatabaseManager.swift in Sources */,
 				6B4A92A7282482C000880080 /* RegisterCashFlow.swift in Sources */,
+				6B4A930B2827203A00880080 /* Int+Extension.swift in Sources */,
 				6B4A92CB2824C25D00880080 /* UITableView+Extension.swift in Sources */,
 				6B4A92CE2824C32900880080 /* UIView+Extension.swift in Sources */,
 				6B4A92DF28257FBA00880080 /* DateFormatter+Extension.swift in Sources */,
@@ -679,6 +702,8 @@
 				6B4A93022826ECD500880080 /* UIColor+Extension.swift in Sources */,
 				6B2726DC28236BED000903CB /* R.generated.swift in Sources */,
 				6B4A92D72824CB7F00880080 /* ListRegisterConfiguration.swift in Sources */,
+				6B4A9305282700FD00880080 /* CellData.swift in Sources */,
+				6B4A930828271D0500880080 /* UIFont+Extension.swift in Sources */,
 				6B27272128240927000903CB /* ErrorRequest.swift in Sources */,
 				6B2727132823FF90000903CB /* ListRegisterContent.swift in Sources */,
 			);
@@ -702,6 +727,7 @@
 				6B4A93002826AB3E00880080 /* RegisterSectionViewModel.swift in Sources */,
 				6B2727062823FBF7000903CB /* InitialFlow.swift in Sources */,
 				6B27270E2823FEA7000903CB /* ListRegisterViewController.swift in Sources */,
+				6B4A930F282720EC00880080 /* NumberFormatter+Extension.swift in Sources */,
 				6B2727012823F9A5000903CB /* AppCoordinator.swift in Sources */,
 				6B4A92AB2824A23D00880080 /* Response.swift in Sources */,
 				6B2727112823FEC9000903CB /* ListRegisterViewModel.swift in Sources */,
@@ -709,6 +735,7 @@
 				6B4A92A228247AE100880080 /* NSObject+Extension.swift in Sources */,
 				6B2726BD28236194000903CB /* AppDelegate.swift in Sources */,
 				6B4A92E328257FF900880080 /* JSONEncoder+Extension.swift in Sources */,
+				6B4A93122827299C00880080 /* TypeRegister.swift in Sources */,
 				6B4A92BD2824C03800880080 /* RegisterCell.swift in Sources */,
 				6B27270B2823FDC8000903CB /* ListRegisterCoordinator.swift in Sources */,
 				6B4A92FA2826AB1F00880080 /* RegisterSection.swift in Sources */,
@@ -721,6 +748,7 @@
 				6B4A92A52824827900880080 /* Encodable+Extension.swift in Sources */,
 				6B27271F28240775000903CB /* DatabaseManager.swift in Sources */,
 				6B4A92A8282482C000880080 /* RegisterCashFlow.swift in Sources */,
+				6B4A930C2827203A00880080 /* Int+Extension.swift in Sources */,
 				6B4A92CC2824C25D00880080 /* UITableView+Extension.swift in Sources */,
 				6B4A92CF2824C32900880080 /* UIView+Extension.swift in Sources */,
 				6B4A92E028257FBA00880080 /* DateFormatter+Extension.swift in Sources */,
@@ -731,6 +759,8 @@
 				6B4A93032826ECD500880080 /* UIColor+Extension.swift in Sources */,
 				6B2726DD28236BED000903CB /* R.generated.swift in Sources */,
 				6B4A92D82824CB7F00880080 /* ListRegisterConfiguration.swift in Sources */,
+				6B4A9306282700FD00880080 /* CellData.swift in Sources */,
+				6B4A930928271D0500880080 /* UIFont+Extension.swift in Sources */,
 				6B27272228240927000903CB /* ErrorRequest.swift in Sources */,
 				6B2727142823FF90000903CB /* ListRegisterContent.swift in Sources */,
 			);

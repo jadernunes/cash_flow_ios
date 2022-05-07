@@ -12,17 +12,27 @@ final class ListRegisterComponent: UIView {
     // MARK: - Attributes
 
     private weak var viewModel: ListRegisterComponentProtocol?
+    private var isEditing = false
+    private var canDelete = false
 
     // MARK: - Elements
 
-    private let tableView: UITableView = initElement {
+    private let buttonEdit: UIButton = initElement {
+        $0.addTarget(self, action: #selector(buttonEditPressed), for: .touchUpInside)
+        $0.configuration = .bordered()
+        $0.setTitleColor(.black, for: .normal)
+    }
+    
+    private let tableView: UITableView = {
+        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.rowHeight = UITableView.automaticDimension
         $0.estimatedRowHeight = 100
         $0.backgroundColor = .clSecondary
         $0.separatorStyle = .none
         $0.registerCell(type: RegisterCell.self)
         .registerHeader(type: RegisterSection.self)
-    }
+        return $0
+    }(UITableView(frame: .zero, style: .grouped))
 
     // MARK: - Life cycle
 
@@ -30,7 +40,6 @@ final class ListRegisterComponent: UIView {
         super.init(frame: .zero)
 
         defineSubviews()
-        defineSubviewsConstraints()
         setupProtocols()
     }
 
@@ -44,15 +53,41 @@ final class ListRegisterComponent: UIView {
     private func setupProtocols() {
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.isEditing = true
     }
 
     private func defineSubviews() {
         backgroundColor = .clSecondary
+        addSubview(buttonEdit)
         addSubview(tableView)
     }
 
     private func reload() {
-        tableView.reloadData()
+        tableView.isEditing = isEditing
+        setupButtonEdit()
+    }
+
+    // MARK: - Button edit setup
+
+    private func setupButtonEdit() {
+        let titleButton = isEditing
+        ? R.string.localizable.buttonTitleCancel()
+        : R.string.localizable.buttonTitleEdit()
+
+        buttonEdit.isVisible = canDelete
+        buttonEdit.setTitle(titleButton, for: .normal)
+    }
+
+    private func changeEditState() {
+        isEditing = !isEditing
+        reload()
+    }
+
+    // MARK: - Actions
+
+    @objc
+    private func buttonEditPressed() {
+        changeEditState()
     }
 }
 
@@ -80,12 +115,11 @@ extension ListRegisterComponent: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let viewModelCell = viewModel?.viewModelCellAt(index: indexPath.row,
-                                                             onIndexSection: indexPath.section)
+        guard let data = viewModel?.cellDataAt(index: indexPath.row, onIndexSection: indexPath.section)
         else { return UITableViewCell() }
 
         let cell = tableView.dequeueReusableCell(with: RegisterCell.self, for: indexPath)
-        cell.configure(with: viewModelCell)
+        cell.configure(with: data)
         return cell
     }
 }
@@ -112,7 +146,26 @@ extension ListRegisterComponent: UITableViewDelegate {
 extension ListRegisterComponent {
 
     private func defineSubviewsConstraints() {
-        tableView.anchor(self)
+        defineButtonEditConstraints()
+        defineTableViewConstraints()
+    }
+
+    private func defineButtonEditConstraints() {
+        NSLayoutConstraint.activate([
+            buttonEdit.topAnchor.constraint(equalTo: topAnchor, constant: 8),
+            buttonEdit.leftAnchor.constraint(greaterThanOrEqualTo: leftAnchor, constant: 8),
+            buttonEdit.rightAnchor.constraint(equalTo: rightAnchor, constant: -8),
+            buttonEdit.heightAnchor.constraint(equalToConstant: canDelete ? 32 : 0)
+        ])
+    }
+
+    private func defineTableViewConstraints() {
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: buttonEdit.bottomAnchor, constant: 4),
+            tableView.leftAnchor.constraint(equalTo: leftAnchor, constant: 8),
+            tableView.rightAnchor.constraint(equalTo: rightAnchor, constant: -8),
+            tableView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8)
+        ])
     }
 }
 
@@ -121,16 +174,22 @@ extension ListRegisterComponent {
 extension ListRegisterComponent: Component {
 
     enum ListRegisterState {
-        case reload, content(viewModel: ListRegisterComponentProtocol)
+        case reload, content(viewModel: ListRegisterComponentProtocol, canDelete: Bool)
     }
 
     func render(with configuration: ListRegisterState) {
+        isEditing = false
+
         switch configuration {
-        case .content(let viewModel):
+        case .content(let viewModel, let canDelete):
             self.viewModel = viewModel
+            self.canDelete = canDelete
+
             reload()
         case .reload:
             reload()
         }
+
+        defineSubviewsConstraints()
     }
 }

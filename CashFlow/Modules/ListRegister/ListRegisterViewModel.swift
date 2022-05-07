@@ -40,14 +40,25 @@ final class ListRegisterViewModel: ListRegisterViewModelProtocol {
                          typeToReturn: RegisterCashFlow.self) { [weak self] response  in
             switch response {
             case .success(let result):
-                self?.configuration.send(.content(viewModel: ListRegisterComponentViewModel(data: result)))
+                let viewModel = ListRegisterComponentViewModel(data: result)
+                viewModel.delegate = self
+                self?.configuration.send(.content(viewModel: viewModel))
             case .failure:
                 self?.configuration.send(.error)
             }
         }
     }
-
+    
     func addRegister() {
         //TODO: - handle it
+    }
+}
+
+// MARK: - ListRegister delegate
+
+extension ListRegisterViewModel: ListRegisterDelegate {
+
+    func willRemove(_ register: RegisterCashFlow?) {
+        loadData()
     }
 }

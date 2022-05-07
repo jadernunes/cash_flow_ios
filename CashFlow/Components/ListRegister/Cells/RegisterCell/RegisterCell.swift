@@ -39,9 +39,9 @@ final class RegisterCell: UITableViewCell {
         content.render(with: .prepareForReuse)
     }
 
-    func configure(with viewModel: RegisterCellViewModelProtocol) {
-        self.viewModel = viewModel
-        content.render(with: .content(viewModel: viewModel))
+    func configure(with data: CellData) {
+        self.viewModel = data.viewModel
+        content.render(with: .content(data: data))
     }
 
     private func defineSubviews() {
@@ -56,9 +56,9 @@ extension RegisterCell {
     private func defineSubviewsConstraints() {
         NSLayoutConstraint.activate([
             content.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 4),
-            content.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
             content.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -4),
-            content.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
+            content.topAnchor.constraint(equalTo: contentView.topAnchor),
+            content.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
     }
 }

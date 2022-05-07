@@ -54,7 +54,7 @@ extension RegisterSection {
             content.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 4),
             content.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
             content.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -4),
-            content.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
+            content.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0)
         ])
     }
 }

@@ -62,7 +62,7 @@ extension ListRegisterContent: Component {
         case .content(let subViewModel):
             stopLoader()
             listComponent.isVisible = true
-            listComponent.render(with: .content(viewModel: subViewModel))
+            listComponent.render(with: .content(viewModel: subViewModel, canDelete: true))
 
         case .error:
             stopLoader()

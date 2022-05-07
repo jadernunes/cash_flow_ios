@@ -24,7 +24,7 @@ protocol ListRegisterComponentProtocol: AnyObject {
 
     //Cell
     func countRegistersAt(indexSection: Int) -> Int
-    func viewModelCellAt(index: Int, onIndexSection: Int) -> RegisterCellViewModelProtocol?
+    func cellDataAt(index: Int, onIndexSection: Int) -> CellData?
 }
 
 final class ListRegisterComponentViewModel {
@@ -69,6 +69,11 @@ final class ListRegisterComponentViewModel {
             list.append(SectionData(date: register.key, registers: register.value))
         }
     }
+
+    private func shouldShowCornerAt(index: Int, onSection: Int) -> Bool {
+        let countRegister = countRegistersAt(indexSection: onSection)
+        return index == countRegister - 1
+    }
 }
 
 // MARK: - Component protocol
@@ -96,11 +101,12 @@ extension ListRegisterComponentViewModel: ListRegisterComponentProtocol {
         sectionAt(index: indexSection)?.registers.count ?? 0
     }
 
-    func viewModelCellAt(index: Int, onIndexSection: Int) -> RegisterCellViewModelProtocol? {
+    func cellDataAt(index: Int, onIndexSection: Int) -> CellData? {
         guard
             let register = registerAt(index: index, sectionIndex: onIndexSection)
         else { return nil }
 
-        return RegisterCellViewModel(register: register)
+        return CellData(viewModel: RegisterCellViewModel(register: register),
+                        hasCorner: shouldShowCornerAt(index: index, onSection: onIndexSection))
     }
 }
