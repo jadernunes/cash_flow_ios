@@ -8,14 +8,16 @@
 import Foundation
 import RealmSwift
 
+typealias RealmDTO = Object
+protocol DBConformable: Object, Codable {}
+
 struct RealmDB {
 
     // MARK: - Attributes
 
-    private let queueRealm = DispatchQueue(label: "queueRealm")
-    private let realmConfiguration: Realm.Configuration = {
-        Realm.Configuration(deleteRealmIfMigrationNeeded: true,
-                            objectTypes: [RegisterCashFlow.self, BaseModel.self])
+    private let queue = DispatchQueue(label: "queueRealm")
+    private let configuration: Realm.Configuration = {
+        Realm.Configuration(deleteRealmIfMigrationNeeded: true, objectTypes: [RegisterCashFlowDTO.self])
     }()
 }
 
@@ -23,12 +25,13 @@ struct RealmDB {
 
 extension RealmDB: DatabaseProtocol {
 
-    func save<T: BaseModel>(_ models: [T], _ completion: @escaping CompletionDBSave) {
-        queueRealm.async {
+    func save<T: DBAcceptable>(_ models: [T], _ completion: @escaping CompletionSave) {
+        queue.async {
             do {
-                let realm = try Realm(configuration: self.realmConfiguration, queue: self.queueRealm)
+                let realm = try Realm(configuration: configuration, queue: queue)
                 try realm.write {
-                    realm.add(models)
+                    realm.deleteAll()
+                    realm.add(models.map { $0.realmDTO() })
                 }
                 completion(.success(Void()))
             } catch {
@@ -37,12 +40,17 @@ extension RealmDB: DatabaseProtocol {
         }
     }
 
-    func loadAll<T: BaseModel>(type: T.Type, _ completion: @escaping CompletionDBLoad<T>) {
-        queueRealm.async {
+    func loadAll<T: DBConformable, R: Codable>(typeSaved: T.Type,
+                                               typeToReturn: R.Type, _ completion: @escaping CompletionLoad<R>) {
+        queue.async {
             do {
-                let realm = try Realm(configuration: realmConfiguration, queue: queueRealm)
-                let results = realm.objects(type).array
-                completion(.success(results))
+                let realm = try Realm(configuration: configuration, queue: queue)
+                let array = realm.objects(typeSaved).array
+                let result = try array.map {
+                    try JSONDecoder.decoder.decode(typeToReturn, from: $0.toJson().toData() ?? Data())
+                }
+
+                completion(.success(result))
             } catch {
                 completion(.failure(error: .generic()))
             }

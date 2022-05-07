@@ -11,3 +11,8 @@
 "error.internal" = "Internal error";
 "error.title" = "Something wrong";
 "noData.title" = "No data";
+
+// MARK: - List register component
+
+"button.title.edit" = "Edit list";
+"button.title.cancel" = "Cancel";

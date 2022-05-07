@@ -48,8 +48,58 @@
 		6B4A92AB2824A23D00880080 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92A92824A23D00880080 /* Response.swift */; };
 		6B4A92B02824B01A00880080 /* RealmDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92AF2824B01A00880080 /* RealmDB.swift */; };
 		6B4A92B12824B01A00880080 /* RealmDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92AF2824B01A00880080 /* RealmDB.swift */; };
-		6B4A92B32824B77000880080 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92B22824B77000880080 /* BaseModel.swift */; };
-		6B4A92B42824B77000880080 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92B22824B77000880080 /* BaseModel.swift */; };
+		6B4A92BC2824C03800880080 /* RegisterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92BB2824C03800880080 /* RegisterCell.swift */; };
+		6B4A92BD2824C03800880080 /* RegisterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92BB2824C03800880080 /* RegisterCell.swift */; };
+		6B4A92BF2824C04900880080 /* RegisterCellContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92BE2824C04900880080 /* RegisterCellContent.swift */; };
+		6B4A92C02824C04900880080 /* RegisterCellContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92BE2824C04900880080 /* RegisterCellContent.swift */; };
+		6B4A92C22824C05D00880080 /* RegisterCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92C12824C05D00880080 /* RegisterCellViewModel.swift */; };
+		6B4A92C32824C05D00880080 /* RegisterCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92C12824C05D00880080 /* RegisterCellViewModel.swift */; };
+		6B4A92C52824C09B00880080 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92C42824C09B00880080 /* Utils.swift */; };
+		6B4A92C62824C09B00880080 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92C42824C09B00880080 /* Utils.swift */; };
+		6B4A92C82824C20A00880080 /* ListRegisterComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92C72824C20A00880080 /* ListRegisterComponent.swift */; };
+		6B4A92C92824C20A00880080 /* ListRegisterComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92C72824C20A00880080 /* ListRegisterComponent.swift */; };
+		6B4A92CB2824C25D00880080 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92CA2824C25D00880080 /* UITableView+Extension.swift */; };
+		6B4A92CC2824C25D00880080 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92CA2824C25D00880080 /* UITableView+Extension.swift */; };
+		6B4A92CE2824C32900880080 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92CD2824C32900880080 /* UIView+Extension.swift */; };
+		6B4A92CF2824C32900880080 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92CD2824C32900880080 /* UIView+Extension.swift */; };
+		6B4A92D12824C38400880080 /* ListRegisterComponentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92D02824C38400880080 /* ListRegisterComponentViewModel.swift */; };
+		6B4A92D22824C38400880080 /* ListRegisterComponentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92D02824C38400880080 /* ListRegisterComponentViewModel.swift */; };
+		6B4A92D42824C8D300880080 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92D32824C8D300880080 /* Collection+Extension.swift */; };
+		6B4A92D52824C8D300880080 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92D32824C8D300880080 /* Collection+Extension.swift */; };
+		6B4A92D72824CB7F00880080 /* ListRegisterConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92D62824CB7F00880080 /* ListRegisterConfiguration.swift */; };
+		6B4A92D82824CB7F00880080 /* ListRegisterConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92D62824CB7F00880080 /* ListRegisterConfiguration.swift */; };
+		6B4A92DC28257E9600880080 /* JSONDecoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92DB28257E9600880080 /* JSONDecoder+Extension.swift */; };
+		6B4A92DD28257E9600880080 /* JSONDecoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92DB28257E9600880080 /* JSONDecoder+Extension.swift */; };
+		6B4A92DF28257FBA00880080 /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92DE28257FBA00880080 /* DateFormatter+Extension.swift */; };
+		6B4A92E028257FBA00880080 /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92DE28257FBA00880080 /* DateFormatter+Extension.swift */; };
+		6B4A92E228257FF900880080 /* JSONEncoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92E128257FF900880080 /* JSONEncoder+Extension.swift */; };
+		6B4A92E328257FF900880080 /* JSONEncoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92E128257FF900880080 /* JSONEncoder+Extension.swift */; };
+		6B4A92E62825A05C00880080 /* RegisterCashFlowDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92E52825A05C00880080 /* RegisterCashFlowDTO.swift */; };
+		6B4A92E72825A05C00880080 /* RegisterCashFlowDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92E52825A05C00880080 /* RegisterCashFlowDTO.swift */; };
+		6B4A92E92825B0B000880080 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92E82825B0B000880080 /* Date+Extension.swift */; };
+		6B4A92EA2825B0B000880080 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92E82825B0B000880080 /* Date+Extension.swift */; };
+		6B4A92EC2825B0D600880080 /* DateFormatType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92EB2825B0D600880080 /* DateFormatType.swift */; };
+		6B4A92ED2825B0D600880080 /* DateFormatType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92EB2825B0D600880080 /* DateFormatType.swift */; };
+		6B4A92F32826A81700880080 /* SectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92F22826A81700880080 /* SectionData.swift */; };
+		6B4A92F42826A81700880080 /* SectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92F22826A81700880080 /* SectionData.swift */; };
+		6B4A92F92826AB1F00880080 /* RegisterSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92F82826AB1F00880080 /* RegisterSection.swift */; };
+		6B4A92FA2826AB1F00880080 /* RegisterSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92F82826AB1F00880080 /* RegisterSection.swift */; };
+		6B4A92FC2826AB2F00880080 /* RegisterSectionContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92FB2826AB2F00880080 /* RegisterSectionContent.swift */; };
+		6B4A92FD2826AB2F00880080 /* RegisterSectionContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92FB2826AB2F00880080 /* RegisterSectionContent.swift */; };
+		6B4A92FF2826AB3E00880080 /* RegisterSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92FE2826AB3E00880080 /* RegisterSectionViewModel.swift */; };
+		6B4A93002826AB3E00880080 /* RegisterSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92FE2826AB3E00880080 /* RegisterSectionViewModel.swift */; };
+		6B4A93022826ECD500880080 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A93012826ECD500880080 /* UIColor+Extension.swift */; };
+		6B4A93032826ECD500880080 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A93012826ECD500880080 /* UIColor+Extension.swift */; };
+		6B4A9305282700FD00880080 /* CellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A9304282700FD00880080 /* CellData.swift */; };
+		6B4A9306282700FD00880080 /* CellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A9304282700FD00880080 /* CellData.swift */; };
+		6B4A930828271D0500880080 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A930728271D0500880080 /* UIFont+Extension.swift */; };
+		6B4A930928271D0500880080 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A930728271D0500880080 /* UIFont+Extension.swift */; };
+		6B4A930B2827203A00880080 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A930A2827203A00880080 /* Int+Extension.swift */; };
+		6B4A930C2827203A00880080 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A930A2827203A00880080 /* Int+Extension.swift */; };
+		6B4A930E282720EC00880080 /* NumberFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A930D282720EC00880080 /* NumberFormatter+Extension.swift */; };
+		6B4A930F282720EC00880080 /* NumberFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A930D282720EC00880080 /* NumberFormatter+Extension.swift */; };
+		6B4A93112827299C00880080 /* TypeRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A93102827299C00880080 /* TypeRegister.swift */; };
+		6B4A93122827299C00880080 /* TypeRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A93102827299C00880080 /* TypeRegister.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,7 +146,32 @@
 		6B4A92A6282482C000880080 /* RegisterCashFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCashFlow.swift; sourceTree = "<group>"; };
 		6B4A92A92824A23D00880080 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		6B4A92AF2824B01A00880080 /* RealmDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDB.swift; sourceTree = "<group>"; };
-		6B4A92B22824B77000880080 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		6B4A92BB2824C03800880080 /* RegisterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCell.swift; sourceTree = "<group>"; };
+		6B4A92BE2824C04900880080 /* RegisterCellContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCellContent.swift; sourceTree = "<group>"; };
+		6B4A92C12824C05D00880080 /* RegisterCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCellViewModel.swift; sourceTree = "<group>"; };
+		6B4A92C42824C09B00880080 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		6B4A92C72824C20A00880080 /* ListRegisterComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRegisterComponent.swift; sourceTree = "<group>"; };
+		6B4A92CA2824C25D00880080 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		6B4A92CD2824C32900880080 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		6B4A92D02824C38400880080 /* ListRegisterComponentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRegisterComponentViewModel.swift; sourceTree = "<group>"; };
+		6B4A92D32824C8D300880080 /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
+		6B4A92D62824CB7F00880080 /* ListRegisterConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRegisterConfiguration.swift; sourceTree = "<group>"; };
+		6B4A92DB28257E9600880080 /* JSONDecoder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Extension.swift"; sourceTree = "<group>"; };
+		6B4A92DE28257FBA00880080 /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
+		6B4A92E128257FF900880080 /* JSONEncoder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONEncoder+Extension.swift"; sourceTree = "<group>"; };
+		6B4A92E52825A05C00880080 /* RegisterCashFlowDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCashFlowDTO.swift; sourceTree = "<group>"; };
+		6B4A92E82825B0B000880080 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		6B4A92EB2825B0D600880080 /* DateFormatType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatType.swift; sourceTree = "<group>"; };
+		6B4A92F22826A81700880080 /* SectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionData.swift; sourceTree = "<group>"; };
+		6B4A92F82826AB1F00880080 /* RegisterSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSection.swift; sourceTree = "<group>"; };
+		6B4A92FB2826AB2F00880080 /* RegisterSectionContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSectionContent.swift; sourceTree = "<group>"; };
+		6B4A92FE2826AB3E00880080 /* RegisterSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSectionViewModel.swift; sourceTree = "<group>"; };
+		6B4A93012826ECD500880080 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		6B4A9304282700FD00880080 /* CellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellData.swift; sourceTree = "<group>"; };
+		6B4A930728271D0500880080 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		6B4A930A2827203A00880080 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		6B4A930D282720EC00880080 /* NumberFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Extension.swift"; sourceTree = "<group>"; };
+		6B4A93102827299C00880080 /* TypeRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeRegister.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,10 +229,11 @@
 		6B27268728235E72000903CB /* CashFlow */ = {
 			isa = PBXGroup;
 			children = (
+				6B2727022823FBE8000903CB /* General */,
+				6B4A92B72824BE9B00880080 /* Components */,
 				6B4A929F28247ACA00880080 /* Extensions */,
 				6B27271928240673000903CB /* Models */,
 				6B27271528240638000903CB /* Database */,
-				6B2727022823FBE8000903CB /* General */,
 				6B2726C7282361BD000903CB /* Targets */,
 				6B2726B828235FEA000903CB /* Resources */,
 				6B2726B92823600E000903CB /* Modules */,
@@ -232,6 +308,7 @@
 		6B2727022823FBE8000903CB /* General */ = {
 			isa = PBXGroup;
 			children = (
+				6B4A92C42824C09B00880080 /* Utils.swift */,
 				6B2727032823FBEE000903CB /* Enums */,
 			);
 			path = General;
@@ -243,6 +320,8 @@
 				6B2727042823FBF7000903CB /* InitialFlow.swift */,
 				6B27272028240927000903CB /* ErrorRequest.swift */,
 				6B4A92A92824A23D00880080 /* Response.swift */,
+				6B4A92EB2825B0D600880080 /* DateFormatType.swift */,
+				6B4A93102827299C00880080 /* TypeRegister.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -250,6 +329,7 @@
 		6B2727082823FDB1000903CB /* ListRegister */ = {
 			isa = PBXGroup;
 			children = (
+				6B4A92D62824CB7F00880080 /* ListRegisterConfiguration.swift */,
 				6B2727122823FF90000903CB /* ListRegisterContent.swift */,
 				6B27270C2823FEA7000903CB /* ListRegisterViewController.swift */,
 				6B27270F2823FEC9000903CB /* ListRegisterViewModel.swift */,
@@ -270,8 +350,7 @@
 		6B27271928240673000903CB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				6B4A92A6282482C000880080 /* RegisterCashFlow.swift */,
-				6B4A92B22824B77000880080 /* BaseModel.swift */,
+				6B4A92E42825A04E00880080 /* RegisterCashFlow */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -281,8 +360,93 @@
 			children = (
 				6B4A92A028247AE100880080 /* NSObject+Extension.swift */,
 				6B4A92A32824827900880080 /* Encodable+Extension.swift */,
+				6B4A92CA2824C25D00880080 /* UITableView+Extension.swift */,
+				6B4A92CD2824C32900880080 /* UIView+Extension.swift */,
+				6B4A92D32824C8D300880080 /* Collection+Extension.swift */,
+				6B4A92DB28257E9600880080 /* JSONDecoder+Extension.swift */,
+				6B4A92E128257FF900880080 /* JSONEncoder+Extension.swift */,
+				6B4A92DE28257FBA00880080 /* DateFormatter+Extension.swift */,
+				6B4A930D282720EC00880080 /* NumberFormatter+Extension.swift */,
+				6B4A92E82825B0B000880080 /* Date+Extension.swift */,
+				6B4A93012826ECD500880080 /* UIColor+Extension.swift */,
+				6B4A930728271D0500880080 /* UIFont+Extension.swift */,
+				6B4A930A2827203A00880080 /* Int+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6B4A92B72824BE9B00880080 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6B4A92B82824BEA900880080 /* ListRegister */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		6B4A92B82824BEA900880080 /* ListRegister */ = {
+			isa = PBXGroup;
+			children = (
+				6B4A92C72824C20A00880080 /* ListRegisterComponent.swift */,
+				6B4A92D02824C38400880080 /* ListRegisterComponentViewModel.swift */,
+				6B4A92F52826AAC300880080 /* Sections */,
+				6B4A92F62826AADA00880080 /* Cells */,
+				6B4A92F12826A80A00880080 /* Models */,
+			);
+			path = ListRegister;
+			sourceTree = "<group>";
+		};
+		6B4A92BA2824C00C00880080 /* RegisterCell */ = {
+			isa = PBXGroup;
+			children = (
+				6B4A92BB2824C03800880080 /* RegisterCell.swift */,
+				6B4A92BE2824C04900880080 /* RegisterCellContent.swift */,
+				6B4A92C12824C05D00880080 /* RegisterCellViewModel.swift */,
+			);
+			path = RegisterCell;
+			sourceTree = "<group>";
+		};
+		6B4A92E42825A04E00880080 /* RegisterCashFlow */ = {
+			isa = PBXGroup;
+			children = (
+				6B4A92A6282482C000880080 /* RegisterCashFlow.swift */,
+				6B4A92E52825A05C00880080 /* RegisterCashFlowDTO.swift */,
+			);
+			path = RegisterCashFlow;
+			sourceTree = "<group>";
+		};
+		6B4A92F12826A80A00880080 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6B4A92F22826A81700880080 /* SectionData.swift */,
+				6B4A9304282700FD00880080 /* CellData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6B4A92F52826AAC300880080 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				6B4A92F72826AB0700880080 /* RegisterSection */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		6B4A92F62826AADA00880080 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6B4A92BA2824C00C00880080 /* RegisterCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		6B4A92F72826AB0700880080 /* RegisterSection */ = {
+			isa = PBXGroup;
+			children = (
+				6B4A92F82826AB1F00880080 /* RegisterSection.swift */,
+				6B4A92FB2826AB2F00880080 /* RegisterSectionContent.swift */,
+				6B4A92FE2826AB3E00880080 /* RegisterSectionViewModel.swift */,
+			);
+			path = RegisterSection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -500,21 +664,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B4A92B32824B77000880080 /* BaseModel.swift in Sources */,
+				6B4A92C82824C20A00880080 /* ListRegisterComponent.swift in Sources */,
+				6B4A92D12824C38400880080 /* ListRegisterComponentViewModel.swift in Sources */,
+				6B4A92F32826A81700880080 /* SectionData.swift in Sources */,
+				6B4A92FF2826AB3E00880080 /* RegisterSectionViewModel.swift in Sources */,
 				6B2727052823FBF7000903CB /* InitialFlow.swift in Sources */,
 				6B27270D2823FEA7000903CB /* ListRegisterViewController.swift in Sources */,
+				6B4A930E282720EC00880080 /* NumberFormatter+Extension.swift in Sources */,
 				6B2727002823F9A5000903CB /* AppCoordinator.swift in Sources */,
 				6B4A92AA2824A23D00880080 /* Response.swift in Sources */,
 				6B2727102823FEC9000903CB /* ListRegisterViewModel.swift in Sources */,
+				6B4A92E62825A05C00880080 /* RegisterCashFlowDTO.swift in Sources */,
 				6B4A92A128247AE100880080 /* NSObject+Extension.swift in Sources */,
 				6B27268928235E72000903CB /* AppDelegate.swift in Sources */,
+				6B4A92E228257FF900880080 /* JSONEncoder+Extension.swift in Sources */,
+				6B4A93112827299C00880080 /* TypeRegister.swift in Sources */,
+				6B4A92BC2824C03800880080 /* RegisterCell.swift in Sources */,
 				6B27270A2823FDC8000903CB /* ListRegisterCoordinator.swift in Sources */,
+				6B4A92F92826AB1F00880080 /* RegisterSection.swift in Sources */,
+				6B4A92E92825B0B000880080 /* Date+Extension.swift in Sources */,
+				6B4A92BF2824C04900880080 /* RegisterCellContent.swift in Sources */,
+				6B4A92FC2826AB2F00880080 /* RegisterSectionContent.swift in Sources */,
+				6B4A92C22824C05D00880080 /* RegisterCellViewModel.swift in Sources */,
+				6B4A92DC28257E9600880080 /* JSONDecoder+Extension.swift in Sources */,
 				6B4A92B02824B01A00880080 /* RealmDB.swift in Sources */,
 				6B4A92A42824827900880080 /* Encodable+Extension.swift in Sources */,
 				6B27271E28240775000903CB /* DatabaseManager.swift in Sources */,
 				6B4A92A7282482C000880080 /* RegisterCashFlow.swift in Sources */,
+				6B4A930B2827203A00880080 /* Int+Extension.swift in Sources */,
+				6B4A92CB2824C25D00880080 /* UITableView+Extension.swift in Sources */,
+				6B4A92CE2824C32900880080 /* UIView+Extension.swift in Sources */,
+				6B4A92DF28257FBA00880080 /* DateFormatter+Extension.swift in Sources */,
+				6B4A92EC2825B0D600880080 /* DateFormatType.swift in Sources */,
 				6B27268B28235E72000903CB /* SceneDelegate.swift in Sources */,
+				6B4A92D42824C8D300880080 /* Collection+Extension.swift in Sources */,
+				6B4A92C52824C09B00880080 /* Utils.swift in Sources */,
+				6B4A93022826ECD500880080 /* UIColor+Extension.swift in Sources */,
 				6B2726DC28236BED000903CB /* R.generated.swift in Sources */,
+				6B4A92D72824CB7F00880080 /* ListRegisterConfiguration.swift in Sources */,
+				6B4A9305282700FD00880080 /* CellData.swift in Sources */,
+				6B4A930828271D0500880080 /* UIFont+Extension.swift in Sources */,
 				6B27272128240927000903CB /* ErrorRequest.swift in Sources */,
 				6B2727132823FF90000903CB /* ListRegisterContent.swift in Sources */,
 			);
@@ -532,21 +721,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B4A92B42824B77000880080 /* BaseModel.swift in Sources */,
+				6B4A92C92824C20A00880080 /* ListRegisterComponent.swift in Sources */,
+				6B4A92D22824C38400880080 /* ListRegisterComponentViewModel.swift in Sources */,
+				6B4A92F42826A81700880080 /* SectionData.swift in Sources */,
+				6B4A93002826AB3E00880080 /* RegisterSectionViewModel.swift in Sources */,
 				6B2727062823FBF7000903CB /* InitialFlow.swift in Sources */,
 				6B27270E2823FEA7000903CB /* ListRegisterViewController.swift in Sources */,
+				6B4A930F282720EC00880080 /* NumberFormatter+Extension.swift in Sources */,
 				6B2727012823F9A5000903CB /* AppCoordinator.swift in Sources */,
 				6B4A92AB2824A23D00880080 /* Response.swift in Sources */,
 				6B2727112823FEC9000903CB /* ListRegisterViewModel.swift in Sources */,
+				6B4A92E72825A05C00880080 /* RegisterCashFlowDTO.swift in Sources */,
 				6B4A92A228247AE100880080 /* NSObject+Extension.swift in Sources */,
 				6B2726BD28236194000903CB /* AppDelegate.swift in Sources */,
+				6B4A92E328257FF900880080 /* JSONEncoder+Extension.swift in Sources */,
+				6B4A93122827299C00880080 /* TypeRegister.swift in Sources */,
+				6B4A92BD2824C03800880080 /* RegisterCell.swift in Sources */,
 				6B27270B2823FDC8000903CB /* ListRegisterCoordinator.swift in Sources */,
+				6B4A92FA2826AB1F00880080 /* RegisterSection.swift in Sources */,
+				6B4A92EA2825B0B000880080 /* Date+Extension.swift in Sources */,
+				6B4A92C02824C04900880080 /* RegisterCellContent.swift in Sources */,
+				6B4A92FD2826AB2F00880080 /* RegisterSectionContent.swift in Sources */,
+				6B4A92C32824C05D00880080 /* RegisterCellViewModel.swift in Sources */,
+				6B4A92DD28257E9600880080 /* JSONDecoder+Extension.swift in Sources */,
 				6B4A92B12824B01A00880080 /* RealmDB.swift in Sources */,
 				6B4A92A52824827900880080 /* Encodable+Extension.swift in Sources */,
 				6B27271F28240775000903CB /* DatabaseManager.swift in Sources */,
 				6B4A92A8282482C000880080 /* RegisterCashFlow.swift in Sources */,
+				6B4A930C2827203A00880080 /* Int+Extension.swift in Sources */,
+				6B4A92CC2824C25D00880080 /* UITableView+Extension.swift in Sources */,
+				6B4A92CF2824C32900880080 /* UIView+Extension.swift in Sources */,
+				6B4A92E028257FBA00880080 /* DateFormatter+Extension.swift in Sources */,
+				6B4A92ED2825B0D600880080 /* DateFormatType.swift in Sources */,
 				6B2726BE28236194000903CB /* SceneDelegate.swift in Sources */,
+				6B4A92D52824C8D300880080 /* Collection+Extension.swift in Sources */,
+				6B4A92C62824C09B00880080 /* Utils.swift in Sources */,
+				6B4A93032826ECD500880080 /* UIColor+Extension.swift in Sources */,
 				6B2726DD28236BED000903CB /* R.generated.swift in Sources */,
+				6B4A92D82824CB7F00880080 /* ListRegisterConfiguration.swift in Sources */,
+				6B4A9306282700FD00880080 /* CellData.swift in Sources */,
+				6B4A930928271D0500880080 /* UIFont+Extension.swift in Sources */,
 				6B27272228240927000903CB /* ErrorRequest.swift in Sources */,
 				6B2727142823FF90000903CB /* ListRegisterContent.swift in Sources */,
 			);
@@ -808,6 +1022,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -824,7 +1039,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jader.cashflow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jader.cashflow.qa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -837,6 +1052,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -853,7 +1069,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jader.cashflow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jader.cashflow.qa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
