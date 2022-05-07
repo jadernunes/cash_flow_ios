@@ -69,5 +69,12 @@ extension UIView {
         layer.shadowRadius = 2
         layer.masksToBounds = false
     }
+
+    @discardableResult func cornerRadius(radius: CGFloat, cornerMask: CACornerMask) -> UIView {
+        clipsToBounds = false
+        layer.cornerRadius = radius
+        layer.maskedCorners = cornerMask
+        return self
+    }
 }
 
