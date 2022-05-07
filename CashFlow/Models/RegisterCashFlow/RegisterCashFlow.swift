@@ -14,15 +14,17 @@ final class RegisterCashFlow: NSObject, DBAcceptable, Codable {
     private var dateDB: String
     var desc: String
     var amount: Int
+    var type: TypeRegister
 
     var date: Date? {
-      dateDB.toDate(.send)
+        dateDB.toDate(.send)
     }
 
-    init(desc: String, amount: Int, date: Date) {
-      self.dateDB = date.toString(.send)
-      self.desc = desc
-      self.amount = amount
+    init(desc: String, amount: Int, date: Date, type: TypeRegister) {
+        self.dateDB = date.toString(.send)
+        self.desc = desc
+        self.amount = amount
+        self.type = type
     }
 }
 
