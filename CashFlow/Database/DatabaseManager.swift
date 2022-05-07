@@ -8,11 +8,16 @@
 import Foundation
 
 protocol DatabaseProtocol {
-    typealias CompletionDBSave = ((Response<Void>) -> Void)
-    typealias CompletionDBLoad<T> = ((Response<[T]>) -> Void)
+    typealias CompletionSave = ((Response<Void>) -> Void)
+    typealias CompletionLoad<R> = ((Response<[R]>) -> Void)
 
-    func save<T: BaseModel>(_ models: [T], _ completion: @escaping CompletionDBSave)
-    func loadAll<T: BaseModel>(type: T.Type, _ completion: @escaping CompletionDBLoad<T>)
+    func save<T: DBAcceptable>(_ models: [T], _ completion: @escaping CompletionSave)
+    func loadAll<T: DBConformable, R: Codable>(typeSaved: T.Type,
+                                               typeToReturn: R.Type, _ completion: @escaping CompletionLoad<R>)
+}
+
+protocol DBAcceptable {
+    func realmDTO() -> RealmDTO
 }
 
 final class DatabaseManager {
@@ -32,11 +37,13 @@ final class DatabaseManager {
 
 extension DatabaseManager: DatabaseProtocol {
 
-    func save<T: BaseModel>(_ models: [T], _ completion: @escaping CompletionDBSave) {
+    func save<T: DBAcceptable>(_ models: [T], _ completion: @escaping CompletionSave) {
         database.save(models, completion)
     }
 
-    func loadAll<T: BaseModel>(type: T.Type, _ completion: @escaping CompletionDBLoad<T>) {
-        database.loadAll(type: type, completion)
+    func loadAll<T: DBConformable, R: Codable>(typeSaved: T.Type,
+                                               typeToReturn: R.Type, _ completion: @escaping CompletionLoad<R>) {
+        database.loadAll(typeSaved: typeSaved,
+                         typeToReturn: typeToReturn, completion)
     }
 }
