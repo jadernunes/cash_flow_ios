@@ -13,7 +13,12 @@ final class ListRegisterContent: UIView {
 
     weak var viewModel: ListRegisterViewModelProtocol?
     private let listComponent: ListRegisterComponent = initElement()
-    private let totals: TotalsComponent = initElement()
+    private let emptyComponent: EmptyComponent = initElement {
+        $0.isHidden = true
+    }
+    private let totals: TotalsComponent = initElement {
+        $0.isHidden = true
+    }
 
     // MARK: - Life cycle
 
@@ -34,6 +39,7 @@ final class ListRegisterContent: UIView {
     private func defineSubviews() {
         backgroundColor = .clSecondary
         addSubview(listComponent)
+        addSubview(emptyComponent)
         addSubview(totals)
     }
 }
@@ -43,6 +49,7 @@ final class ListRegisterContent: UIView {
 extension ListRegisterContent {
 
     private func defineSubviewsConstraints() {
+        emptyComponent.anchor(self)
         defineTotalsConstraints()
         defineListConstraints()
     }
@@ -75,14 +82,18 @@ extension ListRegisterContent: Component {
             stopLoader()
             listComponent.isHidden = true
             totals.isHidden = true
+            emptyComponent.isHidden = true
 
         case .loading:
             startLoader(style: .large)
             listComponent.isHidden = true
             totals.isHidden = true
+            emptyComponent.isHidden = true
 
         case .content(let viewModelList, let viewModelTotals):
             stopLoader()
+            emptyComponent.isHidden = true
+
             //List component
             listComponent.isVisible = true
             listComponent.render(with: .content(viewModel: viewModelList, canDelete: true))
@@ -94,11 +105,13 @@ extension ListRegisterContent: Component {
             stopLoader()
             listComponent.isHidden = true
             totals.isHidden = true
+            emptyComponent.isHidden = true
 
         case .empty:
             stopLoader()
             listComponent.isHidden = true
             totals.isHidden = true
+            emptyComponent.isVisible = true
         }
     }
 }

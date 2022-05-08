@@ -112,6 +112,8 @@
 		6B4A93242827661500880080 /* LabelTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A93222827661500880080 /* LabelTitle.swift */; };
 		6B4A93272827663E00880080 /* LabelDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A93262827663E00880080 /* LabelDetail.swift */; };
 		6B4A93282827663E00880080 /* LabelDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A93262827663E00880080 /* LabelDetail.swift */; };
+		6B4A932B2827691500880080 /* EmptyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A932A2827691500880080 /* EmptyComponent.swift */; };
+		6B4A932C2827691900880080 /* EmptyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A932A2827691500880080 /* EmptyComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -190,6 +192,7 @@
 		6B4A931E2827522D00880080 /* BorderSide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderSide.swift; sourceTree = "<group>"; };
 		6B4A93222827661500880080 /* LabelTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTitle.swift; sourceTree = "<group>"; };
 		6B4A93262827663E00880080 /* LabelDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelDetail.swift; sourceTree = "<group>"; };
+		6B4A932A2827691500880080 /* EmptyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -397,6 +400,7 @@
 		6B4A92B72824BE9B00880080 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				6B4A9329282768E800880080 /* Empty */,
 				6B4A93252827662900880080 /* LabelDetail */,
 				6B4A93212827660600880080 /* LabelTitle */,
 				6B4A93132827348100880080 /* Totals */,
@@ -503,6 +507,14 @@
 				6B4A93262827663E00880080 /* LabelDetail.swift */,
 			);
 			path = LabelDetail;
+			sourceTree = "<group>";
+		};
+		6B4A9329282768E800880080 /* Empty */ = {
+			isa = PBXGroup;
+			children = (
+				6B4A932A2827691500880080 /* EmptyComponent.swift */,
+			);
+			path = Empty;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -747,6 +759,7 @@
 				6B4A92BF2824C04900880080 /* RegisterCellContent.swift in Sources */,
 				6B4A92FC2826AB2F00880080 /* RegisterSectionContent.swift in Sources */,
 				6B4A92C22824C05D00880080 /* RegisterCellViewModel.swift in Sources */,
+				6B4A932B2827691500880080 /* EmptyComponent.swift in Sources */,
 				6B4A92DC28257E9600880080 /* JSONDecoder+Extension.swift in Sources */,
 				6B4A92B02824B01A00880080 /* RealmDB.swift in Sources */,
 				6B4A92A42824827900880080 /* Encodable+Extension.swift in Sources */,
@@ -810,6 +823,7 @@
 				6B4A92C02824C04900880080 /* RegisterCellContent.swift in Sources */,
 				6B4A92FD2826AB2F00880080 /* RegisterSectionContent.swift in Sources */,
 				6B4A92C32824C05D00880080 /* RegisterCellViewModel.swift in Sources */,
+				6B4A932C2827691900880080 /* EmptyComponent.swift in Sources */,
 				6B4A92DD28257E9600880080 /* JSONDecoder+Extension.swift in Sources */,
 				6B4A92B12824B01A00880080 /* RealmDB.swift in Sources */,
 				6B4A92A52824827900880080 /* Encodable+Extension.swift in Sources */,
