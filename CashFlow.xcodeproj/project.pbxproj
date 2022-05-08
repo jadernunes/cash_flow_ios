@@ -100,6 +100,18 @@
 		6B4A930F282720EC00880080 /* NumberFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A930D282720EC00880080 /* NumberFormatter+Extension.swift */; };
 		6B4A93112827299C00880080 /* TypeRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A93102827299C00880080 /* TypeRegister.swift */; };
 		6B4A93122827299C00880080 /* TypeRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A93102827299C00880080 /* TypeRegister.swift */; };
+		6B4A93152827351200880080 /* TotalsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A93142827351200880080 /* TotalsComponent.swift */; };
+		6B4A93162827351200880080 /* TotalsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A93142827351200880080 /* TotalsComponent.swift */; };
+		6B4A93182827353000880080 /* TotalsComponentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A93172827353000880080 /* TotalsComponentViewModel.swift */; };
+		6B4A93192827353000880080 /* TotalsComponentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A93172827353000880080 /* TotalsComponentViewModel.swift */; };
+		6B4A931C282735AD00880080 /* TotalsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A931B282735AD00880080 /* TotalsData.swift */; };
+		6B4A931D282735AD00880080 /* TotalsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A931B282735AD00880080 /* TotalsData.swift */; };
+		6B4A931F2827522D00880080 /* BorderSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A931E2827522D00880080 /* BorderSide.swift */; };
+		6B4A93202827522D00880080 /* BorderSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A931E2827522D00880080 /* BorderSide.swift */; };
+		6B4A93232827661500880080 /* LabelTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A93222827661500880080 /* LabelTitle.swift */; };
+		6B4A93242827661500880080 /* LabelTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A93222827661500880080 /* LabelTitle.swift */; };
+		6B4A93272827663E00880080 /* LabelDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A93262827663E00880080 /* LabelDetail.swift */; };
+		6B4A93282827663E00880080 /* LabelDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A93262827663E00880080 /* LabelDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,6 +184,12 @@
 		6B4A930A2827203A00880080 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		6B4A930D282720EC00880080 /* NumberFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Extension.swift"; sourceTree = "<group>"; };
 		6B4A93102827299C00880080 /* TypeRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeRegister.swift; sourceTree = "<group>"; };
+		6B4A93142827351200880080 /* TotalsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalsComponent.swift; sourceTree = "<group>"; };
+		6B4A93172827353000880080 /* TotalsComponentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalsComponentViewModel.swift; sourceTree = "<group>"; };
+		6B4A931B282735AD00880080 /* TotalsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalsData.swift; sourceTree = "<group>"; };
+		6B4A931E2827522D00880080 /* BorderSide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderSide.swift; sourceTree = "<group>"; };
+		6B4A93222827661500880080 /* LabelTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTitle.swift; sourceTree = "<group>"; };
+		6B4A93262827663E00880080 /* LabelDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,6 +340,7 @@
 				6B4A92A92824A23D00880080 /* Response.swift */,
 				6B4A92EB2825B0D600880080 /* DateFormatType.swift */,
 				6B4A93102827299C00880080 /* TypeRegister.swift */,
+				6B4A931E2827522D00880080 /* BorderSide.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -378,6 +397,9 @@
 		6B4A92B72824BE9B00880080 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				6B4A93252827662900880080 /* LabelDetail */,
+				6B4A93212827660600880080 /* LabelTitle */,
+				6B4A93132827348100880080 /* Totals */,
 				6B4A92B82824BEA900880080 /* ListRegister */,
 			);
 			path = Components;
@@ -447,6 +469,40 @@
 				6B4A92FE2826AB3E00880080 /* RegisterSectionViewModel.swift */,
 			);
 			path = RegisterSection;
+			sourceTree = "<group>";
+		};
+		6B4A93132827348100880080 /* Totals */ = {
+			isa = PBXGroup;
+			children = (
+				6B4A93142827351200880080 /* TotalsComponent.swift */,
+				6B4A93172827353000880080 /* TotalsComponentViewModel.swift */,
+				6B4A931A2827359900880080 /* Models */,
+			);
+			path = Totals;
+			sourceTree = "<group>";
+		};
+		6B4A931A2827359900880080 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6B4A931B282735AD00880080 /* TotalsData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6B4A93212827660600880080 /* LabelTitle */ = {
+			isa = PBXGroup;
+			children = (
+				6B4A93222827661500880080 /* LabelTitle.swift */,
+			);
+			path = LabelTitle;
+			sourceTree = "<group>";
+		};
+		6B4A93252827662900880080 /* LabelDetail */ = {
+			isa = PBXGroup;
+			children = (
+				6B4A93262827663E00880080 /* LabelDetail.swift */,
+			);
+			path = LabelDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -666,7 +722,9 @@
 			files = (
 				6B4A92C82824C20A00880080 /* ListRegisterComponent.swift in Sources */,
 				6B4A92D12824C38400880080 /* ListRegisterComponentViewModel.swift in Sources */,
+				6B4A931F2827522D00880080 /* BorderSide.swift in Sources */,
 				6B4A92F32826A81700880080 /* SectionData.swift in Sources */,
+				6B4A931C282735AD00880080 /* TotalsData.swift in Sources */,
 				6B4A92FF2826AB3E00880080 /* RegisterSectionViewModel.swift in Sources */,
 				6B2727052823FBF7000903CB /* InitialFlow.swift in Sources */,
 				6B27270D2823FEA7000903CB /* ListRegisterViewController.swift in Sources */,
@@ -676,6 +734,9 @@
 				6B2727102823FEC9000903CB /* ListRegisterViewModel.swift in Sources */,
 				6B4A92E62825A05C00880080 /* RegisterCashFlowDTO.swift in Sources */,
 				6B4A92A128247AE100880080 /* NSObject+Extension.swift in Sources */,
+				6B4A93152827351200880080 /* TotalsComponent.swift in Sources */,
+				6B4A93272827663E00880080 /* LabelDetail.swift in Sources */,
+				6B4A93232827661500880080 /* LabelTitle.swift in Sources */,
 				6B27268928235E72000903CB /* AppDelegate.swift in Sources */,
 				6B4A92E228257FF900880080 /* JSONEncoder+Extension.swift in Sources */,
 				6B4A93112827299C00880080 /* TypeRegister.swift in Sources */,
@@ -706,6 +767,7 @@
 				6B4A930828271D0500880080 /* UIFont+Extension.swift in Sources */,
 				6B27272128240927000903CB /* ErrorRequest.swift in Sources */,
 				6B2727132823FF90000903CB /* ListRegisterContent.swift in Sources */,
+				6B4A93182827353000880080 /* TotalsComponentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -723,7 +785,9 @@
 			files = (
 				6B4A92C92824C20A00880080 /* ListRegisterComponent.swift in Sources */,
 				6B4A92D22824C38400880080 /* ListRegisterComponentViewModel.swift in Sources */,
+				6B4A93202827522D00880080 /* BorderSide.swift in Sources */,
 				6B4A92F42826A81700880080 /* SectionData.swift in Sources */,
+				6B4A931D282735AD00880080 /* TotalsData.swift in Sources */,
 				6B4A93002826AB3E00880080 /* RegisterSectionViewModel.swift in Sources */,
 				6B2727062823FBF7000903CB /* InitialFlow.swift in Sources */,
 				6B27270E2823FEA7000903CB /* ListRegisterViewController.swift in Sources */,
@@ -733,6 +797,9 @@
 				6B2727112823FEC9000903CB /* ListRegisterViewModel.swift in Sources */,
 				6B4A92E72825A05C00880080 /* RegisterCashFlowDTO.swift in Sources */,
 				6B4A92A228247AE100880080 /* NSObject+Extension.swift in Sources */,
+				6B4A93162827351200880080 /* TotalsComponent.swift in Sources */,
+				6B4A93282827663E00880080 /* LabelDetail.swift in Sources */,
+				6B4A93242827661500880080 /* LabelTitle.swift in Sources */,
 				6B2726BD28236194000903CB /* AppDelegate.swift in Sources */,
 				6B4A92E328257FF900880080 /* JSONEncoder+Extension.swift in Sources */,
 				6B4A93122827299C00880080 /* TypeRegister.swift in Sources */,
@@ -763,6 +830,7 @@
 				6B4A930928271D0500880080 /* UIFont+Extension.swift in Sources */,
 				6B27272228240927000903CB /* ErrorRequest.swift in Sources */,
 				6B2727142823FF90000903CB /* ListRegisterContent.swift in Sources */,
+				6B4A93192827353000880080 /* TotalsComponentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

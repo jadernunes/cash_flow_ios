@@ -16,3 +16,9 @@
 
 "button.title.edit" = "Edit list";
 "button.title.cancel" = "Cancel";
+
+// MARK: - Totals component
+
+"title.expenses" = "Expenses";
+"title.imcomes" = "Incomes";
+"title.balance" = "Balance";

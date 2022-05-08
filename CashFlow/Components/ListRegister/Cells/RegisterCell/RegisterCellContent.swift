@@ -15,15 +15,9 @@ final class RegisterCellContent: UIView {
 
     // MARK: - Elements
 
-    private let descLabel: UILabel = initElement {
-        $0.textColor = .clBlack
+    private let amountLabel: LabelDetail = initElement()
+    private let descLabel: LabelDetail = initElement {
         $0.numberOfLines = 0
-        $0.font = .detail
-    }
-    private let amountLabel: UILabel = initElement {
-        $0.textColor = .clBlack
-        $0.numberOfLines = 0
-        $0.font = .detail
     }
 
     // MARK: - Life cycle
@@ -52,7 +46,7 @@ final class RegisterCellContent: UIView {
     }
 
     private func setupCorner() {
-        cornerRadius(radius: 8, cornerMask: [.layerMinXMaxYCorner, .layerMaxXMaxYCorner])
+        cornerRadiusAtSide(radius: 8, cornerMask: [.layerMinXMaxYCorner, .layerMaxXMaxYCorner])
     }
 }
 
