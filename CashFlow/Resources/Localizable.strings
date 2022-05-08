@@ -11,6 +11,7 @@
 "error.internal" = "Internal error";
 "error.title" = "Something wrong";
 "noData.title" = "No data";
+"retry.title" = "Retry";
 
 // MARK: - List register component
 
