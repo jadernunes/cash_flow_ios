@@ -9,18 +9,13 @@ import Foundation
 
 extension Date {
 
-  func toString(_ format: DateFormatType) -> String {
-    let formatter = DateFormatter.dateFormatterShow
-    formatter.dateFormat = format.rawValue
-    return formatter.string(from: self)
-  }
-}
+    func toString(_ format: DateFormatType) -> String {
+        let formatter = DateFormatter.dateFormatterShow
+        formatter.dateFormat = format.rawValue
+        return formatter.string(from: self)
+    }
 
-extension String {
-
-  func toDate(_ format: DateFormatType) -> Date? {
-    let formatter = DateFormatter.dateFormatterShow
-    formatter.dateFormat = format.rawValue
-    return formatter.date(from: self)
-  }
+    func toFormat(_ format: DateFormatType) -> Date? {
+        toString(format).toDate(format)
+    }
 }

@@ -120,25 +120,25 @@ extension ListRegisterContent: Component {
     func render(with configuration: ListRegisterConfiguration) {
         switch configuration {
         case .idle:
-            stopLoader()
-            listComponent.isHidden = true
-            totals.isHidden = true
+            listComponent.stopLoader()
+            listComponent.isVisible = true
             errorComponent.isHidden = true
-            buttonAdd.isHidden = true
+            totals.isVisible = true
+            buttonAdd.isVisible = true
 
         case .loading:
-            startLoader(style: .large)
-            listComponent.isHidden = true
-            totals.isHidden = true
+            listComponent.startLoader(style: .large)
+            listComponent.isVisible = true
             errorComponent.isHidden = true
-            buttonAdd.isHidden = true
+            totals.isVisible = true
+            buttonAdd.isVisible = true
 
         case .content(let viewModelList, let viewModelTotals):
-            stopLoader()
             errorComponent.isHidden = true
             buttonAdd.isVisible = true
 
             //List component
+            listComponent.stopLoader()
             listComponent.isVisible = true
             listComponent.render(with: .content(viewModel: viewModelList, canDelete: true))
 
@@ -146,18 +146,18 @@ extension ListRegisterContent: Component {
             totals.isVisible = true
             totals.render(with: .content(viewModel: viewModelTotals))
         case .error:
-            stopLoader()
+            listComponent.stopLoader()
             listComponent.isHidden = true
-            totals.isHidden = true
             errorComponent.isVisible = true
+            totals.isHidden = true
             buttonAdd.isHidden = true
 
         case .empty:
-            stopLoader()
-            listComponent.isHidden = true
-            totals.isHidden = true
             errorComponent.isHidden = true
+            totals.isVisible = true
             buttonAdd.isVisible = true
+            listComponent.isVisible = true
+            listComponent.stopLoader()
             listComponent.render(with: .empty)
         }
     }
