@@ -22,7 +22,7 @@ final class ListRegisterContent: UIView {
     }
     private let buttonAdd: UIButton = initElement {
         $0.isHidden = true
-        $0.setImage(UIImage(named: "iconPlus"), for: .normal)
+        $0.setImage(UIImage.iconPlus, for: .normal)
         $0.backgroundColor = .clSecondary
         $0.layer.borderColor = UIColor.clBlack.cgColor
         $0.layer.borderWidth = 1

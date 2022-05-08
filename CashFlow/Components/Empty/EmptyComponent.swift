@@ -12,7 +12,7 @@ final class EmptyComponent: UIView {
     // MARK: - Elements
 
     private let emptyImage: UIImageView = initElement {
-        $0.image = R.image.iconNoData()
+        $0.image = UIImage.iconNoData
         $0.contentMode = .scaleAspectFit
     }
     private let infoLabel: LabelTitle = initElement {
