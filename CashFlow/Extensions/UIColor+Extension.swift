@@ -25,4 +25,10 @@ extension UIColor {
 
     /// HEX: #FFEAC9
     static let clBeigeDark = UIColor(named: "beigeDark")
+
+    /// HEX: #86B984
+    static let clGreenLight = UIColor(named: "greenLight")
+
+    /// HEX: #D18C8A
+    static let clRedLight = UIColor(named: "redLight")
 }
