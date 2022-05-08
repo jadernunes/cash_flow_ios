@@ -62,7 +62,9 @@ final class ListRegisterViewModel: ListRegisterViewModelProtocol {
         let viewModelList = ListRegisterComponentViewModel(sections: sections)
         viewModelList.delegate = self
 
-        configuration.send(.content(viewModel: viewModelList, viewModelTotals: viewModelTotals))
+        sections.isEmpty
+            ? configuration.send(.empty)
+            : configuration.send(.content(viewModel: viewModelList, viewModelTotals: viewModelTotals))
     }
 
     private func registersGrouped(_ registers: [RegisterCashFlow]) -> (dict: Dictionary<Date, [RegisterCashFlow]>,

@@ -13,6 +13,9 @@ final class ListRegisterContent: UIView {
 
     weak var viewModel: ListRegisterViewModelProtocol?
     private let listComponent: ListRegisterComponent = initElement()
+    private let errorComponent: ErrorComponent = initElement {
+        $0.isHidden = true
+    }
     private let emptyComponent: EmptyComponent = initElement {
         $0.isHidden = true
     }
@@ -37,9 +40,11 @@ final class ListRegisterContent: UIView {
     // MARK: - Custom methods
 
     private func defineSubviews() {
+        errorComponent.delegate = self
         backgroundColor = .clSecondary
         addSubview(listComponent)
         addSubview(emptyComponent)
+        addSubview(errorComponent)
         addSubview(totals)
     }
 }
@@ -50,6 +55,7 @@ extension ListRegisterContent {
 
     private func defineSubviewsConstraints() {
         emptyComponent.anchor(self)
+        errorComponent.anchor(self)
         defineTotalsConstraints()
         defineListConstraints()
     }
@@ -72,6 +78,15 @@ extension ListRegisterContent {
     }
 }
 
+// MARK: - Error delegate
+
+extension ListRegisterContent: ErrorComponentDelegate {
+
+    func willRetry() {
+        viewModel?.loadData()
+    }
+}
+
 // MARK: - Component
 
 extension ListRegisterContent: Component {
@@ -83,16 +98,19 @@ extension ListRegisterContent: Component {
             listComponent.isHidden = true
             totals.isHidden = true
             emptyComponent.isHidden = true
+            errorComponent.isHidden = true
 
         case .loading:
             startLoader(style: .large)
             listComponent.isHidden = true
             totals.isHidden = true
             emptyComponent.isHidden = true
+            errorComponent.isHidden = true
 
         case .content(let viewModelList, let viewModelTotals):
             stopLoader()
             emptyComponent.isHidden = true
+            errorComponent.isHidden = true
 
             //List component
             listComponent.isVisible = true
@@ -106,12 +124,14 @@ extension ListRegisterContent: Component {
             listComponent.isHidden = true
             totals.isHidden = true
             emptyComponent.isHidden = true
+            errorComponent.isVisible = true
 
         case .empty:
             stopLoader()
             listComponent.isHidden = true
             totals.isHidden = true
             emptyComponent.isVisible = true
+            errorComponent.isHidden = true
         }
     }
 }
