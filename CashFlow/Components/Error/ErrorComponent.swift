@@ -20,7 +20,7 @@ final class ErrorComponent: UIView {
     // MARK: - Elements
 
     private let errorImage: UIImageView = initElement {
-        $0.image = R.image.iconError()
+        $0.image = UIImage.iconError
         $0.contentMode = .scaleAspectFit
     }
     private let infoLabel: LabelTitle = initElement {

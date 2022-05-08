@@ -12,15 +12,21 @@ final class ListRegisterContent: UIView {
     // MARK: - Elements
 
     weak var viewModel: ListRegisterViewModelProtocol?
+    private let heightButtonAdd: CGFloat = 56
     private let listComponent: ListRegisterComponent = initElement()
     private let errorComponent: ErrorComponent = initElement {
         $0.isHidden = true
     }
-    private let emptyComponent: EmptyComponent = initElement {
-        $0.isHidden = true
-    }
     private let totals: TotalsComponent = initElement {
         $0.isHidden = true
+    }
+    private let buttonAdd: UIButton = initElement {
+        $0.isHidden = true
+        $0.setImage(UIImage.iconPlus, for: .normal)
+        $0.backgroundColor = .clSecondary
+        $0.layer.borderColor = UIColor.clBlack.cgColor
+        $0.layer.borderWidth = 1
+        $0.addTarget(self, action: #selector(buttonAddPressed), for: .touchUpInside)
     }
 
     // MARK: - Life cycle
@@ -28,6 +34,7 @@ final class ListRegisterContent: UIView {
     init() {
         super.init(frame: .zero)
 
+        setupUI()
         defineSubviews()
         defineSubviewsConstraints()
     }
@@ -39,13 +46,23 @@ final class ListRegisterContent: UIView {
 
     // MARK: - Custom methods
 
+    private func setupUI() {
+        buttonAdd.cornerRadiusAll(radius: heightButtonAdd / 2)
+        buttonAdd.addShadow(opacity: 0.5)
+    }
+
     private func defineSubviews() {
         errorComponent.delegate = self
         backgroundColor = .clSecondary
         addSubview(listComponent)
-        addSubview(emptyComponent)
         addSubview(errorComponent)
         addSubview(totals)
+        addSubview(buttonAdd)
+    }
+
+    @objc
+    private func buttonAddPressed() {
+        viewModel?.addRegister()
     }
 }
 
@@ -54,10 +71,19 @@ final class ListRegisterContent: UIView {
 extension ListRegisterContent {
 
     private func defineSubviewsConstraints() {
-        emptyComponent.anchor(self)
         errorComponent.anchor(self)
         defineTotalsConstraints()
         defineListConstraints()
+        defineButtonAddConstraints()
+    }
+
+    private func defineButtonAddConstraints() {
+        NSLayoutConstraint.activate([
+            buttonAdd.heightAnchor.constraint(equalToConstant: heightButtonAdd),
+            buttonAdd.widthAnchor.constraint(equalToConstant: heightButtonAdd),
+            buttonAdd.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor, constant: -32),
+            buttonAdd.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -32)
+        ])
     }
 
     private func defineTotalsConstraints() {
@@ -97,20 +123,20 @@ extension ListRegisterContent: Component {
             stopLoader()
             listComponent.isHidden = true
             totals.isHidden = true
-            emptyComponent.isHidden = true
             errorComponent.isHidden = true
+            buttonAdd.isHidden = true
 
         case .loading:
             startLoader(style: .large)
             listComponent.isHidden = true
             totals.isHidden = true
-            emptyComponent.isHidden = true
             errorComponent.isHidden = true
+            buttonAdd.isHidden = true
 
         case .content(let viewModelList, let viewModelTotals):
             stopLoader()
-            emptyComponent.isHidden = true
             errorComponent.isHidden = true
+            buttonAdd.isVisible = true
 
             //List component
             listComponent.isVisible = true
@@ -123,15 +149,16 @@ extension ListRegisterContent: Component {
             stopLoader()
             listComponent.isHidden = true
             totals.isHidden = true
-            emptyComponent.isHidden = true
             errorComponent.isVisible = true
+            buttonAdd.isHidden = true
 
         case .empty:
             stopLoader()
             listComponent.isHidden = true
             totals.isHidden = true
-            emptyComponent.isVisible = true
             errorComponent.isHidden = true
+            buttonAdd.isVisible = true
+            listComponent.render(with: .empty)
         }
     }
 }

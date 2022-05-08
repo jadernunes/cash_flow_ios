@@ -38,9 +38,9 @@ extension UIView {
         viewWithTag(tagLoader)?.removeFromSuperview()
     }
 
-    func addShadow(_ offset: CGSize = .init(width: -0.05, height: 0.05))  {
+    func addShadow(_ offset: CGSize = .init(width: -0.05, height: 0.05), opacity: Float = 0.2)  {
         layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOpacity = 0.2
+        layer.shadowOpacity = opacity
         layer.shadowOffset = offset
         layer.shadowRadius = 2
         layer.masksToBounds = false
