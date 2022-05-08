@@ -7,30 +7,6 @@
 
 import UIKit
 
-// MARK: - Constraints
-
-extension UIView {
-
-    func centerInSuperview() {
-        translatesAutoresizingMaskIntoConstraints = false
-        guard let superview = superview else { return }
-
-        NSLayoutConstraint.activate([
-            centerYAnchor.constraint(equalTo: superview.centerYAnchor),
-            centerXAnchor.constraint(equalTo: superview.centerXAnchor)
-        ])
-    }
-
-    func anchor(_ view: UIView, distance: CGFloat = 8) {
-        NSLayoutConstraint.activate([
-            leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: distance),
-            rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -distance),
-            topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: distance),
-            bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -distance),
-        ])
-    }
-}
-
 // MARK: - General
 
 extension UIView {
@@ -70,11 +46,97 @@ extension UIView {
         layer.masksToBounds = false
     }
 
-    @discardableResult func cornerRadius(radius: CGFloat, cornerMask: CACornerMask) -> UIView {
+    @discardableResult
+    func cornerRadiusAll(radius: CGFloat) -> UIView {
+        clipsToBounds = true
+        layer.cornerRadius = radius
+        return self
+    }
+
+    @discardableResult
+    func cornerRadiusAtSide(radius: CGFloat, cornerMask: CACornerMask) -> UIView {
         clipsToBounds = false
         layer.cornerRadius = radius
         layer.maskedCorners = cornerMask
         return self
     }
+
+    @discardableResult
+    func addBorder(listSide: [BorderSide] = BorderSide.allCases,
+                   color: UIColor = .clSeparator,
+                   borderWidth: CGFloat =  1) -> UIView {
+        listSide.forEach {
+            switch $0 {
+            case .top:
+                addBorderTop(color: color, borderWidth: borderWidth)
+            case .bottom:
+                addBorderBottom(color: color, borderWidth: borderWidth)
+            case .left:
+                addBorderLeft(color: color, borderWidth: borderWidth)
+            case .right:
+                addBorderRight(color: color, borderWidth: borderWidth)
+            }
+        }
+        return self
+    }
 }
 
+// MARK: - Constraints
+
+extension UIView {
+
+    func centerInSuperview() {
+        translatesAutoresizingMaskIntoConstraints = false
+        guard let superview = superview else { return }
+
+        NSLayoutConstraint.activate([
+            centerYAnchor.constraint(equalTo: superview.centerYAnchor),
+            centerXAnchor.constraint(equalTo: superview.centerXAnchor)
+        ])
+    }
+
+    func anchor(_ view: UIView, distance: CGFloat = 8) {
+        NSLayoutConstraint.activate([
+            leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: distance),
+            rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -distance),
+            topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: distance),
+            bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -distance),
+        ])
+    }
+}
+
+// MARK: - Bords
+
+private extension UIView {
+    func addBorderTop(color: UIColor = .clSeparator, borderWidth: CGFloat = 1) {
+        let border = UIView()
+        border.backgroundColor = color
+        border.autoresizingMask = [.flexibleWidth, .flexibleBottomMargin]
+        border.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: borderWidth)
+        addSubview(border)
+    }
+
+    func addBorderBottom(color: UIColor = .clSeparator, borderWidth: CGFloat = 1) {
+        let border = UIView()
+        border.backgroundColor = color
+        border.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
+        border.frame = CGRect(x: 0, y: frame.size.height - borderWidth, width: frame.size.width, height: borderWidth)
+        addSubview(border)
+    }
+
+    func addBorderLeft(color: UIColor = .clSeparator, borderWidth: CGFloat = 1) {
+        let border = UIView()
+        border.backgroundColor = color
+        border.frame = CGRect(x: 0, y: 0, width: borderWidth, height: frame.size.height)
+        border.autoresizingMask = [.flexibleHeight, .flexibleRightMargin]
+        addSubview(border)
+    }
+
+    func addBorderRight(color: UIColor = .clSeparator, borderWidth: CGFloat = 1) {
+        let border = UIView()
+        border.backgroundColor = color
+        border.autoresizingMask = [.flexibleHeight, .flexibleLeftMargin]
+        border.frame = CGRect(x: frame.size.width - borderWidth, y: 0, width: borderWidth, height: frame.size.height)
+        addSubview(border)
+    }
+}
