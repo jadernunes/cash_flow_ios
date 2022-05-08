@@ -33,6 +33,9 @@ final class ListRegisterComponent: UIView {
         .registerHeader(type: RegisterSection.self)
         return $0
     }(UITableView(frame: .zero, style: .grouped))
+    private let emptyComponent: EmptyComponent = initElement {
+        $0.isHidden = true
+    }
 
     // MARK: - Life cycle
 
@@ -60,6 +63,7 @@ final class ListRegisterComponent: UIView {
         backgroundColor = .clSecondary
         addSubview(buttonEdit)
         addSubview(tableView)
+        addSubview(emptyComponent)
     }
 
     private func reload() {
@@ -146,6 +150,7 @@ extension ListRegisterComponent: UITableViewDelegate {
 extension ListRegisterComponent {
 
     private func defineSubviewsConstraints() {
+        emptyComponent.anchor(self)
         defineButtonEditConstraints()
         defineTableViewConstraints()
     }
@@ -174,7 +179,7 @@ extension ListRegisterComponent {
 extension ListRegisterComponent: Component {
 
     enum ListRegisterState {
-        case reload, content(viewModel: ListRegisterComponentProtocol, canDelete: Bool)
+        case empty, reload, content(viewModel: ListRegisterComponentProtocol, canDelete: Bool)
     }
 
     func render(with configuration: ListRegisterState) {
@@ -182,12 +187,24 @@ extension ListRegisterComponent: Component {
 
         switch configuration {
         case .content(let viewModel, let canDelete):
+            buttonEdit.isVisible = true
+            tableView.isVisible = true
+            emptyComponent.isHidden = true
+
             self.viewModel = viewModel
             self.canDelete = canDelete
+            reload()
 
-            reload()
         case .reload:
+            buttonEdit.isHidden = true
+            tableView.isHidden = true
+            emptyComponent.isHidden = true
             reload()
+
+        case .empty:
+            buttonEdit.isHidden = true
+            tableView.isHidden = true
+            emptyComponent.isVisible = true
         }
 
         defineSubviewsConstraints()
