@@ -6,7 +6,8 @@
 //
 
 enum ListRegisterConfiguration: Equatable {
-    case idle, loading, empty, error, content(viewModel: ListRegisterComponentProtocol)
+    case idle, loading, empty, error, content(viewModel: ListRegisterComponentProtocol,
+                                              viewModelTotals: TotalsComponentProtocol)
 
     static func == (lhs: ListRegisterConfiguration, rhs: ListRegisterConfiguration) -> Bool {
         switch (lhs, rhs) {
@@ -14,7 +15,7 @@ enum ListRegisterConfiguration: Equatable {
             (loading, loading),
             (empty, empty),
             (error, error),
-            (content(_), content(_)):
+            (content, content):
             return true
         default:
             return false

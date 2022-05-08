@@ -36,16 +36,12 @@ final class ListRegisterComponentViewModel {
 
     // MARK: - Life cycle
 
-    init(data: [RegisterCashFlow]) {
-        mountSectionsBy(registers: data)
+    init(sections: [SectionData]) {
+        self.sections = sections
         sort()
     }
 
     // MARK: - Custom methods
-
-    private func mountSectionsBy(registers: [RegisterCashFlow]) {
-        sections = sectionsBy(registers: registers)
-    }
 
     private func sort() {
         //TODO: Create an action that user can choose which sort they prefere
@@ -58,16 +54,6 @@ final class ListRegisterComponentViewModel {
 
     private func registerAt(index: Int, sectionIndex: Int) -> RegisterCashFlow? {
         sections[safe: sectionIndex]?.registers[safe: index]
-    }
-
-    private func sectionsBy(registers: [RegisterCashFlow]) -> [SectionData] {
-        let dictionary = Dictionary(grouping: registers, by: { $0.date ?? Date() })
-        let initResult = [SectionData]()
-        return dictionary.reduce(into: initResult) { list, register in
-            let result = list.filter { $0.date == register.key && $0.registers.isNotEmpty }
-            list.append(contentsOf: result)
-            list.append(SectionData(date: register.key, registers: register.value))
-        }
     }
 
     private func shouldShowCornerAt(index: Int, onSection: Int) -> Bool {

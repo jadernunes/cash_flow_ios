@@ -15,9 +15,8 @@ final class RegisterSectionContent: UIView {
 
     // MARK: - Elements
 
-    private let titleLabel: UILabel = initElement {
-        $0.textColor = .black
-        $0.font = .subTitle
+    private let titleLabel: LabelTitle = initElement {
+        $0.textAlignment = .left
     }
 
     // MARK: - Life cycle
@@ -42,7 +41,7 @@ final class RegisterSectionContent: UIView {
     private func setupUI() {
         backgroundColor = .clBeigeDark
         addShadow()
-        cornerRadius(radius: 8, cornerMask: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
+        cornerRadiusAtSide(radius: 8, cornerMask: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
     }
 }
 
@@ -80,8 +79,8 @@ extension RegisterSectionContent {
 
     private func setupTitleConstraints() {
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 16),
-            titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16),
+            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 8),
+            titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8),
             titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 8),
             titleLabel.rightAnchor.constraint(greaterThanOrEqualTo: rightAnchor, constant: -8),
         ])

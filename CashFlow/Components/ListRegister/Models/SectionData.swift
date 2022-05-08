@@ -8,6 +8,6 @@
 import Foundation
 
 struct SectionData {
-    var date: Date
-    var registers: [RegisterCashFlow]
+    let date: Date
+    let registers: [RegisterCashFlow]
 }

@@ -13,6 +13,7 @@ final class ListRegisterContent: UIView {
 
     weak var viewModel: ListRegisterViewModelProtocol?
     private let listComponent: ListRegisterComponent = initElement()
+    private let totals: TotalsComponent = initElement()
 
     // MARK: - Life cycle
 
@@ -33,6 +34,7 @@ final class ListRegisterContent: UIView {
     private func defineSubviews() {
         backgroundColor = .clSecondary
         addSubview(listComponent)
+        addSubview(totals)
     }
 }
 
@@ -41,7 +43,25 @@ final class ListRegisterContent: UIView {
 extension ListRegisterContent {
 
     private func defineSubviewsConstraints() {
-        listComponent.anchor(self)
+        defineTotalsConstraints()
+        defineListConstraints()
+    }
+
+    private func defineTotalsConstraints() {
+        NSLayoutConstraint.activate([
+            totals.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            totals.leftAnchor.constraint(equalTo: safeAreaLayoutGuide.leftAnchor, constant: 16),
+            totals.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor, constant: -16)
+        ])
+    }
+
+    private func defineListConstraints() {
+        NSLayoutConstraint.activate([
+            listComponent.topAnchor.constraint(equalTo: totals.bottomAnchor, constant: 4),
+            listComponent.leftAnchor.constraint(equalTo: safeAreaLayoutGuide.leftAnchor, constant: 8),
+            listComponent.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor, constant: -8),
+            listComponent.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -8)
+        ])
     }
 }
 
@@ -54,23 +74,31 @@ extension ListRegisterContent: Component {
         case .idle:
             stopLoader()
             listComponent.isHidden = true
+            totals.isHidden = true
 
         case .loading:
             startLoader(style: .large)
             listComponent.isHidden = true
+            totals.isHidden = true
 
-        case .content(let subViewModel):
+        case .content(let viewModelList, let viewModelTotals):
             stopLoader()
+            //List component
             listComponent.isVisible = true
-            listComponent.render(with: .content(viewModel: subViewModel, canDelete: true))
+            listComponent.render(with: .content(viewModel: viewModelList, canDelete: true))
 
+            //Totals
+            totals.isVisible = true
+            totals.render(with: .content(viewModel: viewModelTotals))
         case .error:
             stopLoader()
             listComponent.isHidden = true
+            totals.isHidden = true
 
         case .empty:
             stopLoader()
             listComponent.isHidden = true
+            totals.isHidden = true
         }
     }
 }
