@@ -8,10 +8,11 @@
 import Foundation
 
 protocol DatabaseProtocol {
-    typealias CompletionSave = ((Response<Void>) -> Void)
+    typealias CompletionSaveDelete = ((Response<Void>) -> Void)
     typealias CompletionLoad<R> = ((Response<[R]>) -> Void)
 
-    func save<T: DBAcceptable>(_ models: [T], _ completion: @escaping CompletionSave)
+    func save<T: DBAcceptable>(_ models: [T], _ completion: @escaping CompletionSaveDelete)
+    func delete<T: DBAcceptable>(_ model: T, _ completion: @escaping CompletionSaveDelete)
     func loadAll<T: DBConformable, R: Codable>(typeSaved: T.Type,
                                                typeToReturn: R.Type, _ completion: @escaping CompletionLoad<R>)
 }
@@ -37,8 +38,12 @@ final class DatabaseManager {
 
 extension DatabaseManager: DatabaseProtocol {
 
-    func save<T: DBAcceptable>(_ models: [T], _ completion: @escaping CompletionSave) {
+    func save<T: DBAcceptable>(_ models: [T], _ completion: @escaping CompletionSaveDelete) {
         database.save(models, completion)
+    }
+
+    func delete<T: DBAcceptable>(_ model: T, _ completion: @escaping CompletionSaveDelete) {
+        database.delete(model, completion)
     }
 
     func loadAll<T: DBConformable, R: Codable>(typeSaved: T.Type,

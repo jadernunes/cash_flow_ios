@@ -36,6 +36,10 @@ final class ListRegisterViewModel: ListRegisterViewModelProtocol {
 
     func loadData() {
         configuration.send(.loading)
+        requestData()
+    }
+
+    private func requestData() {
         database.loadAll(typeSaved: RegisterCashFlowDTO.self,
                          typeToReturn: RegisterCashFlow.self) { [weak self] response  in
             switch response {
@@ -79,10 +83,19 @@ final class ListRegisterViewModel: ListRegisterViewModelProtocol {
             case .expense:
                 totalExpenses += register.amount
             }
-            return register.date ?? Date()
+            return register.date?.toFormat(.sendShort) ?? Date()
         }
 
         return (dic, totalExpenses, totalIncomes)
+    }
+
+    private func deleteRegister(_ register: RegisterCashFlow?) {
+        guard let register = register else { return }
+
+        configuration.send(.loading)
+        database.delete(register) { [weak self] _ in
+            self?.requestData()
+        }
     }
     
     func addRegister() {
@@ -95,6 +108,6 @@ final class ListRegisterViewModel: ListRegisterViewModelProtocol {
 extension ListRegisterViewModel: ListRegisterDelegate {
 
     func willRemove(_ register: RegisterCashFlow?) {
-        loadData()
+        deleteRegister(register)
     }
 }

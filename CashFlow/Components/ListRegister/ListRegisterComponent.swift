@@ -68,6 +68,7 @@ final class ListRegisterComponent: UIView {
 
     private func reload() {
         tableView.isEditing = isEditing
+        tableView.reloadData()
         setupButtonEdit()
     }
 
@@ -187,7 +188,6 @@ extension ListRegisterComponent: Component {
 
         switch configuration {
         case .content(let viewModel, let canDelete):
-            buttonEdit.isVisible = true
             tableView.isVisible = true
             emptyComponent.isHidden = true
 
@@ -196,7 +196,6 @@ extension ListRegisterComponent: Component {
             reload()
 
         case .reload:
-            buttonEdit.isHidden = true
             tableView.isHidden = true
             emptyComponent.isHidden = true
             reload()

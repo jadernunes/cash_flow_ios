@@ -8,8 +8,10 @@
 import Foundation
 import RealmSwift
 
-typealias RealmDTO = Object
-protocol DBConformable: Object, Codable {}
+typealias RealmDTO = DBConformable
+protocol DBConformable: Object, Codable {
+    func getPrimaryKey() -> String
+}
 
 struct RealmDB {
 
@@ -25,13 +27,13 @@ struct RealmDB {
 
 extension RealmDB: DatabaseProtocol {
 
-    func save<T: DBAcceptable>(_ models: [T], _ completion: @escaping CompletionSave) {
+    func save<T: DBAcceptable>(_ models: [T], _ completion: @escaping CompletionSaveDelete) {
         queue.async {
             do {
                 let realm = try Realm(configuration: configuration, queue: queue)
                 try realm.write {
-                    realm.deleteAll()
                     realm.add(models.map { $0.realmDTO() })
+                    realm.refresh()
                 }
                 completion(.success(Void()))
             } catch {
@@ -51,6 +53,26 @@ extension RealmDB: DatabaseProtocol {
                 }
 
                 completion(.success(result))
+            } catch {
+                completion(.failure(error: .generic()))
+            }
+        }
+    }
+
+    func delete<T: DBAcceptable>(_ model: T, _ completion: @escaping CompletionSaveDelete) {
+        let modelDTO = model.realmDTO()
+        queue.async {
+            do {
+                let realm = try Realm(configuration: configuration, queue: queue)
+                if let toDelete = realm.dynamicObject(ofType: modelDTO.className, forPrimaryKey: modelDTO.getPrimaryKey()) {
+                    try realm.write {
+                        realm.delete(toDelete)
+                        realm.refresh()
+                    }
+                    completion(.success(Void()))
+                } else {
+                    completion(.failure(error: .generic()))
+                }
             } catch {
                 completion(.failure(error: .generic()))
             }
