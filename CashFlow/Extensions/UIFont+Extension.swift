@@ -10,8 +10,7 @@ import UIKit
 extension UIFont {
 
     // MARK: - Custom fonts
-
-    static let header = systemFont(ofSize: 28, weight: .bold)
+    
     static let title = systemFont(ofSize: 18, weight: .bold)
     static let subTitle = systemFont(ofSize: 18, weight: .semibold)
     static let detail = systemFont(ofSize: 18, weight: .regular)

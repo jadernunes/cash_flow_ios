@@ -12,6 +12,7 @@
 "error.title" = "Something wrong";
 "noData.title" = "No data";
 "retry.title" = "Retry";
+"cancel.title" = "Cancel";
 
 // MARK: - List register component
 
@@ -23,3 +24,18 @@
 "title.expenses" = "Expenses";
 "title.imcomes" = "Incomes";
 "title.balance" = "Balance";
+
+// MARK: - Type register
+
+"register.type.expense" = "Expense";
+"register.type.income" = "Income";
+
+// MARK: - List type register
+
+"listType.title" = "Transactions";
+
+// MARK: - Add register
+
+"addRegister.title" = "Add Transaction";
+"addRegister.add.title" = "Add";
+"addRegister.desc.placeholder" = "Transaction Description";

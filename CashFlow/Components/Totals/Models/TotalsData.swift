@@ -10,4 +10,9 @@ import Foundation
 struct TotalsData {
     let income: Int
     let expense: Int
+
+    init(income: Int = 0, expense: Int = 0) {
+        self.income = income
+        self.expense = expense
+    }
 }

@@ -52,9 +52,9 @@ extension RegisterSection {
     private func defineSubviewsConstraints() {
         NSLayoutConstraint.activate([
             content.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 4),
-            content.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
+            content.topAnchor.constraint(equalTo: contentView.topAnchor),
             content.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -4),
-            content.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0)
+            content.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
     }
 }

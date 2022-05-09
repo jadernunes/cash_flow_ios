@@ -13,6 +13,8 @@ protocol TotalsComponentProtocol: AnyObject {
     var expenses: CurrentValueSubject<String, Never> { get }
     var balance: CurrentValueSubject<String, Never> { get }
     var progress: CurrentValueSubject<Float, Never> { get }
+
+    func reset()
 }
 
 final class TotalsComponentViewModel: TotalsComponentProtocol {
@@ -40,5 +42,9 @@ final class TotalsComponentViewModel: TotalsComponentProtocol {
 
         let percent = Float(data.expense) / Float(data.income)
         progress.send(percent)
+    }
+
+    func reset() {
+        populateUI(TotalsData())
     }
 }

@@ -13,4 +13,7 @@ extension UIImage {
     static let iconGlobe = UIImage(named: "iconGlobe")
     static let iconNoData = UIImage(named: "iconNoData")
     static let iconPlus = UIImage(named: "iconPlus")
+    static let iconClose = UIImage(named: "iconClose")
+    static let iconUp = UIImage(named: "iconUp")
+    static let iconDown = UIImage(named: "iconDown")
 }

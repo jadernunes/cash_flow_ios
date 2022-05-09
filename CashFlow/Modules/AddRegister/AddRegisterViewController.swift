@@ -1,27 +1,27 @@
 //
-//  ListRegisterViewController.swift
+//  AddRegisterViewController.swift
 //  CashFlow
 //
-//  Created by Jader Nunes on 05/05/22.
+//  Created by Jader Nunes on 08/05/22.
 //
 
 import UIKit
 import Combine
 
-final class ListRegisterViewController: UIViewController {
+final class AddRegisterViewController: UIViewController {
 
     // MARK: - Attributes
 
-    private let viewModel: ListRegisterViewModelProtocol
+    private let viewModel: AddRegisterViewModelProtocol
     private var cancelableBag = Set<AnyCancellable>()
 
     // MARK: - Elements
 
-    private let content = ListRegisterContent()
+    private let content = AddRegisterContent()
 
     // MARK: - Life cycle
 
-    init(viewModel: ListRegisterViewModelProtocol) {
+    init(viewModel: AddRegisterViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
 
@@ -41,7 +41,6 @@ final class ListRegisterViewController: UIViewController {
         super.viewDidLoad()
         
         bindUI()
-        viewModel.loadData()
     }
 
     // MARK: - Custom methods
@@ -53,7 +52,7 @@ final class ListRegisterViewController: UIViewController {
 
 // MARK: - Binds
 
-private extension ListRegisterViewController {
+private extension AddRegisterViewController {
 
     func bindCongiguration() {
         viewModel.configuration

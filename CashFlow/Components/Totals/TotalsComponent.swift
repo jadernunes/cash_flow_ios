@@ -12,7 +12,7 @@ final class TotalsComponent: UIView {
 
     // MARK: - Attributes
 
-    private weak var viewModel: TotalsComponentProtocol?
+    private var viewModel: TotalsComponentProtocol?
     private var cancelableBag = Set<AnyCancellable>()
 
     // MARK: - Elements
@@ -140,7 +140,7 @@ extension TotalsComponent {
 extension TotalsComponent: Component {
 
     enum TotalsState {
-        case reload, content(viewModel: TotalsComponentProtocol)
+        case empty, content(viewModel: TotalsComponentProtocol)
     }
 
     func render(with configuration: TotalsState) {
@@ -148,8 +148,8 @@ extension TotalsComponent: Component {
         case .content(let viewModel):
             self.viewModel = viewModel
             bindUI()
-        case .reload:
-            break
+        case .empty:
+            viewModel?.reset()
         }
     }
 }
@@ -161,7 +161,9 @@ extension TotalsComponent {
     private func bindProgress() {
         viewModel?.progress
             .receive(on: DispatchQueue.main)
-            .sink { [weak self] in self?.progressBar.progress = $0 }
+            .sink { [weak self] in
+                self?.progressBar.progress = $0 >= 0 ? $0 : 0
+            }
             .store(in: &cancelableBag)
     }
 

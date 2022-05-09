@@ -7,6 +7,15 @@
 
 import Foundation
 
-enum TypeRegister: String, Codable {
+enum TypeRegister: String, Codable, CaseIterable {
     case expense, income
+
+    func title() -> String {
+        switch self {
+        case .expense:
+            return R.string.localizable.registerTypeExpense()
+        case .income:
+            return R.string.localizable.registerTypeIncome()
+        }
+    }
 }

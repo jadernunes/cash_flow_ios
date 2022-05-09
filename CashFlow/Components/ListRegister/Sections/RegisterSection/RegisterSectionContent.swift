@@ -82,7 +82,7 @@ extension RegisterSectionContent {
             titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 8),
             titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8),
             titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 8),
-            titleLabel.rightAnchor.constraint(greaterThanOrEqualTo: rightAnchor, constant: -8),
+            titleLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -8),
         ])
     }
 }
