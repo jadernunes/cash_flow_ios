@@ -16,7 +16,7 @@ final class RegisterSectionViewModel: RegisterSectionViewModelProtocol {
     // MARK: - Attributes
 
     private let date: Date
-    var title: String { date.toString(.show) }
+    var title: String { date.dayWihSuffix() + " " + date.toString(.show) }
 
     // MARK: - Life cycle
 
