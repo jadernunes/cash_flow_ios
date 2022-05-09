@@ -7,7 +7,7 @@
 
 enum ErrorRequest: Error {
     case custom(message: String)
-    case generic(message: String = R.string.localizable.errorInternal())
+    case generic(message: String = "error.internal".localized())
     case genericWith(error: Error)
 
     var message: String {
@@ -18,7 +18,7 @@ enum ErrorRequest: Error {
             return message
         case .genericWith(_):
             //TODO: handle the error model
-            return R.string.localizable.errorInternal()
+            return "error.internal".localized()
         }
     }
 }

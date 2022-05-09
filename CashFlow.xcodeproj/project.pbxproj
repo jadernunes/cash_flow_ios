@@ -7,142 +7,75 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		56086BAF44D7CEAA6AD93517 /* Pods_CashFlow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6117439BAFE80C766DAAAD2C /* Pods_CashFlow.framework */; };
 		6B0D5BA5282778A100F5DC59 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D5BA4282778A100F5DC59 /* UIImage+Extension.swift */; };
-		6B0D5BA6282778A100F5DC59 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D5BA4282778A100F5DC59 /* UIImage+Extension.swift */; };
 		6B0D5BA8282796F400F5DC59 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D5BA7282796F400F5DC59 /* String+Extension.swift */; };
-		6B0D5BA9282796F400F5DC59 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D5BA7282796F400F5DC59 /* String+Extension.swift */; };
 		6B0D5BAC2827F7B900F5DC59 /* AddRegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D5BAB2827F7B900F5DC59 /* AddRegisterCoordinator.swift */; };
-		6B0D5BAD2827F7B900F5DC59 /* AddRegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D5BAB2827F7B900F5DC59 /* AddRegisterCoordinator.swift */; };
 		6B0D5BAF2827F99700F5DC59 /* AddRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D5BAE2827F99700F5DC59 /* AddRegisterViewModel.swift */; };
-		6B0D5BB02827F99700F5DC59 /* AddRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D5BAE2827F99700F5DC59 /* AddRegisterViewModel.swift */; };
 		6B0D5BB22827FA6600F5DC59 /* AddRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D5BB12827FA6600F5DC59 /* AddRegisterViewController.swift */; };
-		6B0D5BB32827FA6600F5DC59 /* AddRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D5BB12827FA6600F5DC59 /* AddRegisterViewController.swift */; };
 		6B0D5BB52827FAB000F5DC59 /* AddRegisterContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D5BB42827FAB000F5DC59 /* AddRegisterContent.swift */; };
-		6B0D5BB62827FAB000F5DC59 /* AddRegisterContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D5BB42827FAB000F5DC59 /* AddRegisterContent.swift */; };
 		6B0D5BB82827FE4400F5DC59 /* AddRegisterConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D5BB72827FE4400F5DC59 /* AddRegisterConfiguration.swift */; };
-		6B0D5BB92827FE4400F5DC59 /* AddRegisterConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D5BB72827FE4400F5DC59 /* AddRegisterConfiguration.swift */; };
 		6B0D5BBC2828899400F5DC59 /* ListTypeRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D5BBB2828899400F5DC59 /* ListTypeRegister.swift */; };
-		6B0D5BBD2828899400F5DC59 /* ListTypeRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D5BBB2828899400F5DC59 /* ListTypeRegister.swift */; };
 		6B0D5BBF2828931100F5DC59 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D5BBE2828931100F5DC59 /* UITextField+Extension.swift */; };
-		6B0D5BC02828931100F5DC59 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D5BBE2828931100F5DC59 /* UITextField+Extension.swift */; };
 		6B0D5BC328289A8800F5DC59 /* ButtonCashFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D5BC228289A8800F5DC59 /* ButtonCashFlow.swift */; };
-		6B0D5BC428289A8800F5DC59 /* ButtonCashFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D5BC228289A8800F5DC59 /* ButtonCashFlow.swift */; };
 		6B0D5BC72828C1A500F5DC59 /* CurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D5BC62828C1A500F5DC59 /* CurrencyTextField.swift */; };
-		6B0D5BC82828C1A500F5DC59 /* CurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D5BC62828C1A500F5DC59 /* CurrencyTextField.swift */; };
 		6B0D5BCB2828D68000F5DC59 /* CurrencyStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D5BCA2828D68000F5DC59 /* CurrencyStepper.swift */; };
-		6B0D5BCC2828D68000F5DC59 /* CurrencyStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D5BCA2828D68000F5DC59 /* CurrencyStepper.swift */; };
+		6B0D5BCF2828E88600F5DC59 /* SplashScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D5BCE2828E88600F5DC59 /* SplashScreenCoordinator.swift */; };
+		6B0D5BD22828E8AB00F5DC59 /* SplashScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D5BD12828E8AB00F5DC59 /* SplashScreenViewModel.swift */; };
+		6B0D5BD52828E8B800F5DC59 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D5BD42828E8B800F5DC59 /* SplashScreenViewController.swift */; };
 		6B27268928235E72000903CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27268828235E72000903CB /* AppDelegate.swift */; };
 		6B27268B28235E72000903CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27268A28235E72000903CB /* SceneDelegate.swift */; };
 		6B27269228235E74000903CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B27269128235E74000903CB /* Assets.xcassets */; };
 		6B27269528235E74000903CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B27269328235E74000903CB /* LaunchScreen.storyboard */; };
 		6B2726A028235E75000903CB /* CashFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27269F28235E75000903CB /* CashFlowTests.swift */; };
-		6B2726BD28236194000903CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27268828235E72000903CB /* AppDelegate.swift */; };
-		6B2726BE28236194000903CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27268A28235E72000903CB /* SceneDelegate.swift */; };
-		6B2726C128236194000903CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B27269328235E74000903CB /* LaunchScreen.storyboard */; };
-		6B2726C228236194000903CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B27269128235E74000903CB /* Assets.xcassets */; };
 		6B2726CC28236426000903CB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6B2726CB28236426000903CB /* README.md */; };
-		6B2726CD28236426000903CB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6B2726CB28236426000903CB /* README.md */; };
-		6B2726DC28236BED000903CB /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2726DB28236BED000903CB /* R.generated.swift */; };
-		6B2726DD28236BED000903CB /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2726DB28236BED000903CB /* R.generated.swift */; };
 		6B2727002823F9A5000903CB /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2726FF2823F9A5000903CB /* AppCoordinator.swift */; };
-		6B2727012823F9A5000903CB /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2726FF2823F9A5000903CB /* AppCoordinator.swift */; };
 		6B2727052823FBF7000903CB /* InitialFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2727042823FBF7000903CB /* InitialFlow.swift */; };
-		6B2727062823FBF7000903CB /* InitialFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2727042823FBF7000903CB /* InitialFlow.swift */; };
 		6B27270A2823FDC8000903CB /* ListRegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2727092823FDC8000903CB /* ListRegisterCoordinator.swift */; };
-		6B27270B2823FDC8000903CB /* ListRegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2727092823FDC8000903CB /* ListRegisterCoordinator.swift */; };
 		6B27270D2823FEA7000903CB /* ListRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27270C2823FEA7000903CB /* ListRegisterViewController.swift */; };
-		6B27270E2823FEA7000903CB /* ListRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27270C2823FEA7000903CB /* ListRegisterViewController.swift */; };
 		6B2727102823FEC9000903CB /* ListRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27270F2823FEC9000903CB /* ListRegisterViewModel.swift */; };
-		6B2727112823FEC9000903CB /* ListRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27270F2823FEC9000903CB /* ListRegisterViewModel.swift */; };
 		6B2727132823FF90000903CB /* ListRegisterContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2727122823FF90000903CB /* ListRegisterContent.swift */; };
-		6B2727142823FF90000903CB /* ListRegisterContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2727122823FF90000903CB /* ListRegisterContent.swift */; };
 		6B27271E28240775000903CB /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27271D28240775000903CB /* DatabaseManager.swift */; };
-		6B27271F28240775000903CB /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27271D28240775000903CB /* DatabaseManager.swift */; };
 		6B27272128240927000903CB /* ErrorRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27272028240927000903CB /* ErrorRequest.swift */; };
-		6B27272228240927000903CB /* ErrorRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27272028240927000903CB /* ErrorRequest.swift */; };
 		6B27272428240992000903CB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B27272328240992000903CB /* Localizable.strings */; };
-		6B27272528240992000903CB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B27272328240992000903CB /* Localizable.strings */; };
 		6B4A92A128247AE100880080 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92A028247AE100880080 /* NSObject+Extension.swift */; };
-		6B4A92A228247AE100880080 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92A028247AE100880080 /* NSObject+Extension.swift */; };
 		6B4A92A42824827900880080 /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92A32824827900880080 /* Encodable+Extension.swift */; };
-		6B4A92A52824827900880080 /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92A32824827900880080 /* Encodable+Extension.swift */; };
 		6B4A92A7282482C000880080 /* RegisterCashFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92A6282482C000880080 /* RegisterCashFlow.swift */; };
-		6B4A92A8282482C000880080 /* RegisterCashFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92A6282482C000880080 /* RegisterCashFlow.swift */; };
 		6B4A92AA2824A23D00880080 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92A92824A23D00880080 /* Response.swift */; };
-		6B4A92AB2824A23D00880080 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92A92824A23D00880080 /* Response.swift */; };
 		6B4A92B02824B01A00880080 /* RealmDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92AF2824B01A00880080 /* RealmDB.swift */; };
-		6B4A92B12824B01A00880080 /* RealmDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92AF2824B01A00880080 /* RealmDB.swift */; };
 		6B4A92BC2824C03800880080 /* RegisterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92BB2824C03800880080 /* RegisterCell.swift */; };
-		6B4A92BD2824C03800880080 /* RegisterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92BB2824C03800880080 /* RegisterCell.swift */; };
 		6B4A92BF2824C04900880080 /* RegisterCellContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92BE2824C04900880080 /* RegisterCellContent.swift */; };
-		6B4A92C02824C04900880080 /* RegisterCellContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92BE2824C04900880080 /* RegisterCellContent.swift */; };
 		6B4A92C22824C05D00880080 /* RegisterCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92C12824C05D00880080 /* RegisterCellViewModel.swift */; };
-		6B4A92C32824C05D00880080 /* RegisterCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92C12824C05D00880080 /* RegisterCellViewModel.swift */; };
 		6B4A92C52824C09B00880080 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92C42824C09B00880080 /* Utils.swift */; };
-		6B4A92C62824C09B00880080 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92C42824C09B00880080 /* Utils.swift */; };
 		6B4A92C82824C20A00880080 /* ListRegisterComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92C72824C20A00880080 /* ListRegisterComponent.swift */; };
-		6B4A92C92824C20A00880080 /* ListRegisterComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92C72824C20A00880080 /* ListRegisterComponent.swift */; };
 		6B4A92CB2824C25D00880080 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92CA2824C25D00880080 /* UITableView+Extension.swift */; };
-		6B4A92CC2824C25D00880080 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92CA2824C25D00880080 /* UITableView+Extension.swift */; };
 		6B4A92CE2824C32900880080 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92CD2824C32900880080 /* UIView+Extension.swift */; };
-		6B4A92CF2824C32900880080 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92CD2824C32900880080 /* UIView+Extension.swift */; };
 		6B4A92D12824C38400880080 /* ListRegisterComponentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92D02824C38400880080 /* ListRegisterComponentViewModel.swift */; };
-		6B4A92D22824C38400880080 /* ListRegisterComponentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92D02824C38400880080 /* ListRegisterComponentViewModel.swift */; };
 		6B4A92D42824C8D300880080 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92D32824C8D300880080 /* Collection+Extension.swift */; };
-		6B4A92D52824C8D300880080 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92D32824C8D300880080 /* Collection+Extension.swift */; };
 		6B4A92D72824CB7F00880080 /* ListRegisterConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92D62824CB7F00880080 /* ListRegisterConfiguration.swift */; };
-		6B4A92D82824CB7F00880080 /* ListRegisterConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92D62824CB7F00880080 /* ListRegisterConfiguration.swift */; };
 		6B4A92DC28257E9600880080 /* JSONDecoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92DB28257E9600880080 /* JSONDecoder+Extension.swift */; };
-		6B4A92DD28257E9600880080 /* JSONDecoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92DB28257E9600880080 /* JSONDecoder+Extension.swift */; };
 		6B4A92DF28257FBA00880080 /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92DE28257FBA00880080 /* DateFormatter+Extension.swift */; };
-		6B4A92E028257FBA00880080 /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92DE28257FBA00880080 /* DateFormatter+Extension.swift */; };
 		6B4A92E228257FF900880080 /* JSONEncoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92E128257FF900880080 /* JSONEncoder+Extension.swift */; };
-		6B4A92E328257FF900880080 /* JSONEncoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92E128257FF900880080 /* JSONEncoder+Extension.swift */; };
 		6B4A92E62825A05C00880080 /* RegisterCashFlowDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92E52825A05C00880080 /* RegisterCashFlowDTO.swift */; };
-		6B4A92E72825A05C00880080 /* RegisterCashFlowDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92E52825A05C00880080 /* RegisterCashFlowDTO.swift */; };
 		6B4A92E92825B0B000880080 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92E82825B0B000880080 /* Date+Extension.swift */; };
-		6B4A92EA2825B0B000880080 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92E82825B0B000880080 /* Date+Extension.swift */; };
 		6B4A92EC2825B0D600880080 /* DateFormatType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92EB2825B0D600880080 /* DateFormatType.swift */; };
-		6B4A92ED2825B0D600880080 /* DateFormatType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92EB2825B0D600880080 /* DateFormatType.swift */; };
 		6B4A92F32826A81700880080 /* SectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92F22826A81700880080 /* SectionData.swift */; };
-		6B4A92F42826A81700880080 /* SectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92F22826A81700880080 /* SectionData.swift */; };
 		6B4A92F92826AB1F00880080 /* RegisterSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92F82826AB1F00880080 /* RegisterSection.swift */; };
-		6B4A92FA2826AB1F00880080 /* RegisterSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92F82826AB1F00880080 /* RegisterSection.swift */; };
 		6B4A92FC2826AB2F00880080 /* RegisterSectionContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92FB2826AB2F00880080 /* RegisterSectionContent.swift */; };
-		6B4A92FD2826AB2F00880080 /* RegisterSectionContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92FB2826AB2F00880080 /* RegisterSectionContent.swift */; };
 		6B4A92FF2826AB3E00880080 /* RegisterSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92FE2826AB3E00880080 /* RegisterSectionViewModel.swift */; };
-		6B4A93002826AB3E00880080 /* RegisterSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92FE2826AB3E00880080 /* RegisterSectionViewModel.swift */; };
 		6B4A93022826ECD500880080 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A93012826ECD500880080 /* UIColor+Extension.swift */; };
-		6B4A93032826ECD500880080 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A93012826ECD500880080 /* UIColor+Extension.swift */; };
 		6B4A9305282700FD00880080 /* CellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A9304282700FD00880080 /* CellData.swift */; };
-		6B4A9306282700FD00880080 /* CellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A9304282700FD00880080 /* CellData.swift */; };
 		6B4A930828271D0500880080 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A930728271D0500880080 /* UIFont+Extension.swift */; };
-		6B4A930928271D0500880080 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A930728271D0500880080 /* UIFont+Extension.swift */; };
 		6B4A930B2827203A00880080 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A930A2827203A00880080 /* Int+Extension.swift */; };
-		6B4A930C2827203A00880080 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A930A2827203A00880080 /* Int+Extension.swift */; };
 		6B4A930E282720EC00880080 /* NumberFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A930D282720EC00880080 /* NumberFormatter+Extension.swift */; };
-		6B4A930F282720EC00880080 /* NumberFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A930D282720EC00880080 /* NumberFormatter+Extension.swift */; };
 		6B4A93112827299C00880080 /* TypeRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A93102827299C00880080 /* TypeRegister.swift */; };
-		6B4A93122827299C00880080 /* TypeRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A93102827299C00880080 /* TypeRegister.swift */; };
 		6B4A93152827351200880080 /* TotalsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A93142827351200880080 /* TotalsComponent.swift */; };
-		6B4A93162827351200880080 /* TotalsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A93142827351200880080 /* TotalsComponent.swift */; };
 		6B4A93182827353000880080 /* TotalsComponentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A93172827353000880080 /* TotalsComponentViewModel.swift */; };
-		6B4A93192827353000880080 /* TotalsComponentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A93172827353000880080 /* TotalsComponentViewModel.swift */; };
 		6B4A931C282735AD00880080 /* TotalsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A931B282735AD00880080 /* TotalsData.swift */; };
-		6B4A931D282735AD00880080 /* TotalsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A931B282735AD00880080 /* TotalsData.swift */; };
 		6B4A931F2827522D00880080 /* BorderSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A931E2827522D00880080 /* BorderSide.swift */; };
-		6B4A93202827522D00880080 /* BorderSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A931E2827522D00880080 /* BorderSide.swift */; };
 		6B4A93232827661500880080 /* LabelTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A93222827661500880080 /* LabelTitle.swift */; };
-		6B4A93242827661500880080 /* LabelTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A93222827661500880080 /* LabelTitle.swift */; };
 		6B4A93272827663E00880080 /* LabelDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A93262827663E00880080 /* LabelDetail.swift */; };
-		6B4A93282827663E00880080 /* LabelDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A93262827663E00880080 /* LabelDetail.swift */; };
 		6B4A932B2827691500880080 /* EmptyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A932A2827691500880080 /* EmptyComponent.swift */; };
-		6B4A932C2827691900880080 /* EmptyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A932A2827691500880080 /* EmptyComponent.swift */; };
 		6B4A932F28276C2B00880080 /* ErrorComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A932E28276C2B00880080 /* ErrorComponent.swift */; };
-		6B4A933028276C2B00880080 /* ErrorComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A932E28276C2B00880080 /* ErrorComponent.swift */; };
-		85AF91208B4D9CA86CFAACCE /* Pods_CashFlow_qa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431B932FD83DC15D2F3BFD13 /* Pods_CashFlow_qa.framework */; };
-		E2826857E1D5BC3D5FFC7A31 /* Pods_CashFlowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66743B577E6C1EF09100D1EE /* Pods_CashFlowTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,23 +86,9 @@
 			remoteGlobalIDString = 6B27268428235E72000903CB;
 			remoteInfo = CashFlow;
 		};
-		6B2726D02823693B000903CB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6B27267D28235E72000903CB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6B2726BB28236194000903CB;
-			remoteInfo = "CashFlow-qa";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0AB43B7606596BF02A7D420D /* Pods-CashFlow-qa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CashFlow-qa.debug.xcconfig"; path = "Target Support Files/Pods-CashFlow-qa/Pods-CashFlow-qa.debug.xcconfig"; sourceTree = "<group>"; };
-		321538DA6A0E7F739EF4BD61 /* Pods-CashFlow-qa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CashFlow-qa.release.xcconfig"; path = "Target Support Files/Pods-CashFlow-qa/Pods-CashFlow-qa.release.xcconfig"; sourceTree = "<group>"; };
-		431B932FD83DC15D2F3BFD13 /* Pods_CashFlow_qa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CashFlow_qa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4574E5EC4003728A19CDF810 /* Pods-CashFlow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CashFlow.release.xcconfig"; path = "Target Support Files/Pods-CashFlow/Pods-CashFlow.release.xcconfig"; sourceTree = "<group>"; };
-		6117439BAFE80C766DAAAD2C /* Pods_CashFlow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CashFlow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		66743B577E6C1EF09100D1EE /* Pods_CashFlowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CashFlowTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		67835979321A50ACA1DBC8FA /* Pods-CashFlowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CashFlowTests.release.xcconfig"; path = "Target Support Files/Pods-CashFlowTests/Pods-CashFlowTests.release.xcconfig"; sourceTree = "<group>"; };
 		6B0D5BA4282778A100F5DC59 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		6B0D5BA7282796F400F5DC59 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		6B0D5BAB2827F7B900F5DC59 /* AddRegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRegisterCoordinator.swift; sourceTree = "<group>"; };
@@ -182,6 +101,9 @@
 		6B0D5BC228289A8800F5DC59 /* ButtonCashFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCashFlow.swift; sourceTree = "<group>"; };
 		6B0D5BC62828C1A500F5DC59 /* CurrencyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTextField.swift; sourceTree = "<group>"; };
 		6B0D5BCA2828D68000F5DC59 /* CurrencyStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyStepper.swift; sourceTree = "<group>"; };
+		6B0D5BCE2828E88600F5DC59 /* SplashScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenCoordinator.swift; sourceTree = "<group>"; };
+		6B0D5BD12828E8AB00F5DC59 /* SplashScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewModel.swift; sourceTree = "<group>"; };
+		6B0D5BD42828E8B800F5DC59 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		6B27268528235E72000903CB /* CashFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CashFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B27268828235E72000903CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B27268A28235E72000903CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -190,10 +112,7 @@
 		6B27269628235E74000903CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B27269B28235E75000903CB /* CashFlowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CashFlowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B27269F28235E75000903CB /* CashFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashFlowTests.swift; sourceTree = "<group>"; };
-		6B2726C628236194000903CB /* CashFlow-qa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CashFlow-qa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B2726CA282363AB000903CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B2726CB28236426000903CB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
-		6B2726DB28236BED000903CB /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		6B2726FF2823F9A5000903CB /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		6B2727042823FBF7000903CB /* InitialFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialFlow.swift; sourceTree = "<group>"; };
 		6B2727092823FDC8000903CB /* ListRegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRegisterCoordinator.swift; sourceTree = "<group>"; };
@@ -242,8 +161,6 @@
 		6B4A93262827663E00880080 /* LabelDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelDetail.swift; sourceTree = "<group>"; };
 		6B4A932A2827691500880080 /* EmptyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyComponent.swift; sourceTree = "<group>"; };
 		6B4A932E28276C2B00880080 /* ErrorComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorComponent.swift; sourceTree = "<group>"; };
-		72F77D83D1A8FBB2F5136ECB /* Pods-CashFlow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CashFlow.debug.xcconfig"; path = "Target Support Files/Pods-CashFlow/Pods-CashFlow.debug.xcconfig"; sourceTree = "<group>"; };
-		AB7B3E53422AA1BD5964EA0B /* Pods-CashFlowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CashFlowTests.debug.xcconfig"; path = "Target Support Files/Pods-CashFlowTests/Pods-CashFlowTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,7 +168,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56086BAF44D7CEAA6AD93517 /* Pods_CashFlow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,15 +175,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2826857E1D5BC3D5FFC7A31 /* Pods_CashFlowTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6B2726BF28236194000903CB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				85AF91208B4D9CA86CFAACCE /* Pods_CashFlow_qa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,12 +184,6 @@
 		5AC073CE236FEB74E6843159 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				72F77D83D1A8FBB2F5136ECB /* Pods-CashFlow.debug.xcconfig */,
-				4574E5EC4003728A19CDF810 /* Pods-CashFlow.release.xcconfig */,
-				0AB43B7606596BF02A7D420D /* Pods-CashFlow-qa.debug.xcconfig */,
-				321538DA6A0E7F739EF4BD61 /* Pods-CashFlow-qa.release.xcconfig */,
-				AB7B3E53422AA1BD5964EA0B /* Pods-CashFlowTests.debug.xcconfig */,
-				67835979321A50ACA1DBC8FA /* Pods-CashFlowTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -331,6 +232,16 @@
 			path = CurrencyStepper;
 			sourceTree = "<group>";
 		};
+		6B0D5BCD2828E85B00F5DC59 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				6B0D5BD42828E8B800F5DC59 /* SplashScreenViewController.swift */,
+				6B0D5BD12828E8AB00F5DC59 /* SplashScreenViewModel.swift */,
+				6B0D5BCE2828E88600F5DC59 /* SplashScreenCoordinator.swift */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
 		6B27267C28235E72000903CB = {
 			isa = PBXGroup;
 			children = (
@@ -338,7 +249,6 @@
 				6B27269E28235E75000903CB /* CashFlowTests */,
 				6B27268628235E72000903CB /* Products */,
 				5AC073CE236FEB74E6843159 /* Pods */,
-				9370B342B4EF4A92CD2523D8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -347,7 +257,6 @@
 			children = (
 				6B27268528235E72000903CB /* CashFlow.app */,
 				6B27269B28235E75000903CB /* CashFlowTests.xctest */,
-				6B2726C628236194000903CB /* CashFlow-qa.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -381,7 +290,6 @@
 				6B2726CB28236426000903CB /* README.md */,
 				6B27269328235E74000903CB /* LaunchScreen.storyboard */,
 				6B27269128235E74000903CB /* Assets.xcassets */,
-				6B2726DB28236BED000903CB /* R.generated.swift */,
 				6B27272328240992000903CB /* Localizable.strings */,
 			);
 			path = Resources;
@@ -391,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				6B2726BA28236026000903CB /* App */,
+				6B0D5BCD2828E85B00F5DC59 /* SplashScreen */,
 				6B2727082823FDB1000903CB /* ListRegister */,
 				6B0D5BAA2827F78100F5DC59 /* AddRegister */,
 			);
@@ -411,7 +320,6 @@
 			isa = PBXGroup;
 			children = (
 				6B2726C8282361C7000903CB /* CashFlow */,
-				6B2726C9282361D3000903CB /* CashFlow-qa */,
 			);
 			path = Targets;
 			sourceTree = "<group>";
@@ -422,14 +330,6 @@
 				6B27269628235E74000903CB /* Info.plist */,
 			);
 			path = CashFlow;
-			sourceTree = "<group>";
-		};
-		6B2726C9282361D3000903CB /* CashFlow-qa */ = {
-			isa = PBXGroup;
-			children = (
-				6B2726CA282363AB000903CB /* Info.plist */,
-			);
-			path = "CashFlow-qa";
 			sourceTree = "<group>";
 		};
 		6B2727022823FBE8000903CB /* General */ = {
@@ -639,16 +539,6 @@
 			path = Error;
 			sourceTree = "<group>";
 		};
-		9370B342B4EF4A92CD2523D8 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6117439BAFE80C766DAAAD2C /* Pods_CashFlow.framework */,
-				431B932FD83DC15D2F3BFD13 /* Pods_CashFlow_qa.framework */,
-				66743B577E6C1EF09100D1EE /* Pods_CashFlowTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -656,13 +546,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6B2726AF28235E75000903CB /* Build configuration list for PBXNativeTarget "CashFlow" */;
 			buildPhases = (
-				191AB0AC59A61512B0BE83E1 /* [CP] Check Pods Manifest.lock */,
-				6B2726D928236B3F000903CB /* R.swift */,
 				6B2726CE2823657E000903CB /* Search_TODO_FIXE_ERROR */,
 				6B27268128235E72000903CB /* Sources */,
 				6B27268228235E72000903CB /* Frameworks */,
 				6B27268328235E72000903CB /* Resources */,
-				DCD4227D6A57B390479818DA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -677,43 +564,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6B2726B228235E75000903CB /* Build configuration list for PBXNativeTarget "CashFlowTests" */;
 			buildPhases = (
-				2E1FD61B1706C7A1F7C714D4 /* [CP] Check Pods Manifest.lock */,
 				6B27269728235E75000903CB /* Sources */,
 				6B27269828235E75000903CB /* Frameworks */,
 				6B27269928235E75000903CB /* Resources */,
-				747DD8CE4DFF8E2EAA9A8E75 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				6B27269D28235E75000903CB /* PBXTargetDependency */,
-				6B2726D12823693B000903CB /* PBXTargetDependency */,
 			);
 			name = CashFlowTests;
 			productName = CashFlowTests;
 			productReference = 6B27269B28235E75000903CB /* CashFlowTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		6B2726BB28236194000903CB /* CashFlow-qa */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6B2726C328236194000903CB /* Build configuration list for PBXNativeTarget "CashFlow-qa" */;
-			buildPhases = (
-				98E07A57FE8642053948ECF9 /* [CP] Check Pods Manifest.lock */,
-				6B2726DA28236B80000903CB /* R.swift */,
-				6B2726CF282365A4000903CB /* Search_TODO_FIXE_ERROR */,
-				6B2726BC28236194000903CB /* Sources */,
-				6B2726BF28236194000903CB /* Frameworks */,
-				6B2726C028236194000903CB /* Resources */,
-				8C0C29ED5E0BAB453B38BD16 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "CashFlow-qa";
-			productName = CashFlow;
-			productReference = 6B2726C628236194000903CB /* CashFlow-qa.app */;
-			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -730,7 +593,7 @@
 					};
 					6B27269A28235E75000903CB = {
 						CreatedOnToolsVersion = 13.1;
-						TestTargetID = 6B2726BB28236194000903CB;
+						TestTargetID = 6B27268428235E72000903CB;
 					};
 				};
 			};
@@ -748,7 +611,6 @@
 			projectRoot = "";
 			targets = (
 				6B27268428235E72000903CB /* CashFlow */,
-				6B2726BB28236194000903CB /* CashFlow-qa */,
 				6B27269A28235E75000903CB /* CashFlowTests */,
 			);
 		};
@@ -773,64 +635,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6B2726C028236194000903CB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6B2726CD28236426000903CB /* README.md in Resources */,
-				6B27272528240992000903CB /* Localizable.strings in Resources */,
-				6B2726C128236194000903CB /* LaunchScreen.storyboard in Resources */,
-				6B2726C228236194000903CB /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		191AB0AC59A61512B0BE83E1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CashFlow-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2E1FD61B1706C7A1F7C714D4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CashFlowTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6B2726CE2823657E000903CB /* Search_TODO_FIXE_ERROR */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -849,137 +656,6 @@
 			shellPath = /bin/sh;
 			shellScript = "TAGS=\"TODO: -|FIXME: -\"\nERRORTAG=\"ERROR:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$|($ERRORTAG).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\" | perl -p -e \"s/($ERRORTAG)/ error: \\$1/\"\n\n";
 		};
-		6B2726CF282365A4000903CB /* Search_TODO_FIXE_ERROR */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = Search_TODO_FIXE_ERROR;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "TAGS=\"TODO: -|FIXME: -\"\nERRORTAG=\"ERROR:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$|($ERRORTAG).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\" | perl -p -e \"s/($ERRORTAG)/ error: \\$1/\"\n\n";
-		};
-		6B2726D928236B3F000903CB /* R.swift */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = R.swift;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				$SRCROOT/R.generated.swift,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
-		};
-		6B2726DA28236B80000903CB /* R.swift */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = R.swift;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				$SRCROOT/R.generated.swift,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
-		};
-		747DD8CE4DFF8E2EAA9A8E75 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CashFlowTests/Pods-CashFlowTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CashFlowTests/Pods-CashFlowTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CashFlowTests/Pods-CashFlowTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8C0C29ED5E0BAB453B38BD16 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CashFlow-qa/Pods-CashFlow-qa-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CashFlow-qa/Pods-CashFlow-qa-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CashFlow-qa/Pods-CashFlow-qa-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		98E07A57FE8642053948ECF9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CashFlow-qa-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DCD4227D6A57B390479818DA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CashFlow/Pods-CashFlow-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CashFlow/Pods-CashFlow-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CashFlow/Pods-CashFlow-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -990,6 +666,7 @@
 				6B4A92C82824C20A00880080 /* ListRegisterComponent.swift in Sources */,
 				6B4A92D12824C38400880080 /* ListRegisterComponentViewModel.swift in Sources */,
 				6B4A931F2827522D00880080 /* BorderSide.swift in Sources */,
+				6B0D5BD52828E8B800F5DC59 /* SplashScreenViewController.swift in Sources */,
 				6B4A92F32826A81700880080 /* SectionData.swift in Sources */,
 				6B0D5BBC2828899400F5DC59 /* ListTypeRegister.swift in Sources */,
 				6B4A931C282735AD00880080 /* TotalsData.swift in Sources */,
@@ -1000,6 +677,7 @@
 				6B2727002823F9A5000903CB /* AppCoordinator.swift in Sources */,
 				6B4A92AA2824A23D00880080 /* Response.swift in Sources */,
 				6B2727102823FEC9000903CB /* ListRegisterViewModel.swift in Sources */,
+				6B0D5BD22828E8AB00F5DC59 /* SplashScreenViewModel.swift in Sources */,
 				6B0D5BA5282778A100F5DC59 /* UIImage+Extension.swift in Sources */,
 				6B0D5BAC2827F7B900F5DC59 /* AddRegisterCoordinator.swift in Sources */,
 				6B0D5BBF2828931100F5DC59 /* UITextField+Extension.swift in Sources */,
@@ -1011,6 +689,7 @@
 				6B27268928235E72000903CB /* AppDelegate.swift in Sources */,
 				6B4A92E228257FF900880080 /* JSONEncoder+Extension.swift in Sources */,
 				6B4A93112827299C00880080 /* TypeRegister.swift in Sources */,
+				6B0D5BCF2828E88600F5DC59 /* SplashScreenCoordinator.swift in Sources */,
 				6B4A92BC2824C03800880080 /* RegisterCell.swift in Sources */,
 				6B27270A2823FDC8000903CB /* ListRegisterCoordinator.swift in Sources */,
 				6B4A92F92826AB1F00880080 /* RegisterSection.swift in Sources */,
@@ -1040,7 +719,6 @@
 				6B4A92C52824C09B00880080 /* Utils.swift in Sources */,
 				6B0D5BB82827FE4400F5DC59 /* AddRegisterConfiguration.swift in Sources */,
 				6B4A93022826ECD500880080 /* UIColor+Extension.swift in Sources */,
-				6B2726DC28236BED000903CB /* R.generated.swift in Sources */,
 				6B4A92D72824CB7F00880080 /* ListRegisterConfiguration.swift in Sources */,
 				6B4A9305282700FD00880080 /* CellData.swift in Sources */,
 				6B4A930828271D0500880080 /* UIFont+Extension.swift in Sources */,
@@ -1060,75 +738,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6B2726BC28236194000903CB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6B4A92C92824C20A00880080 /* ListRegisterComponent.swift in Sources */,
-				6B4A92D22824C38400880080 /* ListRegisterComponentViewModel.swift in Sources */,
-				6B4A93202827522D00880080 /* BorderSide.swift in Sources */,
-				6B4A92F42826A81700880080 /* SectionData.swift in Sources */,
-				6B0D5BBD2828899400F5DC59 /* ListTypeRegister.swift in Sources */,
-				6B4A931D282735AD00880080 /* TotalsData.swift in Sources */,
-				6B4A93002826AB3E00880080 /* RegisterSectionViewModel.swift in Sources */,
-				6B2727062823FBF7000903CB /* InitialFlow.swift in Sources */,
-				6B27270E2823FEA7000903CB /* ListRegisterViewController.swift in Sources */,
-				6B4A930F282720EC00880080 /* NumberFormatter+Extension.swift in Sources */,
-				6B2727012823F9A5000903CB /* AppCoordinator.swift in Sources */,
-				6B4A92AB2824A23D00880080 /* Response.swift in Sources */,
-				6B2727112823FEC9000903CB /* ListRegisterViewModel.swift in Sources */,
-				6B0D5BA6282778A100F5DC59 /* UIImage+Extension.swift in Sources */,
-				6B0D5BAD2827F7B900F5DC59 /* AddRegisterCoordinator.swift in Sources */,
-				6B0D5BC02828931100F5DC59 /* UITextField+Extension.swift in Sources */,
-				6B4A92E72825A05C00880080 /* RegisterCashFlowDTO.swift in Sources */,
-				6B4A92A228247AE100880080 /* NSObject+Extension.swift in Sources */,
-				6B4A93162827351200880080 /* TotalsComponent.swift in Sources */,
-				6B4A93282827663E00880080 /* LabelDetail.swift in Sources */,
-				6B4A93242827661500880080 /* LabelTitle.swift in Sources */,
-				6B2726BD28236194000903CB /* AppDelegate.swift in Sources */,
-				6B4A92E328257FF900880080 /* JSONEncoder+Extension.swift in Sources */,
-				6B4A93122827299C00880080 /* TypeRegister.swift in Sources */,
-				6B4A92BD2824C03800880080 /* RegisterCell.swift in Sources */,
-				6B27270B2823FDC8000903CB /* ListRegisterCoordinator.swift in Sources */,
-				6B4A92FA2826AB1F00880080 /* RegisterSection.swift in Sources */,
-				6B4A92EA2825B0B000880080 /* Date+Extension.swift in Sources */,
-				6B4A92C02824C04900880080 /* RegisterCellContent.swift in Sources */,
-				6B4A92FD2826AB2F00880080 /* RegisterSectionContent.swift in Sources */,
-				6B0D5BCC2828D68000F5DC59 /* CurrencyStepper.swift in Sources */,
-				6B4A92C32824C05D00880080 /* RegisterCellViewModel.swift in Sources */,
-				6B4A932C2827691900880080 /* EmptyComponent.swift in Sources */,
-				6B4A92DD28257E9600880080 /* JSONDecoder+Extension.swift in Sources */,
-				6B4A92B12824B01A00880080 /* RealmDB.swift in Sources */,
-				6B4A92A52824827900880080 /* Encodable+Extension.swift in Sources */,
-				6B0D5BA9282796F400F5DC59 /* String+Extension.swift in Sources */,
-				6B27271F28240775000903CB /* DatabaseManager.swift in Sources */,
-				6B0D5BB32827FA6600F5DC59 /* AddRegisterViewController.swift in Sources */,
-				6B4A92A8282482C000880080 /* RegisterCashFlow.swift in Sources */,
-				6B4A930C2827203A00880080 /* Int+Extension.swift in Sources */,
-				6B4A92CC2824C25D00880080 /* UITableView+Extension.swift in Sources */,
-				6B4A92CF2824C32900880080 /* UIView+Extension.swift in Sources */,
-				6B0D5BC428289A8800F5DC59 /* ButtonCashFlow.swift in Sources */,
-				6B4A92E028257FBA00880080 /* DateFormatter+Extension.swift in Sources */,
-				6B4A92ED2825B0D600880080 /* DateFormatType.swift in Sources */,
-				6B0D5BB02827F99700F5DC59 /* AddRegisterViewModel.swift in Sources */,
-				6B2726BE28236194000903CB /* SceneDelegate.swift in Sources */,
-				6B0D5BB62827FAB000F5DC59 /* AddRegisterContent.swift in Sources */,
-				6B4A92D52824C8D300880080 /* Collection+Extension.swift in Sources */,
-				6B4A92C62824C09B00880080 /* Utils.swift in Sources */,
-				6B0D5BB92827FE4400F5DC59 /* AddRegisterConfiguration.swift in Sources */,
-				6B4A93032826ECD500880080 /* UIColor+Extension.swift in Sources */,
-				6B2726DD28236BED000903CB /* R.generated.swift in Sources */,
-				6B4A92D82824CB7F00880080 /* ListRegisterConfiguration.swift in Sources */,
-				6B4A9306282700FD00880080 /* CellData.swift in Sources */,
-				6B4A930928271D0500880080 /* UIFont+Extension.swift in Sources */,
-				6B4A933028276C2B00880080 /* ErrorComponent.swift in Sources */,
-				6B27272228240927000903CB /* ErrorRequest.swift in Sources */,
-				6B2727142823FF90000903CB /* ListRegisterContent.swift in Sources */,
-				6B4A93192827353000880080 /* TotalsComponentViewModel.swift in Sources */,
-				6B0D5BC82828C1A500F5DC59 /* CurrencyTextField.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1136,11 +745,6 @@
 			isa = PBXTargetDependency;
 			target = 6B27268428235E72000903CB /* CashFlow */;
 			targetProxy = 6B27269C28235E75000903CB /* PBXContainerItemProxy */;
-		};
-		6B2726D12823693B000903CB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6B2726BB28236194000903CB /* CashFlow-qa */;
-			targetProxy = 6B2726D02823693B000903CB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1276,10 +880,10 @@
 		};
 		6B2726B028235E75000903CB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 72F77D83D1A8FBB2F5136ECB /* Pods-CashFlow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1306,10 +910,10 @@
 		};
 		6B2726B128235E75000903CB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4574E5EC4003728A19CDF810 /* Pods-CashFlow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1336,7 +940,6 @@
 		};
 		6B2726B328235E75000903CB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AB7B3E53422AA1BD5964EA0B /* Pods-CashFlowTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1355,13 +958,12 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CashFlow-qa.app/CashFlow-qa";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CashFlow.app/CashFlow";
 			};
 			name = Debug;
 		};
 		6B2726B428235E75000903CB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 67835979321A50ACA1DBC8FA /* Pods-CashFlowTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1380,69 +982,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CashFlow-qa.app/CashFlow-qa";
-			};
-			name = Release;
-		};
-		6B2726C428236194000903CB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0AB43B7606596BF02A7D420D /* Pods-CashFlow-qa.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "$(PROJECT_NAME)/Targets/$(TARGET_NAME)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Cash Flow";
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jader.cashflow.qa;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Debug;
-		};
-		6B2726C528236194000903CB /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 321538DA6A0E7F739EF4BD61 /* Pods-CashFlow-qa.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "$(PROJECT_NAME)/Targets/$(TARGET_NAME)/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Cash Flow";
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jader.cashflow.qa;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CashFlow.app/CashFlow";
 			};
 			name = Release;
 		};
@@ -1472,15 +1012,6 @@
 			buildConfigurations = (
 				6B2726B328235E75000903CB /* Debug */,
 				6B2726B428235E75000903CB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6B2726C328236194000903CB /* Build configuration list for PBXNativeTarget "CashFlow-qa" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6B2726C428236194000903CB /* Debug */,
-				6B2726C528236194000903CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

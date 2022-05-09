@@ -16,7 +16,7 @@ final class EmptyComponent: UIView {
         $0.contentMode = .scaleAspectFit
     }
     private let infoLabel: LabelTitle = initElement {
-        $0.text = R.string.localizable.noDataTitle()
+        $0.text = "noData.title".localized()
     }
 
     // MARK: - Life cycle

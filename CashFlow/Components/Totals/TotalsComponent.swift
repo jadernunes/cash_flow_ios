@@ -21,13 +21,13 @@ final class TotalsComponent: UIView {
     private let valueIncomeLabel: LabelDetail = initElement()
     private let valueBalanceLabel: LabelDetail = initElement()
     private let titleExpensesLabel: LabelTitle = initElement {
-        $0.text = R.string.localizable.titleExpenses()
+        $0.text = "title.expenses".localized()
     }
     private let titleIncomeLabel: LabelTitle = initElement {
-        $0.text = R.string.localizable.titleImcomes()
+        $0.text = "title.incomes".localized()
     }
     private let titleBalanceLabel: LabelTitle = initElement {
-        $0.text = R.string.localizable.titleBalance()
+        $0.text = "title.balance".localized()
     }
     private let stackLeft: UIStackView = initElement {
         $0.axis = .vertical

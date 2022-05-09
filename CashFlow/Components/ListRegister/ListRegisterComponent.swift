@@ -76,8 +76,8 @@ final class ListRegisterComponent: UIView {
 
     private func setupButtonEdit() {
         let titleButton = isEditing
-        ? R.string.localizable.buttonTitleCancel()
-        : R.string.localizable.buttonTitleEdit()
+        ? "button.title.cancel".localized()
+        : "button.title.edit".localized()
 
         buttonEdit.isVisible = canDelete
         buttonEdit.setTitle(titleButton, for: .normal)

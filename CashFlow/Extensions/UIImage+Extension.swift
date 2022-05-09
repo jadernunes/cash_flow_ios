@@ -10,7 +10,7 @@ import UIKit
 extension UIImage {
 
     static let iconError = UIImage(named: "iconError")
-    static let iconGlobe = UIImage(named: "iconGlobe")
+    static let iconDollar = UIImage(named: "iconDollar")
     static let iconNoData = UIImage(named: "iconNoData")
     static let iconPlus = UIImage(named: "iconPlus")
     static let iconClose = UIImage(named: "iconClose")
