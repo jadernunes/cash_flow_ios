@@ -14,4 +14,9 @@ extension String {
         formatter.dateFormat = format.rawValue
         return formatter.date(from: self)
     }
+
+    func onlyDigits() -> String {
+        let filtredUnicodeScalars = unicodeScalars.filter { CharacterSet.decimalDigits.contains($0) }
+        return String(String.UnicodeScalarView(filtredUnicodeScalars))
+    }
 }

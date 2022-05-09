@@ -23,6 +23,7 @@ extension UIView {
         }
     }
 
+    @objc
     func startLoader(style: UIActivityIndicatorView.Style = .medium) {
         let loader = UIActivityIndicatorView()
         loader.hidesWhenStopped = true
@@ -34,6 +35,7 @@ extension UIView {
         loader.centerInSuperview()
     }
 
+    @objc
     func stopLoader() {
         viewWithTag(tagLoader)?.removeFromSuperview()
     }

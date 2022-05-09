@@ -17,17 +17,11 @@ extension UIColor {
     static let clNoData = lightGray.withAlphaComponent(0.3)
     static let clBlack = black
 
-    /// HEX: #FF5229
-    static let clPrimary = UIColor(named: "primary")
-
     /// HEX: #FFFAF5
     static let clBeige = UIColor(named: "beige")
 
     /// HEX: #FFEAC9
     static let clBeigeDark = UIColor(named: "beigeDark")
-
-    /// HEX: #86B984
-    static let clGreenLight = UIColor(named: "greenLight")
 
     /// HEX: #D18C8A
     static let clRedLight = UIColor(named: "redLight")
