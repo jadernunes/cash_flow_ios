@@ -35,9 +35,9 @@ extension RealmDB: DatabaseProtocol {
                     realm.add(models.map { $0.realmDTO() })
                     realm.refresh()
                 }
-                completion(.success(Void()))
+                sendToMainThread(.success(Void()), completion)
             } catch {
-                completion(.failure(error: .generic()))
+                sendToMainThread(.failure(error: .generic()), completion)
             }
         }
     }
@@ -51,10 +51,9 @@ extension RealmDB: DatabaseProtocol {
                 let result = try array.map {
                     try JSONDecoder.decoder.decode(typeToReturn, from: $0.toJson().toData() ?? Data())
                 }
-
-                completion(.success(result))
+                sendToMainThread(.success(result), completion)
             } catch {
-                completion(.failure(error: .generic()))
+                sendToMainThread(.failure(error: .generic()), completion)
             }
         }
     }
@@ -69,14 +68,21 @@ extension RealmDB: DatabaseProtocol {
                         realm.delete(toDelete)
                         realm.refresh()
                     }
-                    completion(.success(Void()))
+                    sendToMainThread(.success(Void()), completion)
                 } else {
-                    completion(.failure(error: .generic()))
+                    sendToMainThread(.failure(error: .generic()), completion)
                 }
             } catch {
-                completion(.failure(error: .generic()))
+                sendToMainThread(.failure(error: .generic()), completion)
             }
         }
+    }
+
+    //Send all data to main thread
+
+    private func sendToMainThread<T>(_ response: Response<T>,
+                                     _ completion: @escaping ((Response<T>) -> Void)) {
+        DispatchQueue.main.async { completion(response) }
     }
 }
 
