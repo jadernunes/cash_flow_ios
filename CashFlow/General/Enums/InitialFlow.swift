@@ -7,5 +7,5 @@
 
 /// Here you've all the posibilities to start the app. i.g: Splash screen, List of resgisters, Detail  and so on.
 enum InitialFlow: CaseIterable {
-    case listRegister
+    case listRegister, splashScreen
 }

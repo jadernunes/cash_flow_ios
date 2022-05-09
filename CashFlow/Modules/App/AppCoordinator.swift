@@ -16,7 +16,7 @@ final class AppCoordinator {
 
     // MARK: - Life cycle
 
-    init(window: UIWindow?, initialFlow: InitialFlow = .listRegister) {
+    init(window: UIWindow?, initialFlow: InitialFlow = .splashScreen) {
         self.window = window
         self.initialFlow = initialFlow
     }
@@ -25,12 +25,21 @@ final class AppCoordinator {
 
     func start() {
         switch initialFlow {
+        case .splashScreen:
+            openSplashScreen()
         case .listRegister:
             openListRegister()
         }
     }
 
     // MARK: - Navigations
+
+    private func openSplashScreen() {
+        guard let window = window else { return }
+        let coodinator = SplashScreenCoordinator(presenter: window)
+        coodinator.delegate = self
+        coodinator.start()
+    }
 
     private func openListRegister() {
         let navigation = UINavigationController()
@@ -39,5 +48,14 @@ final class AppCoordinator {
 
         window?.rootViewController = navigation
         window?.makeKeyAndVisible()
+    }
+}
+
+// MARK: - SplashScreen delegate
+
+extension AppCoordinator: SplashScreenCoordinatorDelegate {
+
+    func didFinishSplashScreen() {
+        openListRegister()
     }
 }
