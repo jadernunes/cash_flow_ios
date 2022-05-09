@@ -51,7 +51,7 @@ final class AddRegisterContent: UIView {
         $0.addShadow(opacity: 0.5)
     }
     private let titleLabel: LabelTitle = initElement {
-        $0.text = R.string.localizable.addRegisterTitle()
+        $0.text = "addRegister.title".localized()
     }
     private let closeButton: UIButton = initElement {
         $0.setImage(UIImage.iconClose, for: .normal)
@@ -69,11 +69,11 @@ final class AddRegisterContent: UIView {
         $0.backgroundColor = .clSecondary
         $0.addShadow()
         $0.borderStyle = .roundedRect
-        $0.placeholder = R.string.localizable.addRegisterDescPlaceholder()
+        $0.placeholder = "addRegister.desc.placeholder".localized()
     }
     private let addButton: ButtonCashFlow = initElement {
         $0.configuration = .bordered()
-        $0.setTitle(R.string.localizable.addRegisterAddTitle(), for: .normal)
+        $0.setTitle("addRegister.add.title".localized(), for: .normal)
         $0.setTitleColor(.clBlack, for: .normal)
         $0.addTarget(self, action: #selector(buttonSavePressed), for: .touchUpInside)
     }

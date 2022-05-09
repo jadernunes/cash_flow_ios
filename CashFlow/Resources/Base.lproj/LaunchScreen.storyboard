@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconGlobe" translatesAutoresizingMaskIntoConstraints="NO" id="PnP-oo-Z2c">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconDollar" translatesAutoresizingMaskIntoConstraints="NO" id="PnP-oo-Z2c">
                                 <rect key="frame" x="103.5" y="349.5" width="207" height="207"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="PnP-oo-Z2c" secondAttribute="height" id="Run-QB-PIv"/>
@@ -40,7 +40,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="iconGlobe" width="128" height="128"/>
+        <image name="iconDollar" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

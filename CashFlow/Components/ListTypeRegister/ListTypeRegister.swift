@@ -20,10 +20,9 @@ final class ListTypeRegister {
     // MARK: - Show list
 
     func showFrom( _ viewController: UIViewController) {
-        let alert = UIAlertController(title: R.string.localizable.listTypeTitle(),
+        let alert = UIAlertController(title: "listType.title".localized(),
                                       message: nil,
                                       preferredStyle: .actionSheet)
-
         createActionsForTypeRegister(for: alert)
         createCancelAction(for: alert)
 
@@ -45,7 +44,7 @@ final class ListTypeRegister {
 
     private func createCancelAction(for alert: UIAlertController) {
         //Action to cancel
-        alert.addAction(UIAlertAction(title: R.string.localizable.cancelTitle(),
+        alert.addAction(UIAlertAction(title: "cancel.title".localized(),
                                       style: .cancel,
                                       handler: { _ in
             alert.dismiss(animated: true)

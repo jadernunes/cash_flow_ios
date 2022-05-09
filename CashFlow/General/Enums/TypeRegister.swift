@@ -13,9 +13,9 @@ enum TypeRegister: String, Codable, CaseIterable {
     func title() -> String {
         switch self {
         case .expense:
-            return R.string.localizable.registerTypeExpense()
+            return "register.type.expense".localized()
         case .income:
-            return R.string.localizable.registerTypeIncome()
+            return "register.type.income".localized()
         }
     }
 }

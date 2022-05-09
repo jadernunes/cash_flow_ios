@@ -19,4 +19,9 @@ extension String {
         let filtredUnicodeScalars = unicodeScalars.filter { CharacterSet.decimalDigits.contains($0) }
         return String(String.UnicodeScalarView(filtredUnicodeScalars))
     }
+
+    func localized() -> String {
+        let textLocalised = NSLocalizedString(self, comment: "")
+        return self == textLocalised ? "" : textLocalised
+    }
 }

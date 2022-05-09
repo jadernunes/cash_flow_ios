@@ -24,11 +24,11 @@ final class ErrorComponent: UIView {
         $0.contentMode = .scaleAspectFit
     }
     private let infoLabel: LabelTitle = initElement {
-        $0.text = R.string.localizable.errorTitle()
+        $0.text = "error.title".localized()
         $0.textAlignment = .center
     }
     private let retryButton: UIButton = initElement {
-        $0.setTitle(R.string.localizable.retryTitle(), for: .normal)
+        $0.setTitle("error.retry".localized(), for: .normal)
         $0.setTitleColor(.clBlack, for: .normal)
         $0.backgroundColor = .clBeigeDark
         $0.layer.cornerRadius = 8

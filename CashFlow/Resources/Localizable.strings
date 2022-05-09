@@ -22,7 +22,7 @@
 // MARK: - Totals component
 
 "title.expenses" = "Expenses";
-"title.imcomes" = "Incomes";
+"title.incomes" = "Incomes";
 "title.balance" = "Balance";
 
 // MARK: - Type register

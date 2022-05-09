@@ -16,7 +16,7 @@ final class SplashScreenViewController: UIViewController {
     // MARK: - Elements
 
     private let logoImageView: UIImageView = initElement {
-        $0.image = R.image.iconGlobe()
+        $0.image = UIImage.iconDollar
         $0.contentMode = .scaleAspectFit
     }
 
