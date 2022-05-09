@@ -45,8 +45,8 @@ final class RegisterCellContent: UIView {
         addShadow()
     }
 
-    private func setupCorner() {
-        cornerRadiusAtSide(radius: 8, cornerMask: [.layerMinXMaxYCorner, .layerMaxXMaxYCorner])
+    private func setupCorner(_ hasCorner: Bool) {
+        cornerRadiusAtSide(radius: hasCorner ? 8 : 0, cornerMask: [.layerMinXMaxYCorner, .layerMaxXMaxYCorner])
     }
 }
 
@@ -62,18 +62,17 @@ extension RegisterCellContent: Component {
         switch configuration {
         case .content(let data):
             self.viewModel = data.viewModel
-            populdateUI(data.hasCorner)
+            populdateUI()
+            setupCorner(data.hasCorner)
 
         case .prepareForReuse:
             descLabel.text = nil
         }
     }
 
-    private func populdateUI(_ hasCorner: Bool) {
+    private func populdateUI() {
         descLabel.text = viewModel?.desc
         amountLabel.text = viewModel?.amount
-
-        if hasCorner { setupCorner() }
     }
 }
 

@@ -39,18 +39,12 @@ final class ListRegisterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setupUI()
+        
         bindUI()
         viewModel.loadData()
     }
 
     // MARK: - Custom methods
-
-    private func setupUI() {
-        view.backgroundColor = .clSecondary
-        view.backgroundColor = .white
-    }
 
     private func bindUI() {
         bindCongiguration()

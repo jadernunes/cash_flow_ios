@@ -99,7 +99,7 @@ final class ListRegisterViewModel: ListRegisterViewModelProtocol {
     }
     
     func addRegister() {
-        //TODO: - handle it
+        coordinator?.openAddRegister(delegate: self)
     }
 }
 
@@ -109,5 +109,14 @@ extension ListRegisterViewModel: ListRegisterDelegate {
 
     func willRemove(_ register: RegisterCashFlow?) {
         deleteRegister(register)
+    }
+}
+
+// MARK: - AddRegister Delegate
+
+extension ListRegisterViewModel: AddRegisterDelegate {
+
+    func didAddRegister() {
+        loadData()
     }
 }

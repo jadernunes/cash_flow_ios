@@ -11,7 +11,7 @@ final class ListRegisterComponent: UIView {
 
     // MARK: - Attributes
 
-    private weak var viewModel: ListRegisterComponentProtocol?
+    private var viewModel: ListRegisterComponentProtocol?
     private var isEditing = false
     private var canDelete = false
 
@@ -44,6 +44,7 @@ final class ListRegisterComponent: UIView {
 
         defineSubviews()
         setupProtocols()
+        defineSubviewsConstraints()
     }
 
     @available(*, unavailable)
@@ -56,7 +57,6 @@ final class ListRegisterComponent: UIView {
     private func setupProtocols() {
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.isEditing = true
     }
 
     private func defineSubviews() {
@@ -81,6 +81,7 @@ final class ListRegisterComponent: UIView {
 
         buttonEdit.isVisible = canDelete
         buttonEdit.setTitle(titleButton, for: .normal)
+        updateConstraintEditButton()
     }
 
     private func changeEditState() {
@@ -158,20 +159,28 @@ extension ListRegisterComponent {
 
     private func defineButtonEditConstraints() {
         NSLayoutConstraint.activate([
-            buttonEdit.topAnchor.constraint(equalTo: topAnchor, constant: 8),
+            buttonEdit.topAnchor.constraint(equalTo: topAnchor, constant: 16),
             buttonEdit.leftAnchor.constraint(greaterThanOrEqualTo: leftAnchor, constant: 8),
-            buttonEdit.rightAnchor.constraint(equalTo: rightAnchor, constant: -8),
-            buttonEdit.heightAnchor.constraint(equalToConstant: canDelete ? 32 : 0)
+            buttonEdit.rightAnchor.constraint(equalTo: rightAnchor, constant: -8)
         ])
     }
 
     private func defineTableViewConstraints() {
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: buttonEdit.bottomAnchor, constant: 4),
             tableView.leftAnchor.constraint(equalTo: leftAnchor, constant: 8),
             tableView.rightAnchor.constraint(equalTo: rightAnchor, constant: -8),
             tableView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8)
         ])
+    }
+
+    private func updateConstraintEditButton() {
+        setNeedsLayout()
+        UIView.animate(withDuration: 0.2) { [weak self] in
+            guard let self = self else { return }
+            self.layoutIfNeeded()
+            self.buttonEdit.heightAnchor.constraint(equalToConstant: self.canDelete ? 32 : 0).isActive = true
+            self.tableView.topAnchor.constraint(equalTo: self.buttonEdit.bottomAnchor, constant: 16).isActive = true
+        }
     }
 }
 
@@ -205,7 +214,5 @@ extension ListRegisterComponent: Component {
             tableView.isHidden = true
             emptyComponent.isVisible = true
         }
-
-        defineSubviewsConstraints()
     }
 }

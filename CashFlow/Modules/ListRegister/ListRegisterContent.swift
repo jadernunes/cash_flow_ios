@@ -154,8 +154,9 @@ extension ListRegisterContent: Component {
 
         case .empty:
             errorComponent.isHidden = true
-            totals.isVisible = true
             buttonAdd.isVisible = true
+            totals.isVisible = true
+            totals.render(with: .empty)
             listComponent.isVisible = true
             listComponent.stopLoader()
             listComponent.render(with: .empty)

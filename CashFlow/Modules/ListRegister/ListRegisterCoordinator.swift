@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ListRegisterCoordinatorProtocol {
-    func openAddRegister()
+    func openAddRegister(delegate: AddRegisterDelegate)
 }
 
 final class ListRegisterCoordinator: ListRegisterCoordinatorProtocol {
@@ -31,7 +31,9 @@ final class ListRegisterCoordinator: ListRegisterCoordinatorProtocol {
         presenter?.viewControllers = [viewController]
     }
 
-    func openAddRegister() {
-        //TODO: - handle it
+    func openAddRegister(delegate: AddRegisterDelegate) {
+        guard let navigation = presenter else { return }
+        let coordinator = AddRegisterCoordinator(presenter: navigation)
+        coordinator.start(delegate: delegate)
     }
 }
