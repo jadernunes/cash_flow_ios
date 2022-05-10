@@ -44,14 +44,14 @@ final class EmptyComponent: UIView {
 
 // MARK: - Constraints
 
-extension EmptyComponent {
+private extension EmptyComponent {
 
-    private func defineSubviewsConstraints() {
+    func defineSubviewsConstraints() {
         setupImageConstraints()
         setupLableConstraints()
     }
 
-    private func setupImageConstraints() {
+    func setupImageConstraints() {
         NSLayoutConstraint.activate([
             emptyImage.topAnchor.constraint(greaterThanOrEqualTo: topAnchor, constant: 16),
             emptyImage.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),
@@ -61,7 +61,7 @@ extension EmptyComponent {
         ])
     }
 
-    private func setupLableConstraints() {
+    func setupLableConstraints() {
         NSLayoutConstraint.activate([
             infoLabel.heightAnchor.constraint(equalToConstant: 24),
             infoLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),

@@ -149,15 +149,15 @@ extension ListRegisterComponent: UITableViewDelegate {
 
 // MARK: - Constraints
 
-extension ListRegisterComponent {
+private extension ListRegisterComponent {
 
-    private func defineSubviewsConstraints() {
+    func defineSubviewsConstraints() {
         emptyComponent.anchor(self)
         defineButtonEditConstraints()
         defineTableViewConstraints()
     }
 
-    private func defineButtonEditConstraints() {
+    func defineButtonEditConstraints() {
         NSLayoutConstraint.activate([
             buttonEdit.topAnchor.constraint(equalTo: topAnchor, constant: 16),
             buttonEdit.leftAnchor.constraint(greaterThanOrEqualTo: leftAnchor, constant: 8),
@@ -165,7 +165,7 @@ extension ListRegisterComponent {
         ])
     }
 
-    private func defineTableViewConstraints() {
+    func defineTableViewConstraints() {
         NSLayoutConstraint.activate([
             tableView.leftAnchor.constraint(equalTo: leftAnchor, constant: 8),
             tableView.rightAnchor.constraint(equalTo: rightAnchor, constant: -8),
@@ -173,7 +173,7 @@ extension ListRegisterComponent {
         ])
     }
 
-    private func updateConstraintEditButton() {
+    func updateConstraintEditButton() {
         setNeedsLayout()
         UIView.animate(withDuration: 0.2) { [weak self] in
             guard let self = self else { return }

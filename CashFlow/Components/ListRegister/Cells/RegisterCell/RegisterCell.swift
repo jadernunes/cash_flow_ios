@@ -51,9 +51,9 @@ final class RegisterCell: UITableViewCell {
 
 // MARK: - Constraints
 
-extension RegisterCell {
+private extension RegisterCell {
 
-    private func defineSubviewsConstraints() {
+    func defineSubviewsConstraints() {
         NSLayoutConstraint.activate([
             content.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 4),
             content.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -4),

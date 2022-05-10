@@ -128,7 +128,7 @@ private extension CurrencyStepper {
         ])
     }
 
-    private func defineAmountConstraints() {
+    func defineAmountConstraints() {
         NSLayoutConstraint.activate([
             stackButtonsAmount.widthAnchor.constraint(equalToConstant: 32),
             textFieldAmount.widthAnchor.constraint(equalTo: widthAnchor, constant: -32),            textFieldAmount.heightAnchor.constraint(equalTo: heightAnchor),
