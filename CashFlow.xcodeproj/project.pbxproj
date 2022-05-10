@@ -23,11 +23,13 @@
 		6B0D5BD22828E8AB00F5DC59 /* SplashScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D5BD12828E8AB00F5DC59 /* SplashScreenViewModel.swift */; };
 		6B0D5BD52828E8B800F5DC59 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D5BD42828E8B800F5DC59 /* SplashScreenViewController.swift */; };
 		6B0D5BD8282900DC00F5DC59 /* Calendar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D5BD7282900DC00F5DC59 /* Calendar+Extension.swift */; };
+		6B0D5BDB28290B8A00F5DC59 /* GeneralTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D5BDA28290B8A00F5DC59 /* GeneralTests.swift */; };
+		6B0D5BDD28290C8E00F5DC59 /* UITableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D5BDC28290C8E00F5DC59 /* UITableViewTests.swift */; };
+		6B0D5BDF28290E3A00F5DC59 /* RegisterCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D5BDE28290E3A00F5DC59 /* RegisterCellTests.swift */; };
 		6B27268928235E72000903CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27268828235E72000903CB /* AppDelegate.swift */; };
 		6B27268B28235E72000903CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27268A28235E72000903CB /* SceneDelegate.swift */; };
 		6B27269228235E74000903CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B27269128235E74000903CB /* Assets.xcassets */; };
 		6B27269528235E74000903CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B27269328235E74000903CB /* LaunchScreen.storyboard */; };
-		6B2726A028235E75000903CB /* CashFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27269F28235E75000903CB /* CashFlowTests.swift */; };
 		6B2726CC28236426000903CB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6B2726CB28236426000903CB /* README.md */; };
 		6B2727002823F9A5000903CB /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2726FF2823F9A5000903CB /* AppCoordinator.swift */; };
 		6B2727052823FBF7000903CB /* InitialFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2727042823FBF7000903CB /* InitialFlow.swift */; };
@@ -77,6 +79,20 @@
 		6B4A93272827663E00880080 /* LabelDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A93262827663E00880080 /* LabelDetail.swift */; };
 		6B4A932B2827691500880080 /* EmptyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A932A2827691500880080 /* EmptyComponent.swift */; };
 		6B4A932F28276C2B00880080 /* ErrorComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A932E28276C2B00880080 /* ErrorComponent.swift */; };
+		6BFA2FE62829C4F500013458 /* EnumsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFA2FE52829C4F500013458 /* EnumsTests.swift */; };
+		6BFA2FEE2829D46700013458 /* EncodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFA2FED2829D46700013458 /* EncodableTests.swift */; };
+		6BFA2FF22829D4E000013458 /* AppCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFA2FF12829D4E000013458 /* AppCoordinatorTests.swift */; };
+		6BFA2FF52829D58600013458 /* ListRegisterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFA2FF42829D58600013458 /* ListRegisterViewModelTests.swift */; };
+		6BFA2FFA2829E89500013458 /* SplashScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFA2FF92829E89500013458 /* SplashScreenTests.swift */; };
+		6BFA2FFD2829E8F600013458 /* AddRegisterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFA2FFC2829E8F600013458 /* AddRegisterViewModelTests.swift */; };
+		6BFA30002829E94E00013458 /* ListRegisterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFA2FFF2829E94E00013458 /* ListRegisterMock.swift */; };
+		6BFA30042829F1C900013458 /* RegisterCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFA30032829F1C900013458 /* RegisterCellViewModelTests.swift */; };
+		6BFA30082829F37800013458 /* RegisterSectionViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFA30072829F37800013458 /* RegisterSectionViewModelTests.swift */; };
+		6BFA300B2829F41900013458 /* ListRegisterComponentViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFA300A2829F41900013458 /* ListRegisterComponentViewModelTests.swift */; };
+		6BFA300E2829F76700013458 /* TotalsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFA300D2829F76700013458 /* TotalsTests.swift */; };
+		6BFA30102829F97700013458 /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFA300F2829F97700013458 /* StringTests.swift */; };
+		6BFA30122829FAFF00013458 /* UIImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFA30112829FAFF00013458 /* UIImageTests.swift */; };
+		6BFA30142829FB7800013458 /* UIColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFA30132829FB7800013458 /* UIColorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +122,9 @@
 		6B0D5BD12828E8AB00F5DC59 /* SplashScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewModel.swift; sourceTree = "<group>"; };
 		6B0D5BD42828E8B800F5DC59 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		6B0D5BD7282900DC00F5DC59 /* Calendar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+Extension.swift"; sourceTree = "<group>"; };
+		6B0D5BDA28290B8A00F5DC59 /* GeneralTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTests.swift; sourceTree = "<group>"; };
+		6B0D5BDC28290C8E00F5DC59 /* UITableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewTests.swift; sourceTree = "<group>"; };
+		6B0D5BDE28290E3A00F5DC59 /* RegisterCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCellTests.swift; sourceTree = "<group>"; };
 		6B27268528235E72000903CB /* CashFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CashFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B27268828235E72000903CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B27268A28235E72000903CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,7 +132,6 @@
 		6B27269428235E74000903CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B27269628235E74000903CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B27269B28235E75000903CB /* CashFlowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CashFlowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B27269F28235E75000903CB /* CashFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashFlowTests.swift; sourceTree = "<group>"; };
 		6B2726CB28236426000903CB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		6B2726FF2823F9A5000903CB /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		6B2727042823FBF7000903CB /* InitialFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialFlow.swift; sourceTree = "<group>"; };
@@ -163,6 +181,20 @@
 		6B4A93262827663E00880080 /* LabelDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelDetail.swift; sourceTree = "<group>"; };
 		6B4A932A2827691500880080 /* EmptyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyComponent.swift; sourceTree = "<group>"; };
 		6B4A932E28276C2B00880080 /* ErrorComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorComponent.swift; sourceTree = "<group>"; };
+		6BFA2FE52829C4F500013458 /* EnumsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumsTests.swift; sourceTree = "<group>"; };
+		6BFA2FED2829D46700013458 /* EncodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableTests.swift; sourceTree = "<group>"; };
+		6BFA2FF12829D4E000013458 /* AppCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTests.swift; sourceTree = "<group>"; };
+		6BFA2FF42829D58600013458 /* ListRegisterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRegisterViewModelTests.swift; sourceTree = "<group>"; };
+		6BFA2FF92829E89500013458 /* SplashScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenTests.swift; sourceTree = "<group>"; };
+		6BFA2FFC2829E8F600013458 /* AddRegisterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRegisterViewModelTests.swift; sourceTree = "<group>"; };
+		6BFA2FFF2829E94E00013458 /* ListRegisterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRegisterMock.swift; sourceTree = "<group>"; };
+		6BFA30032829F1C900013458 /* RegisterCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCellViewModelTests.swift; sourceTree = "<group>"; };
+		6BFA30072829F37800013458 /* RegisterSectionViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSectionViewModelTests.swift; sourceTree = "<group>"; };
+		6BFA300A2829F41900013458 /* ListRegisterComponentViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRegisterComponentViewModelTests.swift; sourceTree = "<group>"; };
+		6BFA300D2829F76700013458 /* TotalsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalsTests.swift; sourceTree = "<group>"; };
+		6BFA300F2829F97700013458 /* StringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
+		6BFA30112829FAFF00013458 /* UIImageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageTests.swift; sourceTree = "<group>"; };
+		6BFA30132829FB7800013458 /* UIColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +276,21 @@
 			path = SplashScreen;
 			sourceTree = "<group>";
 		};
+		6B0D5BD928290B7600F5DC59 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				6B0D5BDA28290B8A00F5DC59 /* GeneralTests.swift */,
+				6B0D5BDC28290C8E00F5DC59 /* UITableViewTests.swift */,
+				6B0D5BDE28290E3A00F5DC59 /* RegisterCellTests.swift */,
+				6BFA2FE52829C4F500013458 /* EnumsTests.swift */,
+				6BFA2FED2829D46700013458 /* EncodableTests.swift */,
+				6BFA300F2829F97700013458 /* StringTests.swift */,
+				6BFA30112829FAFF00013458 /* UIImageTests.swift */,
+				6BFA30132829FB7800013458 /* UIColorTests.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
 		6B27267C28235E72000903CB = {
 			isa = PBXGroup;
 			children = (
@@ -281,7 +328,10 @@
 		6B27269E28235E75000903CB /* CashFlowTests */ = {
 			isa = PBXGroup;
 			children = (
-				6B27269F28235E75000903CB /* CashFlowTests.swift */,
+				6BFA2FFE2829E94400013458 /* Helper */,
+				6B0D5BD928290B7600F5DC59 /* General */,
+				6BFA30012829F1B300013458 /* Components */,
+				6BFA2FEF2829D4A800013458 /* Modules */,
 			);
 			path = CashFlowTests;
 			sourceTree = "<group>";
@@ -542,6 +592,100 @@
 			path = Error;
 			sourceTree = "<group>";
 		};
+		6BFA2FEF2829D4A800013458 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				6BFA2FF82829E88100013458 /* SplashScreen */,
+				6BFA2FF02829D4D700013458 /* App */,
+				6BFA2FF32829D53D00013458 /* ListRegister */,
+				6BFA2FFB2829E8E100013458 /* AddRegister */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		6BFA2FF02829D4D700013458 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6BFA2FF12829D4E000013458 /* AppCoordinatorTests.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		6BFA2FF32829D53D00013458 /* ListRegister */ = {
+			isa = PBXGroup;
+			children = (
+				6BFA2FF42829D58600013458 /* ListRegisterViewModelTests.swift */,
+			);
+			path = ListRegister;
+			sourceTree = "<group>";
+		};
+		6BFA2FF82829E88100013458 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				6BFA2FF92829E89500013458 /* SplashScreenTests.swift */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		6BFA2FFB2829E8E100013458 /* AddRegister */ = {
+			isa = PBXGroup;
+			children = (
+				6BFA2FFC2829E8F600013458 /* AddRegisterViewModelTests.swift */,
+			);
+			path = AddRegister;
+			sourceTree = "<group>";
+		};
+		6BFA2FFE2829E94400013458 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				6BFA2FFF2829E94E00013458 /* ListRegisterMock.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		6BFA30012829F1B300013458 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6BFA300C2829F75300013458 /* Totals */,
+				6BFA30052829F2F400013458 /* ListRegister */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		6BFA30022829F1BC00013458 /* RegisterCell */ = {
+			isa = PBXGroup;
+			children = (
+				6BFA30032829F1C900013458 /* RegisterCellViewModelTests.swift */,
+			);
+			path = RegisterCell;
+			sourceTree = "<group>";
+		};
+		6BFA30052829F2F400013458 /* ListRegister */ = {
+			isa = PBXGroup;
+			children = (
+				6BFA300A2829F41900013458 /* ListRegisterComponentViewModelTests.swift */,
+				6BFA30062829F35D00013458 /* RegisterSection */,
+				6BFA30022829F1BC00013458 /* RegisterCell */,
+			);
+			path = ListRegister;
+			sourceTree = "<group>";
+		};
+		6BFA30062829F35D00013458 /* RegisterSection */ = {
+			isa = PBXGroup;
+			children = (
+				6BFA30072829F37800013458 /* RegisterSectionViewModelTests.swift */,
+			);
+			path = RegisterSection;
+			sourceTree = "<group>";
+		};
+		6BFA300C2829F75300013458 /* Totals */ = {
+			isa = PBXGroup;
+			children = (
+				6BFA300D2829F76700013458 /* TotalsTests.swift */,
+			);
+			path = Totals;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -738,7 +882,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B2726A028235E75000903CB /* CashFlowTests.swift in Sources */,
+				6BFA2FFA2829E89500013458 /* SplashScreenTests.swift in Sources */,
+				6BFA30122829FAFF00013458 /* UIImageTests.swift in Sources */,
+				6BFA30102829F97700013458 /* StringTests.swift in Sources */,
+				6B0D5BDD28290C8E00F5DC59 /* UITableViewTests.swift in Sources */,
+				6BFA300E2829F76700013458 /* TotalsTests.swift in Sources */,
+				6BFA2FE62829C4F500013458 /* EnumsTests.swift in Sources */,
+				6BFA300B2829F41900013458 /* ListRegisterComponentViewModelTests.swift in Sources */,
+				6BFA30042829F1C900013458 /* RegisterCellViewModelTests.swift in Sources */,
+				6BFA2FFD2829E8F600013458 /* AddRegisterViewModelTests.swift in Sources */,
+				6BFA2FF22829D4E000013458 /* AppCoordinatorTests.swift in Sources */,
+				6BFA2FF52829D58600013458 /* ListRegisterViewModelTests.swift in Sources */,
+				6B0D5BDB28290B8A00F5DC59 /* GeneralTests.swift in Sources */,
+				6B0D5BDF28290E3A00F5DC59 /* RegisterCellTests.swift in Sources */,
+				6BFA30002829E94E00013458 /* ListRegisterMock.swift in Sources */,
+				6BFA30142829FB7800013458 /* UIColorTests.swift in Sources */,
+				6BFA2FEE2829D46700013458 /* EncodableTests.swift in Sources */,
+				6BFA30082829F37800013458 /* RegisterSectionViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
