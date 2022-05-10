@@ -1,0 +1,41 @@
+/* 
+  Localizable.strings
+  CashFlow
+
+  Created by Jader Nunes on 05/05/22.
+  
+*/
+
+// MARK: - General
+
+"error.internal" = "Internal error";
+"error.title" = "Something wrong";
+"noData.title" = "No data";
+"retry.title" = "Retry";
+"cancel.title" = "Cancel";
+
+// MARK: - List register component
+
+"button.title.edit" = "Edit list";
+"button.title.cancel" = "Cancel";
+
+// MARK: - Totals component
+
+"title.expenses" = "Expenses";
+"title.incomes" = "Incomes";
+"title.balance" = "Balance";
+
+// MARK: - Type register
+
+"register.type.expense" = "Expense";
+"register.type.income" = "Income";
+
+// MARK: - List type register
+
+"listType.title" = "Transactions";
+
+// MARK: - Add register
+
+"addRegister.title" = "Add Transaction";
+"addRegister.add.title" = "Add";
+"addRegister.desc.placeholder" = "Transaction Description";
