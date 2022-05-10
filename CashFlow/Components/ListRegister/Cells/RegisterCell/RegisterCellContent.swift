@@ -45,6 +45,11 @@ final class RegisterCellContent: UIView {
         addShadow()
     }
 
+    private func populdateUI() {
+        descLabel.text = viewModel?.desc
+        amountLabel.text = viewModel?.amount
+    }
+
     private func setupCorner(_ hasCorner: Bool) {
         cornerRadiusAtSide(radius: hasCorner ? 8 : 0, cornerMask: [.layerMinXMaxYCorner, .layerMaxXMaxYCorner])
     }
@@ -69,23 +74,18 @@ extension RegisterCellContent: Component {
             descLabel.text = nil
         }
     }
-
-    private func populdateUI() {
-        descLabel.text = viewModel?.desc
-        amountLabel.text = viewModel?.amount
-    }
 }
 
 // MARK: - Constraints
 
-extension RegisterCellContent {
+private extension RegisterCellContent {
 
-    private func defineSubviewsConstraints() {
+    func defineSubviewsConstraints() {
         setupTitleConstraints()
         setupAmountConstraints()
     }
 
-    private func setupAmountConstraints() {
+    func setupAmountConstraints() {
         amountLabel.setContentCompressionResistancePriority(.required, for: .horizontal)
 
         NSLayoutConstraint.activate([

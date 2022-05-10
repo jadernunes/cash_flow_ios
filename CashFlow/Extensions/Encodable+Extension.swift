@@ -9,9 +9,9 @@ import Foundation
 
 extension Encodable {
 
-    func toJson() -> Dictionary<String, Any> {
+    func toJson(encoder: JSONEncoder = JSONEncoder.encoder) -> Dictionary<String, Any> {
         do {
-            let jsonData = try JSONEncoder.encoder.encode(self)
+            let jsonData = try encoder.encode(self)
             let json = try JSONSerialization.jsonObject(with: jsonData, options: .allowFragments) as? [String: Any]
             return json ?? [:]
         } catch {

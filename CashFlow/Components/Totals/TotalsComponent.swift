@@ -109,14 +109,14 @@ final class TotalsComponent: UIView {
 
 // MARK: - Constraints
 
-extension TotalsComponent {
+private extension TotalsComponent {
 
-    private func defineSubviewsConstraints() {
+    func defineSubviewsConstraints() {
         defineProgressConstraints()
         defineStackContentConstraints()
     }
 
-    private func defineProgressConstraints() {
+    func defineProgressConstraints() {
         NSLayoutConstraint.activate([
             progressBar.heightAnchor.constraint(equalToConstant: 20),
             progressBar.leftAnchor.constraint(equalTo: leftAnchor, constant: 32),
@@ -126,7 +126,7 @@ extension TotalsComponent {
         ])
     }
 
-    private func defineStackContentConstraints() {
+    func defineStackContentConstraints() {
         NSLayoutConstraint.activate([
             stackContent.leftAnchor.constraint(equalTo: leftAnchor, constant: 32),
             stackContent.rightAnchor.constraint(equalTo: rightAnchor, constant: -32),
@@ -156,9 +156,9 @@ extension TotalsComponent: Component {
 
 // MARK: - Binds
 
-extension TotalsComponent {
+private extension TotalsComponent {
 
-    private func bindProgress() {
+    func bindProgress() {
         viewModel?.progress
             .receive(on: DispatchQueue.main)
             .sink { [weak self] in
@@ -167,21 +167,21 @@ extension TotalsComponent {
             .store(in: &cancelableBag)
     }
 
-    private func bindExpenses() {
+    func bindExpenses() {
         viewModel?.expenses
             .receive(on: DispatchQueue.main)
             .sink { [weak self] in self?.valueExpensesLabel.text = $0 }
             .store(in: &cancelableBag)
     }
 
-    private func bindIncomes() {
+    func bindIncomes() {
         viewModel?.incomes
             .receive(on: DispatchQueue.main)
             .sink { [weak self] in self?.valueIncomeLabel.text = $0 }
             .store(in: &cancelableBag)
     }
 
-    private func bindBalance() {
+    func bindBalance() {
         viewModel?.balance
             .receive(on: DispatchQueue.main)
             .sink { [weak self] in self?.valueBalanceLabel.text = $0 }

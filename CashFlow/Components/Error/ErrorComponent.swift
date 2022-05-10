@@ -67,15 +67,15 @@ final class ErrorComponent: UIView {
 
 // MARK: - Constraints
 
-extension ErrorComponent {
+private extension ErrorComponent {
 
-    private func defineSubviewsConstraints() {
+    func defineSubviewsConstraints() {
         setupLableConstraints()
         setupImageConstraints()
         setupButtonConstraints()
     }
 
-    private func setupLableConstraints() {
+    func setupLableConstraints() {
         NSLayoutConstraint.activate([
             infoLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),
             infoLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -16),
@@ -83,7 +83,7 @@ extension ErrorComponent {
         ])
     }
 
-    private func setupImageConstraints() {
+    func setupImageConstraints() {
         NSLayoutConstraint.activate([
             errorImage.topAnchor.constraint(greaterThanOrEqualTo: topAnchor, constant: 16),
             errorImage.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),
@@ -94,7 +94,7 @@ extension ErrorComponent {
         ])
     }
 
-    private func setupButtonConstraints() {
+    func setupButtonConstraints() {
         NSLayoutConstraint.activate([
             retryButton.heightAnchor.constraint(equalToConstant: 44),
             retryButton.widthAnchor.constraint(equalTo: errorImage.widthAnchor, multiplier: 0.5),

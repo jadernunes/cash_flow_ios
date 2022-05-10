@@ -43,6 +43,10 @@ final class RegisterSectionContent: UIView {
         addShadow()
         cornerRadiusAtSide(radius: 8, cornerMask: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
     }
+
+    private func populdateUI() {
+        titleLabel.text = viewModel?.title
+    }
 }
 
 // MARK: - Component
@@ -63,21 +67,17 @@ extension RegisterSectionContent: Component {
             titleLabel.text = nil
         }
     }
-
-    private func populdateUI() {
-        titleLabel.text = viewModel?.title
-    }
 }
 
 // MARK: - Constraints
 
-extension RegisterSectionContent {
+private extension RegisterSectionContent {
 
-    private func defineSubviewsConstraints() {
+    func defineSubviewsConstraints() {
         setupTitleConstraints()
     }
 
-    private func setupTitleConstraints() {
+    func setupTitleConstraints() {
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 8),
             titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8),

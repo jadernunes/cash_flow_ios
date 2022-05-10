@@ -46,9 +46,9 @@ final class RegisterSection: UITableViewHeaderFooterView {
 
 // MARK: - Constraints
 
-extension RegisterSection {
+private extension RegisterSection {
 
-    private func defineSubviewsConstraints() {
+    func defineSubviewsConstraints() {
         NSLayoutConstraint.activate([
             content.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 4),
             content.topAnchor.constraint(equalTo: contentView.topAnchor),

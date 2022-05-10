@@ -9,6 +9,8 @@ import UIKit
 
 final class LabelDetail: UILabel {
 
+    // MARK: - Life cycle
+
     init() {
         super.init(frame: .zero)
         setupUI()
@@ -18,6 +20,8 @@ final class LabelDetail: UILabel {
         super.init(coder: coder)
         setupUI()
     }
+
+    // MARK: - Custom methods
 
     private func setupUI() {
         textAlignment = .center
