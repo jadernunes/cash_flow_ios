@@ -5,7 +5,7 @@ With this project you will be able to control your expenses and incomes where yo
 Here we'll show you a list of registers and a screen where you can add it with some details.
 
 ## Topics
-* [Architecture](#setup)
+* [Architecture](#set_up)
 * [Concepts covered](#conceptscovered)
 * [In this version](#inthisversion)
 * [Future items](#futureitems)
