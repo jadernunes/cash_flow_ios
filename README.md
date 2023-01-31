@@ -5,7 +5,7 @@ With this project you will be able to control your expenses and incomes where yo
 Here we'll show you a list of registers and a screen where you can add it with some details.
 
 ## Topics
-* [Architecture](#set_up)
+* [Architecture](#architechture)
 * [Concepts covered](#conceptscovered)
 * [In this version](#inthisversion)
 * [Future items](#futureitems)
@@ -13,7 +13,7 @@ Here we'll show you a list of registers and a screen where you can add it with s
 * [Requirements](#requirements)
 * [Installation](#installation)
 
-## Set up
+## Architechture
 For this application was used **MVVM-C** where C stands for Coordinator to manage all the presentations for each flow.
 Using this pattern also allow us to manage all the business logic inside the ViewModels, given a good point when we're looking at an application with Scalability, Readability and Maintainability.
 Following the same concept we created a components that could be used everywhere inside.
