@@ -67,7 +67,6 @@ Following the same concept we created a components that could be used everywhere
 * Create topic to show how to use each component.
 
 ## Dependencies
-* [Cocoapods](https://guides.cocoapods.org/using/getting-started.html) 1.10.2.
 * [RealmSwift](https://www.mongodb.com/docs/realm/sdk/swift/) 10.25.2.
 
 ## Requirements
@@ -76,10 +75,7 @@ Following the same concept we created a components that could be used everywhere
 * Swift 5.0.
 
 ## Installation
-* Make sure we've been installed [Cocoapods](https://guides.cocoapods.org/using/getting-started.html) 1.10.2.
-* Open the *Terminal*.
-* Go to the project's root folder where should've the **Podfile**.
-* Run this command: ```pod install```.
+* Nothing needed, only open the project.
 
 ## Screenshots
 ------------
