@@ -10,9 +10,15 @@ import XCTest
 
 final class AddRegisterViewModelTests: XCTestCase {
 
-    func testAddRegisterViewModel() {
+    func testAddRegisterViewModel() async throws {
+        let date = "2024-02-27".toDate(.sendShort) ?? Date()
+        let model = CashFlowRealm(data: CashFlowDTO(data: CashFlowData(date: date, desc: "test", amount: 100, type: .income)))
+        
+        let database = DatabaseMock<CashFlowRealm>()
+        try await database.save(model)
+        
         let viewModel = AddRegisterViewModel(coordinator: nil,
-                                             database: DatabaseManager(database: ListRegisterMock(data: [])))
+                                             service: AddRegisterService(database: database))
         XCTAssertEqual(viewModel.configuration.value, .idle)
 
         viewModel.didSelectType(.expense)
@@ -23,7 +29,7 @@ final class AddRegisterViewModelTests: XCTestCase {
         viewModel.delegate = spy
 
         XCTAssertFalse(spy.hasAdded)
-        viewModel.save()
+        await viewModel.save()
         XCTAssertTrue(spy.hasAdded)
 
         XCTAssertEqual(viewModel.configuration.value, .loading)

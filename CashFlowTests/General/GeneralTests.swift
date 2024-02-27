@@ -35,11 +35,13 @@ final class GeneralTests: XCTestCase {
     }
 
     func testCellData() {
-        let viewModel = RegisterCellViewModel(register: RegisterCashFlow(desc: "q",
-                                                                         amount: 100,
-                                                                         date: "2022-05-09 10:10:10".toDate(.send) ?? Date(),
-                                                                         type: .income))
+        let data = CashFlowData(date: "2022-05-09 10:10:10".toDate(.send) ?? Date(),
+                                desc: "q",
+                                amount: 100,
+                                type: .income)
+        let viewModel = RegisterCellViewModel(register: data)
         let model = CellData(viewModel: viewModel, hasCorner: false)
+        
         XCTAssertEqual(model.viewModel?.amount, viewModel.amount)
         XCTAssertEqual(model.viewModel?.desc, viewModel.desc)
     }
@@ -47,14 +49,14 @@ final class GeneralTests: XCTestCase {
     func testRegisterCashFlow() {
         let dateString = "2022-05-09 10:10:10"
         let date = dateString.toDate(.send) ?? Date()
-        let model = RegisterCashFlow(desc: "q",
-                                     amount: 100,
-                                     date: date,
-                                     type: .income)
+        let model = CashFlowData(date: date,
+                                 desc: "q",
+                                 amount: 100,
+                                 type: .income)
         XCTAssertEqual(model.date, date)
-
-        let dto = model.realmDTO()
-        XCTAssertEqual(dto.getPrimaryKey(), dateString)
+        
+        let realm = CashFlowDTO(data: model).asRealm
+        XCTAssertEqual(realm.getPrimaryKey(), dateString)
     }
 
     func testIsNotEmpty() {

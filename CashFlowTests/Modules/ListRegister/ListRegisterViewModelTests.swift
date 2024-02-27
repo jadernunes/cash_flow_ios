@@ -10,17 +10,19 @@ import XCTest
 
 final class ListRegisterViewModelTests: XCTestCase {
 
-    func testListRegisterViewModel() {
-        let model = RegisterCashFlowDTO(value: ["desc": "d",
-                                                "amount": 100,
-                                                "dateDB": "2022-05-9 10:10:10",
-                                                "type": TypeRegister.income.rawValue])
-
+    func testListRegisterViewModel() async throws {
+        let date = "2024-02-27".toDate(.sendShort) ?? Date()
+        let model = CashFlowRealm(data: CashFlowDTO(data: CashFlowData(date: date, desc: "test", amount: 100, type: .income)))
+        
+        let database = DatabaseMock<CashFlowRealm>()
+        try await database.save(model)
+        
         let viewModel = ListRegisterViewModel(coordinator: nil,
-                                              database: DatabaseManager(database: ListRegisterMock(data: [model])))
+                                              service: ListRegisterService(database: database))
+        
         XCTAssertEqual(viewModel.configuration.value, .idle)
 
-        viewModel.loadData()
+        await viewModel.loadData()
 
         switch viewModel.configuration.value {
         case .content(let viewModel, let viewModelTotals):
@@ -35,9 +37,11 @@ final class ListRegisterViewModelTests: XCTestCase {
             XCTAssertEqual(viewModelTotals.incomes.value.onlyDigits(), "000")
 
             let sectionViewModel = viewModel.viewModelSectionAt(index: 0)
-            XCTAssertEqual(sectionViewModel?.title, "9th May, 2022")
+            
+            let title = date.dayWihSuffix() + " " + date.toString(.show)
+            XCTAssertEqual(sectionViewModel?.title, title)
         default:
-            XCTFail()
+            XCTFail("\(viewModel.configuration.value)")
         }
     }
 }

@@ -10,12 +10,9 @@ import XCTest
 
 final class ListRegisterComponentViewModelTests: XCTestCase {
 
-    func testListRegisterComponent() {
+    func testListRegisterComponent() async {
         let date = "2022-05-09 10:10:10".toDate(.send) ?? Date()
-        let register = RegisterCashFlow(desc: "q",
-                                        amount: 100,
-                                        date: date,
-                                        type: .income)
+        let register = CashFlowData(date: date, desc: "a", amount: 100, type: .income)
         let section = SectionData(date: date,
                                   registers: [register])
 
@@ -27,7 +24,7 @@ final class ListRegisterComponentViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.countRegistersAt(indexSection: 0), 1)
 
         XCTAssertFalse(spy.hasRemoved)
-        viewModel.remove(index: 0, onIndexSection: 0)
+        await viewModel.remove(index: 0, onIndexSection: 0)
         XCTAssertTrue(spy.hasRemoved)
     }
 }
@@ -42,7 +39,7 @@ private final class ListRegisterComponentSpy: ListRegisterDelegate {
 
     // MARK: - ListRegister delegate
 
-    func willRemove(_ register: RegisterCashFlow?) {
+    func willRemove(_ register: ICashFlowData?) async {
         hasRemoved = true
     }
 }
