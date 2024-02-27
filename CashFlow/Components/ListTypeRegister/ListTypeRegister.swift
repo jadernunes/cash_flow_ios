@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ListTypeRegisterDelegate: AnyObject {
-    func didSelectType(_ type: TypeRegister)
+    func didSelectType(_ type: TypeRegisterData)
 }
 
 final class ListTypeRegister {
@@ -33,7 +33,7 @@ final class ListTypeRegister {
 
     private func createActionsForTypeRegister(for alert: UIAlertController) {
         //Create a list based on all type of registers
-        TypeRegister.allCases.forEach { type in
+        TypeRegisterData.allCases.forEach { type in
             alert.addAction(UIAlertAction(title: type.title(),
                                           style: .default,
                                           handler: { [weak self] _ in

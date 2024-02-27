@@ -143,7 +143,9 @@ final class AddRegisterContent: UIView {
 
     @objc
     private func buttonSavePressed() {
-        viewModel?.save()
+        Task { @MainActor in
+            await viewModel?.save()
+        }
     }
 
     @objc

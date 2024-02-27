@@ -9,5 +9,5 @@ import Foundation
 
 struct SectionData {
     let date: Date
-    let registers: [RegisterCashFlow]
+    let registers: [ICashFlowData]
 }

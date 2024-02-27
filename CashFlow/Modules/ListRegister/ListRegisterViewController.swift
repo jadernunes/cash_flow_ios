@@ -41,7 +41,10 @@ final class ListRegisterViewController: UIViewController {
         super.viewDidLoad()
         
         bindUI()
-        viewModel.loadData()
+        
+        Task { @MainActor in
+            await viewModel.loadData()
+        }
     }
 
     // MARK: - Custom methods

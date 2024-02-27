@@ -143,7 +143,9 @@ extension ListRegisterComponent: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        viewModel?.remove(index: indexPath.row, onIndexSection: indexPath.section)
+        Task { @MainActor in
+            await viewModel?.remove(index: indexPath.row, onIndexSection: indexPath.section)
+        }
     }
 }
 

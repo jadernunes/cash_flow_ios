@@ -11,7 +11,7 @@ import Combine
 protocol ListRegisterViewModelProtocol: AnyObject {
     var configuration: CurrentValueSubject<ListRegisterConfiguration, Never> { get }
 
-    func loadData()
+    func loadData() async
     func addRegister()
 }
 
@@ -20,38 +20,36 @@ final class ListRegisterViewModel: ListRegisterViewModelProtocol {
     // MARK: - Attributes
 
     private let coordinator: ListRegisterCoordinatorProtocol?
-    private let database: DatabaseProtocol
+    private let service: IListRegisterService
 
     var configuration = CurrentValueSubject<ListRegisterConfiguration, Never>(.idle)
 
     // MARK: - Life cycle
 
     init(coordinator: ListRegisterCoordinatorProtocol? = nil,
-         database: DatabaseProtocol = RealmDB()) {
+         service: IListRegisterService = ListRegisterService()) {
         self.coordinator = coordinator
-        self.database = database
+        self.service = service
     }
 
     // MARK: - Custom methods
 
-    func loadData() {
-        configuration.send(.loading)
-        requestData()
+    func loadData() async {
+        await requestData()
     }
 
-    private func requestData() {
-        database.loadAll(typeSaved: RegisterCashFlowDTO.self,
-                         typeToReturn: RegisterCashFlow.self) { [weak self] response  in
-            switch response {
-            case .success(let result):
-                self?.mountSectionsBy(registers: result)
-            case .failure:
-                self?.configuration.send(.error)
-            }
+    private func requestData() async {
+        configuration.send(.loading)
+        
+        do {
+            let data = try await service.loadAllData()
+            mountSectionsBy(registers: data)
+        } catch {
+            configuration.send(.error)
         }
     }
 
-    private func mountSectionsBy(registers: [RegisterCashFlow]) {
+    private func mountSectionsBy(registers: [ICashFlowData]) {
         //Totals
         let dataGrouped = registersGrouped(registers)
         let viewModelTotals = TotalsComponentViewModel(data: TotalsData(income: dataGrouped.incomes,
@@ -71,7 +69,7 @@ final class ListRegisterViewModel: ListRegisterViewModelProtocol {
             : configuration.send(.content(viewModel: viewModelList, viewModelTotals: viewModelTotals))
     }
 
-    private func registersGrouped(_ registers: [RegisterCashFlow]) -> (dict: Dictionary<Date, [RegisterCashFlow]>,
+    private func registersGrouped(_ registers: [ICashFlowData]) -> (dict: Dictionary<Date, [ICashFlowData]>,
                                                                        expenses: Int,
                                                                        incomes: Int) {
         var totalExpenses: Int = 0
@@ -83,18 +81,21 @@ final class ListRegisterViewModel: ListRegisterViewModelProtocol {
             case .expense:
                 totalExpenses += register.amount
             }
-            return register.date?.toFormat(.sendShort) ?? Date()
+            return register.date.toFormat(.sendShort) ?? Date()
         }
 
         return (dic, totalExpenses, totalIncomes)
     }
 
-    private func deleteRegister(_ register: RegisterCashFlow?) {
-        guard let register = register else { return }
-
+    private func deleteRegister(_ register: ICashFlowData) async {
         configuration.send(.loading)
-        database.delete(register) { [weak self] _ in
-            self?.requestData()
+        
+        do {
+            try await service.delete(date: register.date)
+            configuration.send(.idle)
+            await requestData()
+        } catch {
+            configuration.send(.error)
         }
     }
     
@@ -107,8 +108,10 @@ final class ListRegisterViewModel: ListRegisterViewModelProtocol {
 
 extension ListRegisterViewModel: ListRegisterDelegate {
 
-    func willRemove(_ register: RegisterCashFlow?) {
-        deleteRegister(register)
+    func willRemove(_ register: ICashFlowData?) async {
+        guard let register = register else { return }
+        
+        await deleteRegister(register)
     }
 }
 
@@ -116,7 +119,7 @@ extension ListRegisterViewModel: ListRegisterDelegate {
 
 extension ListRegisterViewModel: AddRegisterDelegate {
 
-    func didAddRegister() {
-        loadData()
+    func didAddRegister() async {
+        await loadData()
     }
 }

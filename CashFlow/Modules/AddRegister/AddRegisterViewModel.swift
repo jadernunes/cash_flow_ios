@@ -9,15 +9,15 @@ import Foundation
 import Combine
 
 protocol AddRegisterDelegate: AnyObject {
-    func didAddRegister()
+    func didAddRegister() async
 }
 
 protocol AddRegisterViewModelProtocol: ListTypeRegisterDelegate {
     var configuration: CurrentValueSubject<AddRegisterConfiguration, Never> { get }
-    var typeRegister: CurrentValueSubject<TypeRegister, Never> { get }
+    var typeRegister: CurrentValueSubject<TypeRegisterData, Never> { get }
 
     func close()
-    func save()
+    func save() async
     func selectRegisterType()
     func descDidChange(_ text: String)
     func amountDidChange(_ value: Int)
@@ -28,45 +28,45 @@ final class AddRegisterViewModel: AddRegisterViewModelProtocol {
     // MARK: - Attributes
 
     weak var delegate: AddRegisterDelegate?
+    var configuration = CurrentValueSubject<AddRegisterConfiguration, Never>(.idle)
+    var typeRegister = CurrentValueSubject<TypeRegisterData, Never>(.expense)
+    
     private let coordinator: AddRegisterCoordinatorProtocol?
-    private let database: DatabaseProtocol
+    private let service: IAddRegisterService
     private var description: String = ""
     private var amount = Int()
-
-    var configuration = CurrentValueSubject<AddRegisterConfiguration, Never>(.idle)
-    var typeRegister = CurrentValueSubject<TypeRegister, Never>(.expense)
 
     // MARK: - Life cycle
 
     init(coordinator: AddRegisterCoordinatorProtocol? = nil,
-         database: DatabaseProtocol = RealmDB()) {
+         service: IAddRegisterService = AddRegisterService()) {
         self.coordinator = coordinator
-        self.database = database
+        self.service = service
     }
 
     // MARK: - Custom methods
 
+    @MainActor
     func close() {
         coordinator?.close()
     }
 
-    func save() {
+    func save() async {
         guard canSave() else {
             return //TODO: - handle error message
         }
 
         configuration.send(.loading)
-        database.save([RegisterCashFlow(desc: description,
-                                        amount: amount,
-                                        date: Date().toFormat(.send) ?? Date(),
-                                        type: typeRegister.value)]) { [weak self] response in
-            switch response {
-            case .success:
-                self?.delegate?.didAddRegister()
-                self?.close()
-            case .failure:
-                self?.configuration.send(.error)
-            }
+        
+        do {
+            try await service.save(data: CashFlowData(date: Date(),
+                                                      desc: description,
+                                                      amount: amount,
+                                                      type: typeRegister.value))
+            await delegate?.didAddRegister()
+            await close()
+        } catch {
+            configuration.send(.error)
         }
     }
 
@@ -91,7 +91,7 @@ final class AddRegisterViewModel: AddRegisterViewModelProtocol {
 
 extension AddRegisterViewModel  {
 
-    func didSelectType(_ type: TypeRegister) {
+    func didSelectType(_ type: TypeRegisterData) {
         typeRegister.send(type)
     }
 }

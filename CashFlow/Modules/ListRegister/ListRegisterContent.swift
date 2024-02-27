@@ -109,7 +109,9 @@ extension ListRegisterContent {
 extension ListRegisterContent: ErrorComponentDelegate {
 
     func willRetry() {
-        viewModel?.loadData()
+        Task { @MainActor in
+            await viewModel?.loadData()
+        }
     }
 }
 

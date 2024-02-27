@@ -2,87 +2,101 @@
 //  RealmDB.swift
 //  CashFlow
 //
-//  Created by Jader Nunes on 05/05/22.
+//  Created by Jader Nunes on 2024-02-26.
 //
 
 import Foundation
 import RealmSwift
 
-typealias RealmDTO = DBConformable
-protocol DBConformable: Object, Codable {
+protocol DBConformable: Object, Encodable {
     func getPrimaryKey() -> String
+}
+
+protocol IDatabase {
+    func save<T: DBConformable>(_ data: T) async throws
+    func loadAll<T: DBConformable, R: Decodable>(databaseType: T.Type, resultType: R.Type) async throws -> [R]
+    func delete(className: String, primaryKey: String) async throws
 }
 
 struct RealmDB {
 
     // MARK: - Attributes
 
-    private let queue = DispatchQueue(label: "queueRealm")
+    private let realmQueue = DispatchQueue(label: "realmQueue")
     private let configuration: Realm.Configuration = {
-        Realm.Configuration(deleteRealmIfMigrationNeeded: true, objectTypes: [RegisterCashFlowDTO.self])
+        Realm.Configuration(deleteRealmIfMigrationNeeded: true, objectTypes: [CashFlowRealm.self])
     }()
 }
 
-// MARK: - Database protocol
-
-extension RealmDB: DatabaseProtocol {
-
-    func save<T: DBAcceptable>(_ models: [T], _ completion: @escaping CompletionSaveDelete) {
-        queue.async {
-            do {
-                let realm = try Realm(configuration: configuration, queue: queue)
-                try realm.write {
-                    realm.add(models.map { $0.realmDTO() })
-                    realm.refresh()
-                }
-                sendToMainThread(.success(Void()), completion)
-            } catch {
-                sendToMainThread(.failure(error: .generic()), completion)
-            }
-        }
-    }
-
-    func loadAll<T: DBConformable, R: Codable>(typeSaved: T.Type,
-                                               typeToReturn: R.Type, _ completion: @escaping CompletionLoad<R>) {
-        queue.async {
-            do {
-                let realm = try Realm(configuration: configuration, queue: queue)
-                let array = realm.objects(typeSaved).array
-                let result = try array.map {
-                    try JSONDecoder.decoder.decode(typeToReturn, from: $0.toJson().toData() ?? Data())
-                }
-                sendToMainThread(.success(result), completion)
-            } catch {
-                sendToMainThread(.failure(error: .generic()), completion)
-            }
-        }
-    }
-
-    func delete<T: DBAcceptable>(_ model: T, _ completion: @escaping CompletionSaveDelete) {
-        let modelDTO = model.realmDTO()
-        queue.async {
-            do {
-                let realm = try Realm(configuration: configuration, queue: queue)
-                if let toDelete = realm.dynamicObject(ofType: modelDTO.className, forPrimaryKey: modelDTO.getPrimaryKey()) {
+extension RealmDB: IDatabase {
+    
+    // MARK: - Public methods
+    
+    func save<T: DBConformable>(_ data: T) async throws {
+        try await withCheckedThrowingContinuation { continuation in
+            realmQueue.async {
+                do {
+                    let realm = try Realm(configuration: configuration, queue: realmQueue)
                     try realm.write {
-                        realm.delete(toDelete)
+                        realm.add(data)
                         realm.refresh()
                     }
-                    sendToMainThread(.success(Void()), completion)
-                } else {
-                    sendToMainThread(.failure(error: .generic()), completion)
+                    
+                    sendStatus(continuation, value: .success(Void()))
+                } catch {
+                    sendStatus(continuation, value: .failure(ErrorRequest.generic()))
                 }
-            } catch {
-                sendToMainThread(.failure(error: .generic()), completion)
             }
         }
     }
-
-    //Send all data to main thread
-
-    private func sendToMainThread<T>(_ response: Response<T>,
-                                     _ completion: @escaping ((Response<T>) -> Void)) {
-        DispatchQueue.main.async { completion(response) }
+    
+    func loadAll<T: DBConformable, R: Decodable>(databaseType: T.Type, resultType: R.Type) async throws -> [R] {
+        try await withCheckedThrowingContinuation { continuation in
+            realmQueue.async {
+                do {
+                    let realm = try Realm(configuration: configuration, queue: realmQueue)
+                    let array = realm.objects(databaseType).array
+                    let result = try array.compactMap {
+                        try $0.toData()?.decoded(as: resultType)
+                    }
+                    
+                    sendStatus(continuation, value: .success(result))
+                } catch {
+                    sendStatus(continuation, value: .failure(ErrorRequest.generic()))
+                }
+            }
+        }
+    }
+    
+    func delete(className: String, primaryKey: String) async throws {
+        try await withCheckedThrowingContinuation { continuation in
+            realmQueue.async {
+                do {
+                    let realm = try Realm(configuration: configuration, queue: realmQueue)
+                    if let toDelete = realm.dynamicObject(ofType: className, forPrimaryKey: primaryKey) {
+                        try realm.write {
+                            realm.delete(toDelete)
+                            realm.refresh()
+                        }
+                        
+                        sendStatus(continuation, value: .success(Void()))
+                        return
+                    }
+                    
+                    sendStatus(continuation, value: .failure(ErrorRequest.generic()))
+                } catch {
+                    sendStatus(continuation, value: .failure(ErrorRequest.generic()))
+                }
+            }
+        }
+    }
+    
+    // MARK: - Private methods
+    
+    private func sendStatus<T: Any>(_ continuation: CheckedContinuation<T, Error>, value: Result<T, Error>) {
+        DispatchQueue.main.async {
+            continuation.resume(with: value)
+        }
     }
 }
 
