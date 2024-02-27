@@ -8,15 +8,15 @@
 import Foundation
 
 protocol ListRegisterDelegate: AnyObject {
-    func willRemove(_ register: RegisterCashFlow?)
+    func willRemove(_ register: ICashFlowData?) async
 }
 
 extension ListRegisterDelegate {
-    func willRemove(_ register: RegisterCashFlow?) { }
+    func willRemove(_ register: ICashFlowData?) async { }
 }
 
 protocol ListRegisterComponentProtocol: AnyObject {
-    func remove(index: Int, onIndexSection: Int)
+    func remove(index: Int, onIndexSection: Int) async
 
     //Section
     func countSections() -> Int
@@ -52,7 +52,7 @@ final class ListRegisterComponentViewModel {
         sections[safe: index]
     }
 
-    private func registerAt(index: Int, sectionIndex: Int) -> RegisterCashFlow? {
+    private func registerAt(index: Int, sectionIndex: Int) -> ICashFlowData? {
         sections[safe: sectionIndex]?.registers[safe: index]
     }
 
@@ -66,8 +66,8 @@ final class ListRegisterComponentViewModel {
 
 extension ListRegisterComponentViewModel: ListRegisterComponentProtocol {
 
-    func remove(index: Int, onIndexSection: Int) {
-        delegate?.willRemove(registerAt(index: index, sectionIndex: onIndexSection))
+    func remove(index: Int, onIndexSection: Int) async {
+        await delegate?.willRemove(registerAt(index: index, sectionIndex: onIndexSection))
     }
 
     // MARK: - Section

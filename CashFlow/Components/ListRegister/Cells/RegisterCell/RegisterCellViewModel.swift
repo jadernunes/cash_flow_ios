@@ -14,7 +14,7 @@ final class RegisterCellViewModel: RegisterCellViewModelProtocol {
 
     // MARK: - Attributes
 
-    private let register: RegisterCashFlow
+    private let register: ICashFlowData
     var desc: String { register.desc }
     var amount: String {
         switch register.type {
@@ -27,7 +27,7 @@ final class RegisterCellViewModel: RegisterCellViewModelProtocol {
 
     // MARK: - Life cycle
 
-    init(register: RegisterCashFlow) {
+    init(register: ICashFlowData) {
         self.register = register
     }
 }
