@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		273D3CD92B8C07F500EE702C /* ListRegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273D3CD82B8C07F500EE702C /* ListRegisterService.swift */; };
+		273D3CDB2B8D26A000EE702C /* RealmDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273D3CDA2B8D26A000EE702C /* RealmDB.swift */; };
+		273D3CDD2B8D2A2D00EE702C /* CashFlowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273D3CDC2B8D2A2D00EE702C /* CashFlowData.swift */; };
+		273D3CDF2B8D2A4300EE702C /* TypeRegisterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273D3CDE2B8D2A4300EE702C /* TypeRegisterData.swift */; };
+		273D3CE32B8D2A7000EE702C /* TypeRegisterDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273D3CE22B8D2A7000EE702C /* TypeRegisterDTO.swift */; };
+		273D3CE62B8D2AAC00EE702C /* CashFlowDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273D3CE52B8D2AAC00EE702C /* CashFlowDTO.swift */; };
+		273D3CE82B8D2AF400EE702C /* CashFlowRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273D3CE72B8D2AF400EE702C /* CashFlowRealm.swift */; };
+		273D3CEA2B8D2D7100EE702C /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273D3CE92B8D2D7100EE702C /* Data+Extension.swift */; };
+		273D3CEC2B8D43E700EE702C /* AddRegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273D3CEB2B8D43E700EE702C /* AddRegisterService.swift */; };
+		273D3CEE2B8D654F00EE702C /* RealmDBMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273D3CED2B8D654F00EE702C /* RealmDBMock.swift */; };
 		27CF53042B88FD1D0084B3F7 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 27CF53032B88FD1D0084B3F7 /* Realm */; };
 		27CF53062B88FD1D0084B3F7 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 27CF53052B88FD1D0084B3F7 /* RealmSwift */; };
 		6B0D5BA5282778A100F5DC59 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D5BA4282778A100F5DC59 /* UIImage+Extension.swift */; };
@@ -39,14 +49,11 @@
 		6B27270D2823FEA7000903CB /* ListRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27270C2823FEA7000903CB /* ListRegisterViewController.swift */; };
 		6B2727102823FEC9000903CB /* ListRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27270F2823FEC9000903CB /* ListRegisterViewModel.swift */; };
 		6B2727132823FF90000903CB /* ListRegisterContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2727122823FF90000903CB /* ListRegisterContent.swift */; };
-		6B27271E28240775000903CB /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27271D28240775000903CB /* DatabaseManager.swift */; };
 		6B27272128240927000903CB /* ErrorRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B27272028240927000903CB /* ErrorRequest.swift */; };
 		6B27272428240992000903CB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B27272328240992000903CB /* Localizable.strings */; };
 		6B4A92A128247AE100880080 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92A028247AE100880080 /* NSObject+Extension.swift */; };
 		6B4A92A42824827900880080 /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92A32824827900880080 /* Encodable+Extension.swift */; };
-		6B4A92A7282482C000880080 /* RegisterCashFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92A6282482C000880080 /* RegisterCashFlow.swift */; };
 		6B4A92AA2824A23D00880080 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92A92824A23D00880080 /* Response.swift */; };
-		6B4A92B02824B01A00880080 /* RealmDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92AF2824B01A00880080 /* RealmDB.swift */; };
 		6B4A92BC2824C03800880080 /* RegisterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92BB2824C03800880080 /* RegisterCell.swift */; };
 		6B4A92BF2824C04900880080 /* RegisterCellContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92BE2824C04900880080 /* RegisterCellContent.swift */; };
 		6B4A92C22824C05D00880080 /* RegisterCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92C12824C05D00880080 /* RegisterCellViewModel.swift */; };
@@ -60,7 +67,6 @@
 		6B4A92DC28257E9600880080 /* JSONDecoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92DB28257E9600880080 /* JSONDecoder+Extension.swift */; };
 		6B4A92DF28257FBA00880080 /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92DE28257FBA00880080 /* DateFormatter+Extension.swift */; };
 		6B4A92E228257FF900880080 /* JSONEncoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92E128257FF900880080 /* JSONEncoder+Extension.swift */; };
-		6B4A92E62825A05C00880080 /* RegisterCashFlowDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92E52825A05C00880080 /* RegisterCashFlowDTO.swift */; };
 		6B4A92E92825B0B000880080 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92E82825B0B000880080 /* Date+Extension.swift */; };
 		6B4A92EC2825B0D600880080 /* DateFormatType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92EB2825B0D600880080 /* DateFormatType.swift */; };
 		6B4A92F32826A81700880080 /* SectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4A92F22826A81700880080 /* SectionData.swift */; };
@@ -87,7 +93,6 @@
 		6BFA2FF52829D58600013458 /* ListRegisterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFA2FF42829D58600013458 /* ListRegisterViewModelTests.swift */; };
 		6BFA2FFA2829E89500013458 /* SplashScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFA2FF92829E89500013458 /* SplashScreenTests.swift */; };
 		6BFA2FFD2829E8F600013458 /* AddRegisterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFA2FFC2829E8F600013458 /* AddRegisterViewModelTests.swift */; };
-		6BFA30002829E94E00013458 /* ListRegisterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFA2FFF2829E94E00013458 /* ListRegisterMock.swift */; };
 		6BFA30042829F1C900013458 /* RegisterCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFA30032829F1C900013458 /* RegisterCellViewModelTests.swift */; };
 		6BFA30082829F37800013458 /* RegisterSectionViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFA30072829F37800013458 /* RegisterSectionViewModelTests.swift */; };
 		6BFA300B2829F41900013458 /* ListRegisterComponentViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFA300A2829F41900013458 /* ListRegisterComponentViewModelTests.swift */; };
@@ -108,6 +113,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		273D3CD82B8C07F500EE702C /* ListRegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRegisterService.swift; sourceTree = "<group>"; };
+		273D3CDA2B8D26A000EE702C /* RealmDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDB.swift; sourceTree = "<group>"; };
+		273D3CDC2B8D2A2D00EE702C /* CashFlowData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashFlowData.swift; sourceTree = "<group>"; };
+		273D3CDE2B8D2A4300EE702C /* TypeRegisterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeRegisterData.swift; sourceTree = "<group>"; };
+		273D3CE22B8D2A7000EE702C /* TypeRegisterDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeRegisterDTO.swift; sourceTree = "<group>"; };
+		273D3CE52B8D2AAC00EE702C /* CashFlowDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashFlowDTO.swift; sourceTree = "<group>"; };
+		273D3CE72B8D2AF400EE702C /* CashFlowRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashFlowRealm.swift; sourceTree = "<group>"; };
+		273D3CE92B8D2D7100EE702C /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
+		273D3CEB2B8D43E700EE702C /* AddRegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRegisterService.swift; sourceTree = "<group>"; };
+		273D3CED2B8D654F00EE702C /* RealmDBMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDBMock.swift; sourceTree = "<group>"; };
 		6B0D5BA4282778A100F5DC59 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		6B0D5BA7282796F400F5DC59 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		6B0D5BAB2827F7B900F5DC59 /* AddRegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRegisterCoordinator.swift; sourceTree = "<group>"; };
@@ -141,14 +156,11 @@
 		6B27270C2823FEA7000903CB /* ListRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRegisterViewController.swift; sourceTree = "<group>"; };
 		6B27270F2823FEC9000903CB /* ListRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRegisterViewModel.swift; sourceTree = "<group>"; };
 		6B2727122823FF90000903CB /* ListRegisterContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRegisterContent.swift; sourceTree = "<group>"; };
-		6B27271D28240775000903CB /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		6B27272028240927000903CB /* ErrorRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorRequest.swift; sourceTree = "<group>"; };
 		6B27272328240992000903CB /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		6B4A92A028247AE100880080 /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
 		6B4A92A32824827900880080 /* Encodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
-		6B4A92A6282482C000880080 /* RegisterCashFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCashFlow.swift; sourceTree = "<group>"; };
 		6B4A92A92824A23D00880080 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
-		6B4A92AF2824B01A00880080 /* RealmDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDB.swift; sourceTree = "<group>"; };
 		6B4A92BB2824C03800880080 /* RegisterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCell.swift; sourceTree = "<group>"; };
 		6B4A92BE2824C04900880080 /* RegisterCellContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCellContent.swift; sourceTree = "<group>"; };
 		6B4A92C12824C05D00880080 /* RegisterCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCellViewModel.swift; sourceTree = "<group>"; };
@@ -162,7 +174,6 @@
 		6B4A92DB28257E9600880080 /* JSONDecoder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Extension.swift"; sourceTree = "<group>"; };
 		6B4A92DE28257FBA00880080 /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
 		6B4A92E128257FF900880080 /* JSONEncoder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONEncoder+Extension.swift"; sourceTree = "<group>"; };
-		6B4A92E52825A05C00880080 /* RegisterCashFlowDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCashFlowDTO.swift; sourceTree = "<group>"; };
 		6B4A92E82825B0B000880080 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		6B4A92EB2825B0D600880080 /* DateFormatType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatType.swift; sourceTree = "<group>"; };
 		6B4A92F22826A81700880080 /* SectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionData.swift; sourceTree = "<group>"; };
@@ -189,7 +200,6 @@
 		6BFA2FF42829D58600013458 /* ListRegisterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRegisterViewModelTests.swift; sourceTree = "<group>"; };
 		6BFA2FF92829E89500013458 /* SplashScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenTests.swift; sourceTree = "<group>"; };
 		6BFA2FFC2829E8F600013458 /* AddRegisterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRegisterViewModelTests.swift; sourceTree = "<group>"; };
-		6BFA2FFF2829E94E00013458 /* ListRegisterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRegisterMock.swift; sourceTree = "<group>"; };
 		6BFA30032829F1C900013458 /* RegisterCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCellViewModelTests.swift; sourceTree = "<group>"; };
 		6BFA30072829F37800013458 /* RegisterSectionViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSectionViewModelTests.swift; sourceTree = "<group>"; };
 		6BFA300A2829F41900013458 /* ListRegisterComponentViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRegisterComponentViewModelTests.swift; sourceTree = "<group>"; };
@@ -219,6 +229,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		273D3CE12B8D2A6100EE702C /* TypeRegister */ = {
+			isa = PBXGroup;
+			children = (
+				273D3CDE2B8D2A4300EE702C /* TypeRegisterData.swift */,
+				273D3CE22B8D2A7000EE702C /* TypeRegisterDTO.swift */,
+			);
+			path = TypeRegister;
+			sourceTree = "<group>";
+		};
+		273D3CE42B8D2AA000EE702C /* CashFlow */ = {
+			isa = PBXGroup;
+			children = (
+				273D3CDC2B8D2A2D00EE702C /* CashFlowData.swift */,
+				273D3CE52B8D2AAC00EE702C /* CashFlowDTO.swift */,
+				273D3CE72B8D2AF400EE702C /* CashFlowRealm.swift */,
+			);
+			path = CashFlow;
+			sourceTree = "<group>";
+		};
 		6B0D5BAA2827F78100F5DC59 /* AddRegister */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +256,7 @@
 				6B0D5BB12827FA6600F5DC59 /* AddRegisterViewController.swift */,
 				6B0D5BAE2827F99700F5DC59 /* AddRegisterViewModel.swift */,
 				6B0D5BAB2827F7B900F5DC59 /* AddRegisterCoordinator.swift */,
+				273D3CEB2B8D43E700EE702C /* AddRegisterService.swift */,
 			);
 			path = AddRegister;
 			sourceTree = "<group>";
@@ -410,6 +440,7 @@
 				6B27270C2823FEA7000903CB /* ListRegisterViewController.swift */,
 				6B27270F2823FEC9000903CB /* ListRegisterViewModel.swift */,
 				6B2727092823FDC8000903CB /* ListRegisterCoordinator.swift */,
+				273D3CD82B8C07F500EE702C /* ListRegisterService.swift */,
 			);
 			path = ListRegister;
 			sourceTree = "<group>";
@@ -417,8 +448,7 @@
 		6B27271528240638000903CB /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				6B27271D28240775000903CB /* DatabaseManager.swift */,
-				6B4A92AF2824B01A00880080 /* RealmDB.swift */,
+				273D3CDA2B8D26A000EE702C /* RealmDB.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -426,7 +456,8 @@
 		6B27271928240673000903CB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				6B4A92E42825A04E00880080 /* RegisterCashFlow */,
+				273D3CE42B8D2AA000EE702C /* CashFlow */,
+				273D3CE12B8D2A6100EE702C /* TypeRegister */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -451,6 +482,7 @@
 				6B0D5BA7282796F400F5DC59 /* String+Extension.swift */,
 				6B0D5BBE2828931100F5DC59 /* UITextField+Extension.swift */,
 				6B0D5BD7282900DC00F5DC59 /* Calendar+Extension.swift */,
+				273D3CE92B8D2D7100EE702C /* Data+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -492,15 +524,6 @@
 				6B4A92C12824C05D00880080 /* RegisterCellViewModel.swift */,
 			);
 			path = RegisterCell;
-			sourceTree = "<group>";
-		};
-		6B4A92E42825A04E00880080 /* RegisterCashFlow */ = {
-			isa = PBXGroup;
-			children = (
-				6B4A92A6282482C000880080 /* RegisterCashFlow.swift */,
-				6B4A92E52825A05C00880080 /* RegisterCashFlowDTO.swift */,
-			);
-			path = RegisterCashFlow;
 			sourceTree = "<group>";
 		};
 		6B4A92F12826A80A00880080 /* Models */ = {
@@ -634,7 +657,7 @@
 		6BFA2FFE2829E94400013458 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				6BFA2FFF2829E94E00013458 /* ListRegisterMock.swift */,
+				273D3CED2B8D654F00EE702C /* RealmDBMock.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -814,10 +837,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B4A92C82824C20A00880080 /* ListRegisterComponent.swift in Sources */,
+				273D3CDF2B8D2A4300EE702C /* TypeRegisterData.swift in Sources */,
+				273D3CE32B8D2A7000EE702C /* TypeRegisterDTO.swift in Sources */,
 				6B4A92D12824C38400880080 /* ListRegisterComponentViewModel.swift in Sources */,
 				6B4A931F2827522D00880080 /* BorderSide.swift in Sources */,
 				6B0D5BD52828E8B800F5DC59 /* SplashScreenViewController.swift in Sources */,
 				6B4A92F32826A81700880080 /* SectionData.swift in Sources */,
+				273D3CE62B8D2AAC00EE702C /* CashFlowDTO.swift in Sources */,
 				6B0D5BBC2828899400F5DC59 /* ListTypeRegister.swift in Sources */,
 				6B4A931C282735AD00880080 /* TotalsData.swift in Sources */,
 				6B4A92FF2826AB3E00880080 /* RegisterSectionViewModel.swift in Sources */,
@@ -832,18 +858,20 @@
 				6B0D5BA5282778A100F5DC59 /* UIImage+Extension.swift in Sources */,
 				6B0D5BAC2827F7B900F5DC59 /* AddRegisterCoordinator.swift in Sources */,
 				6B0D5BBF2828931100F5DC59 /* UITextField+Extension.swift in Sources */,
-				6B4A92E62825A05C00880080 /* RegisterCashFlowDTO.swift in Sources */,
 				6B4A92A128247AE100880080 /* NSObject+Extension.swift in Sources */,
 				6B4A93152827351200880080 /* TotalsComponent.swift in Sources */,
+				273D3CDB2B8D26A000EE702C /* RealmDB.swift in Sources */,
 				6B4A93272827663E00880080 /* LabelDetail.swift in Sources */,
 				6B4A93232827661500880080 /* LabelTitle.swift in Sources */,
 				6B27268928235E72000903CB /* AppDelegate.swift in Sources */,
 				6B4A92E228257FF900880080 /* JSONEncoder+Extension.swift in Sources */,
+				273D3CE82B8D2AF400EE702C /* CashFlowRealm.swift in Sources */,
 				6B4A93112827299C00880080 /* TypeRegister.swift in Sources */,
 				6B0D5BCF2828E88600F5DC59 /* SplashScreenCoordinator.swift in Sources */,
 				6B4A92BC2824C03800880080 /* RegisterCell.swift in Sources */,
 				6B27270A2823FDC8000903CB /* ListRegisterCoordinator.swift in Sources */,
 				6B4A92F92826AB1F00880080 /* RegisterSection.swift in Sources */,
+				273D3CEC2B8D43E700EE702C /* AddRegisterService.swift in Sources */,
 				6B4A92E92825B0B000880080 /* Date+Extension.swift in Sources */,
 				6B4A92BF2824C04900880080 /* RegisterCellContent.swift in Sources */,
 				6B4A92FC2826AB2F00880080 /* RegisterSectionContent.swift in Sources */,
@@ -851,12 +879,10 @@
 				6B4A92C22824C05D00880080 /* RegisterCellViewModel.swift in Sources */,
 				6B4A932B2827691500880080 /* EmptyComponent.swift in Sources */,
 				6B4A92DC28257E9600880080 /* JSONDecoder+Extension.swift in Sources */,
-				6B4A92B02824B01A00880080 /* RealmDB.swift in Sources */,
+				273D3CD92B8C07F500EE702C /* ListRegisterService.swift in Sources */,
 				6B4A92A42824827900880080 /* Encodable+Extension.swift in Sources */,
 				6B0D5BA8282796F400F5DC59 /* String+Extension.swift in Sources */,
-				6B27271E28240775000903CB /* DatabaseManager.swift in Sources */,
 				6B0D5BB22827FA6600F5DC59 /* AddRegisterViewController.swift in Sources */,
-				6B4A92A7282482C000880080 /* RegisterCashFlow.swift in Sources */,
 				6B4A930B2827203A00880080 /* Int+Extension.swift in Sources */,
 				6B4A92CB2824C25D00880080 /* UITableView+Extension.swift in Sources */,
 				6B4A92CE2824C32900880080 /* UIView+Extension.swift in Sources */,
@@ -871,8 +897,10 @@
 				6B0D5BB82827FE4400F5DC59 /* AddRegisterConfiguration.swift in Sources */,
 				6B4A93022826ECD500880080 /* UIColor+Extension.swift in Sources */,
 				6B4A92D72824CB7F00880080 /* ListRegisterConfiguration.swift in Sources */,
+				273D3CEA2B8D2D7100EE702C /* Data+Extension.swift in Sources */,
 				6B4A9305282700FD00880080 /* CellData.swift in Sources */,
 				6B4A930828271D0500880080 /* UIFont+Extension.swift in Sources */,
+				273D3CDD2B8D2A2D00EE702C /* CashFlowData.swift in Sources */,
 				6B4A932F28276C2B00880080 /* ErrorComponent.swift in Sources */,
 				6B27272128240927000903CB /* ErrorRequest.swift in Sources */,
 				6B2727132823FF90000903CB /* ListRegisterContent.swift in Sources */,
@@ -886,6 +914,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BFA2FFA2829E89500013458 /* SplashScreenTests.swift in Sources */,
+				273D3CEE2B8D654F00EE702C /* RealmDBMock.swift in Sources */,
 				6BFA30122829FAFF00013458 /* UIImageTests.swift in Sources */,
 				6BFA30102829F97700013458 /* StringTests.swift in Sources */,
 				6B0D5BDD28290C8E00F5DC59 /* UITableViewTests.swift in Sources */,
@@ -898,7 +927,6 @@
 				6BFA2FF52829D58600013458 /* ListRegisterViewModelTests.swift in Sources */,
 				6B0D5BDB28290B8A00F5DC59 /* GeneralTests.swift in Sources */,
 				6B0D5BDF28290E3A00F5DC59 /* RegisterCellTests.swift in Sources */,
-				6BFA30002829E94E00013458 /* ListRegisterMock.swift in Sources */,
 				6BFA30142829FB7800013458 /* UIColorTests.swift in Sources */,
 				6BFA2FEE2829D46700013458 /* EncodableTests.swift in Sources */,
 				6BFA30082829F37800013458 /* RegisterSectionViewModelTests.swift in Sources */,
