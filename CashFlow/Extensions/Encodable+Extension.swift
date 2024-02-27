@@ -8,6 +8,14 @@
 import Foundation
 
 extension Encodable {
+    
+    func toData(encoder: JSONEncoder = JSONEncoder.encoder) -> Data? {
+        do {
+            return try encoder.encode(self)
+        } catch {
+            return nil
+        }
+    }
 
     func toJson(encoder: JSONEncoder = JSONEncoder.encoder) -> Dictionary<String, Any> {
         do {
