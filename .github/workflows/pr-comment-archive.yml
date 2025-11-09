@@ -1,0 +1,93 @@
+name: PR comment to Bitrise archive
+
+on:
+  issue_comment:
+    types: [created]
+  pull_request_review_comment:
+    types: [created]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  trigger-bitrise:
+    # Run only for PR-related comments
+    if: ${{ github.event_name == 'issue_comment' && github.event.issue.pull_request || github.event_name == 'pull_request_review_comment' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Debug event (safe)
+        run: |
+          set -euo pipefail
+          echo "event_name=${GITHUB_EVENT_NAME}"
+          assoc=$(jq -r '.comment.author_association' "$GITHUB_EVENT_PATH")
+          body_preview=$(jq -r '.comment.body' "$GITHUB_EVENT_PATH" | head -c 200)
+          printf 'assoc=%s\n' "$assoc"
+          printf 'body (first 200 chars): %s\n' "$body_preview"
+
+      - name: Extract PR branch/ref (safe)
+        id: pr
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          if [ "${GITHUB_EVENT_NAME}" = "issue_comment" ]; then
+            PR_URL=$(jq -r '.issue.pull_request.url' "$GITHUB_EVENT_PATH")
+          else
+            PR_URL=$(jq -r '.pull_request.url' "$GITHUB_EVENT_PATH")
+          fi
+          echo "PR_URL=$PR_URL"
+
+          resp=$(curl -sS \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "$PR_URL")
+
+          head_ref=$(echo "$resp" | jq -r '.head.ref')
+          head_sha=$(echo "$resp" | jq -r '.head.sha')
+          base_ref=$(echo "$resp" | jq -r '.base.ref')
+
+          echo "head_ref=$head_ref" >> "$GITHUB_OUTPUT"
+          echo "head_sha=$head_sha" >> "$GITHUB_OUTPUT"
+          echo "base_ref=$base_ref" >> "$GITHUB_OUTPUT"
+
+      - name: Validate commenter & command (safe)
+        id: gate
+        run: |
+          set -euo pipefail
+          body=$(jq -r '.comment.body' "$GITHUB_EVENT_PATH")
+          assoc=$(jq -r '.comment.author_association' "$GITHUB_EVENT_PATH")
+
+          # Require "/archive" at the start (case-insensitive)
+          if ! printf '%s' "$body" | grep -qiE '^[[:space:]]*/archive([[:space:]]|$)'; then
+            echo "ok=false" >>"$GITHUB_OUTPUT"; exit 0
+          fi
+
+          case "$assoc" in
+            OWNER|MEMBER|COLLABORATOR) ;;
+            *) echo "ok=false" >>"$GITHUB_OUTPUT"; exit 0 ;;
+          esac
+
+          echo "ok=true" >>"$GITHUB_OUTPUT"
+
+      - name: Stop if not a valid request
+        if: ${{ steps.gate.outputs.ok != 'true' }}
+        run: echo "Skipped (not /archive or unauthorized)."
+
+      - name: Call Bitrise Start Build API
+        if: ${{ steps.gate.outputs.ok == 'true' }}
+        env:
+          BITRISE_APP_SLUG_JADER: ${{ secrets.BITRISE_APP_SLUG_JADER }}
+          BITRISE_API_TOKEN_JADER: ${{ secrets.BITRISE_API_TOKEN_JADER }}
+          BRANCH: ${{ steps.pr.outputs.head_ref }}
+          WORKFLOW_ID: CNN_RELEASE_ADHOC   # <-- your Bitrise workflow
+        run: |
+          set -euo pipefail
+          echo "Triggering Bitrise build for branch: $BRANCH (workflow: $WORKFLOW_ID)"
+          payload=$(jq -n --arg branch "$BRANCH" --arg wf "$WORKFLOW_ID" \
+            '{hook_info:{type:"bitrise"}, build_params:{branch:$branch, workflow_id:$wf}}')
+          curl -sS -X POST "https://api.bitrise.io/v0.1/apps/${BITRISE_APP_SLUG_JADER}/builds" \
+            -H "Authorization: ${BITRISE_API_TOKEN_JADER}" \
+            -H "Content-Type: application/json" \
+            --data "$payload"
