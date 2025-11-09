@@ -81,7 +81,7 @@ jobs:
           BITRISE_APP_SLUG_JADER: ${{ secrets.BITRISE_APP_SLUG_JADER }}
           BITRISE_API_TOKEN_JADER: ${{ secrets.BITRISE_API_TOKEN_JADER }}
           BRANCH: ${{ steps.pr.outputs.head_ref }}
-          WORKFLOW_ID: CNN_RELEASE_ADHOC   # <-- your Bitrise workflow
+          WORKFLOW_ID: BuildGeneral # <-- your Bitrise workflow
         run: |
           set -euo pipefail
           echo "Triggering Bitrise build for branch: $BRANCH (workflow: $WORKFLOW_ID)"
