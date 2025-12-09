@@ -26,7 +26,7 @@ jobs:
           printf 'assoc=%s\n' "$assoc"
           printf 'body (first 200 chars): %s\n' "$body_preview"
 
-      - name: Extract PR branch/ref (safe)
+      - name: Extract PR details (safe)
         id: pr
         env:
           GH_TOKEN: ${{ github.token }}
@@ -47,10 +47,20 @@ jobs:
           head_ref=$(echo "$resp" | jq -r '.head.ref')
           head_sha=$(echo "$resp" | jq -r '.head.sha')
           base_ref=$(echo "$resp" | jq -r '.base.ref')
+          pr_number=$(echo "$resp" | jq -r '.number')
+          head_owner=$(echo "$resp" | jq -r '.head.repo.owner.login')
+          base_owner=$(echo "$resp" | jq -r '.base.repo.owner.login')
+          head_repo_url=$(echo "$resp" | jq -r '.head.repo.clone_url')
 
-          echo "head_ref=$head_ref" >> "$GITHUB_OUTPUT"
-          echo "head_sha=$head_sha" >> "$GITHUB_OUTPUT"
-          echo "base_ref=$base_ref" >> "$GITHUB_OUTPUT"
+          {
+            echo "head_ref=$head_ref"
+            echo "head_sha=$head_sha"
+            echo "base_ref=$base_ref"
+            echo "pr_number=$pr_number"
+            echo "head_owner=$head_owner"
+            echo "base_owner=$base_owner"
+            echo "head_repo_url=$head_repo_url"
+          } >> "$GITHUB_OUTPUT"
 
       - name: Validate commenter & command (safe)
         id: gate
@@ -59,13 +69,13 @@ jobs:
           body=$(jq -r '.comment.body' "$GITHUB_EVENT_PATH")
           assoc=$(jq -r '.comment.author_association' "$GITHUB_EVENT_PATH")
 
-          # Require "/archive" at the start (case-insensitive)
-          if ! printf '%s' "$body" | grep -qiE '^[[:space:]]*/archive([[:space:]]|$)'; then
+          # Accept only "/archive" (no extra chars, no spaces), case-insensitive
+          if ! printf '%s' "$body" | tr -d '\r' | grep -qiE '^/archive$'; then
             echo "ok=false" >>"$GITHUB_OUTPUT"; exit 0
           fi
 
           case "$assoc" in
-            OWNER|MEMBER|COLLABORATOR) ;;
+            OWNER|MEMBER|COLLABORATOR|CONTRIBUTOR) ;;  # widen if needed
             *) echo "ok=false" >>"$GITHUB_OUTPUT"; exit 0 ;;
           esac
 
@@ -78,16 +88,44 @@ jobs:
       - name: Call Bitrise Start Build API
         if: ${{ steps.gate.outputs.ok == 'true' }}
         env:
-          BITRISE_APP_SLUG_JADER: ${{ secrets.BITRISE_APP_SLUG_JADER }}
-          BITRISE_API_TOKEN_JADER: ${{ secrets.BITRISE_API_TOKEN_JADER }}
+          BITRISE_APP_SLUG: ${{ vars.BITRISE_APP_SLUG }}
+          BITRISE_API_TOKEN: ${{ secrets.BITRISE_API_TOKEN }}
           BRANCH: ${{ steps.pr.outputs.head_ref }}
-          WORKFLOW_ID: BuildGeneral # <-- your Bitrise workflow
+          HEAD_SHA: ${{ steps.pr.outputs.head_sha }}
+          BASE_BRANCH: ${{ steps.pr.outputs.base_ref }}
+          PR_NUMBER: ${{ steps.pr.outputs.pr_number }}
+          HEAD_OWNER: ${{ steps.pr.outputs.head_owner }}
+          BASE_OWNER: ${{ steps.pr.outputs.base_owner }}
+          HEAD_REPO_URL: ${{ steps.pr.outputs.head_repo_url }}
+          WORKFLOW_ID: ${{ vars.WORKFLOW_ID }} # <-- Bitrise workflow
         run: |
           set -euo pipefail
-          echo "Triggering Bitrise build for branch: $BRANCH (workflow: $WORKFLOW_ID)"
-          payload=$(jq -n --arg branch "$BRANCH" --arg wf "$WORKFLOW_ID" \
-            '{hook_info:{type:"bitrise"}, build_params:{branch:$branch, workflow_id:$wf}}')
-          curl -sS -X POST "https://api.bitrise.io/v0.1/apps/${BITRISE_APP_SLUG_JADER}/builds" \
-            -H "Authorization: ${BITRISE_API_TOKEN_JADER}" \
+          echo "Triggering Bitrise build for PR #$PR_NUMBER ($BRANCH -> $BASE_BRANCH), workflow: $WORKFLOW_ID"
+
+          payload=$(jq -n \
+            --arg branch "$BRANCH" \
+            --arg base "$BASE_BRANCH" \
+            --arg wf "$WORKFLOW_ID" \
+            --arg head_owner "$HEAD_OWNER" \
+            --arg base_owner "$BASE_OWNER" \
+            --arg head_repo "$HEAD_REPO_URL" \
+            --arg head_sha "$HEAD_SHA" \
+            --argjson pr "$PR_NUMBER" \
+            '{
+              hook_info: { type: "bitrise" },
+              build_params: {
+                branch: $branch,
+                branch_dest: $base,
+                branch_repo_owner: $head_owner,
+                branch_dest_repo_owner: $base_owner,
+                pull_request_id: $pr,
+                pull_request_repository_url: $head_repo,
+                commit_hash: $head_sha,
+                workflow_id: $wf
+              }
+            }')
+
+          curl -sS -X POST "https://api.bitrise.io/v0.1/apps/${BITRISE_APP_SLUG}/builds" \
+            -H "Authorization: ${BITRISE_API_TOKEN}" \
             -H "Content-Type: application/json" \
             --data "$payload"
