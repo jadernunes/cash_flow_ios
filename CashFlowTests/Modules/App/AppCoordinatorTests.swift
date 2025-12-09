@@ -9,6 +9,8 @@ import XCTest
 @testable import CashFlow
 
 final class AppCoordinatorTests: XCTestCase {
+    
+    
 
     func testAppCoordinatorDefaultFlow() {
         let window = UIWindow()
